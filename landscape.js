@@ -4,6 +4,7 @@ import {siteAccessReference,siteAccessContour,siteWalkwayContour} from './site-a
 import {createTerrainRelief,terrainGeometry} from './terrain-relief.js';
 import {rainwaterChannelPlan} from './ground-junctions.js';
 import {planRainwaterDetails} from './rainwater-details.js';
+import {plinthSpec} from './plinth-plan.js';
 
 // PDF49/арк01 + §3.4–3.5: retained greenery, restored entrance asphalt.
 // §5.2: 600mm concrete perimeter apron, authored separately in the native model.
@@ -43,7 +44,9 @@ export function setupLandscape(scene,{footprint,groundY,apronWidth=.6,apronCentr
  const pixels=new Uint8Array(64*64*4);let seed=713;
  for(let i=0;i<pixels.length;i+=4){seed=(Math.imul(seed,1664525)+1013904223)>>>0;const c=238+(seed>>>28);pixels[i]=c;pixels[i+1]=c;pixels[i+2]=c;pixels[i+3]=255;}
  const texture=new THREE.DataTexture(pixels,64,64,THREE.RGBAFormat);texture.colorSpace=THREE.SRGBColorSpace;texture.wrapS=texture.wrapT=THREE.RepeatWrapping;texture.repeat.set(1/2.5,1/2.5);texture.generateMipmaps=true;texture.minFilter=THREE.LinearMipmapLinearFilter;texture.magFilter=THREE.LinearFilter;texture.needsUpdate=true;textures.push(texture);grass.map=texture;
- const lawnGeometry=terrainGeometry(THREE,{halfX,halfZ,centreZ:apronCentreZ,height:relief.height});
+ // Only the existing building core removes turf. The wider protection
+ // rectangle flattens relief; it must not cut a hole between concrete pads.
+ const lawnGeometry=terrainGeometry(THREE,{halfX:plinthSpec.existingHalfLength,halfZ:plinthSpec.existingHalfDepth,xBreaks:[-halfX,halfX],zBreaks:[apronCentreZ-halfZ,apronCentreZ+halfZ],height:relief.height});
  const positions=lawnGeometry.attributes.position,colours=[],fade=[];
  const smooth=t=>{t=Math.max(0,Math.min(1,t));return t*t*(3-2*t);};
  for(let i=0;i<positions.count;i++){

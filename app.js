@@ -81,7 +81,6 @@ const perspectiveCamera=new THREE.PerspectiveCamera(36,1,.1,450);const orthoCame
 perspectiveCamera.position.set(35,22,55);
 let nativeModel;
 let rendererStart;
-try{rendererStart=createViewerContext(()=>document.createElement('canvas'));app.dataset.contextAntialias=String(rendererStart.antialias);}catch(error){showStartupFailure(document,error,'context');throw error;}
 try{nativeModel=await loadNativeModel(scene,{assetVersion:document.documentElement.dataset.assetVersion,onProgress:loadingStage});}catch(error){showStartupFailure(document,error,'asset');console.error('Native model loading failed',error);throw error;}
 app.dataset.modelReadyMs=performance.now().toFixed(0);
 const {building,garden,patch,fieldPatch,panelRecords,updateFacade,setInspection,setFacadeLayers}=nativeModel;
@@ -569,6 +568,10 @@ $('open-engineering').addEventListener('click',()=>{const d=$('engineering-drawe
 const engineeringDrawer=$('engineering-drawer');engineeringDrawer.addEventListener('toggle',()=>{$('open-engineering').setAttribute('aria-expanded',String(engineeringDrawer.open));$('open-engineering').textContent=engineeringDrawer.open?'До моделі ↑':'Креслення';});
 
 try{
+  // Allocate GPU resources only after native assembly, keeping downloads
+  // and CPU model construction outside the context lifetime. On touch
+  // devices the denser settled frame smooths edges without an MSAA buffer.
+  rendererStart=createViewerContext(()=>document.createElement('canvas'),{preferAntialias:!matchMedia('(pointer:coarse)').matches});app.dataset.contextAntialias=String(rendererStart.antialias);
   // Closed 0.6mm sheet solids require precision at whole-building distances.
   // EXT_clip_control uses reversed depth without logarithmic fragment-depth
   // writes, which produced visible roof patterns in the projector view.
