@@ -1,0 +1,948 @@
+{
+  "schema": "mae7-material-ledger-v25/1",
+  "title": "Матеріали Mäe7 · проєкт, цифровий вигляд і невідомий продукт",
+  "createdUTC": "2026-10-09T11:56:13.362285+00:00",
+  "scope": "Джерельний реєстр; не замовлення, не підтвердження фізичного зразка та не перевірка нового native експорту",
+  "sourcePDF": {
+    "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+    "sha256": "fc22c9eb0964b52800a5d926fa2574b3f95654f64d1a3f17f21a0afaddd15f99"
+  },
+  "auditSHA256": "5d6de7ce1d72f4facfeead4fbba9a48bfebe7b9d9f713673822f72a9f964f1f1",
+  "materialReferenceAtReview": {
+    "path": "/home/pustota/Desktop/Стройка/prototype/dist/material-reference.js",
+    "sha256": "b645a6654db5a1b4154f7531da6993db65bcdd011d3ca9e77c07ee38aa7b7387"
+  },
+  "manufacturerReferences": [
+    {
+      "title": "RuukkiEE ClassicDesign475",
+      "url": "https://www.ruukki.com/est/katusetooted/tooted-ja-teenused/katuseprofiilid/katuse-detailid/parnu-classic-design-c-475mm",
+      "verified": "Official current page:32mm high,475mm useful/510total,.6mm,200mm recommended battens,RR23 available. Reference only, no project order."
+    },
+    {
+      "title": "Swisspearl official2026 colourchart",
+      "url": "https://www.swisspearl.com/media/42447/download/SEE_Swisspearl_ColourChart_BRO_EN_2026_01.pdf?inline=true&v=3",
+      "pages": "8–9",
+      "verified": "P222 approxNCS S1005-Y40R;P070 S7000-N. Digital/reference codes not measured deliveredbatch."
+    },
+    {
+      "title": "SwisspearlGlobal PatinaWoodDIM",
+      "url": "https://www.swisspearl.com/media/27497/download/Global_Swisspearl_Facade_PatinaWood_DIM_EN_2026_02.pdf?inline=true&v=7",
+      "pages": "10–12,16–17",
+      "verified": "ribbedEPDM at least selectedbattenwidth recommended;Ø8 pilot and scoped edge/screw rules;ceiling400mm. Global manual not automatic override of EE local/project design."
+    },
+    {
+      "title": "IsoverStandard35 officialdatasheet",
+      "url": "https://www.isover.ee/documents/tooteleht/isover-standard-35.pdf",
+      "verified": "lambda.035,A1,unfaced mineralwool50–200mm; project example not orderedbrand."
+    },
+    {
+      "title": "IsoverKV041 officialdatasheet",
+      "url": "https://www.isover.ee/documents/tooteleht/isover-kv-041.pdf",
+      "verified": "lambda.041,A1,horizontalfloorblownwool;Hyvinkää20028grey colour noted;doesnotbindgenericmodelbatch."
+    },
+    {
+      "title": "GyprocGTS9 officialproduct",
+      "url": "https://www.gyproc.ee/products/gyproc-gts-9-tuuletokkeplaat",
+      "verified": "actual9.5mm thickness;project generic9mm mustnot silently become exactGTS9."
+    },
+    {
+      "title": "IsoverRKLFacade officialproduct",
+      "url": "https://www.isover.ee/Tooted/ehitusisolatsioon/isover-rkl-facade",
+      "verified": "coatedwind/insulationboard lambda.031,available30/50etc;examplewindboard not adhesive tape."
+    }
+  ],
+  "rows": [
+    {
+      "id": "ROOF-METAL",
+      "title": "Покрівельний метал",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 19,
+          "text": [
+            "vastavalt kasutatava katusekatte tootja juhistele). Katusekattena paigaldada klassik profiil plekk"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 53,
+          "text": [
+            "4.    Katus -Klassik plekk RR23.                                                                                                                                                                           TELLIJA / ESINDAJA",
+            "5.    Tuulekoja katus - SBS.                                                                                                                                                                               OBJEKT"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 60,
+          "text": [
+            "PURAL kattega                     200   liistuga distantsliistu peale                                                                   Tuulesuunaja 13 mm",
+            "PURAL kattega",
+            "(t=0,6mm, PURAL kate)                                                                                                                                                                    Sarika pikendus 300 mm, üleulatuvus ol.oleva"
+          ]
+        }
+      ],
+      "statedCode": "Classic / PURAL / RR23",
+      "statedThicknessMM": 0.6,
+      "statedDimensions": "32/475 мм — лише довідковий профіль Ruukki EE",
+      "sourceAuthority": "Профільний клас, покриття та колір задані проєктом; виробник не замовлений",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Цифровий зразок RR23 виробника; блиск, шорсткість і відбиття — кандидат",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Виробник, модель замка, партія покриття, радіуси та кріплення",
+      "fabricationApproved": false
+    },
+    {
+      "id": "ROOF-UNDERLAY",
+      "title": "Підпокрівельна мембрана",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 60,
+          "text": [
+            "·     Katuse mittehingav aluskate                                                                                                                                                            (tuletõkkevahendiga immutatud värvitud laudis"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 19,
+          "text": [
+            "Sarikate peale paigaldada aluskate, distantsliist 32x50 mm ning roovitus 32x100 mm (samm"
+          ]
+        }
+      ],
+      "statedCode": null,
+      "statedThicknessMM": null,
+      "statedDimensions": "Контррейка32×50; обрешітка32×100 мм",
+      "sourceAuthority": "Задана непаропроникна підпокрівельна мембрана",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Показова темна поверхня; 0,2 мм — товщина для відображення",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Продукт, товщина, нахльости та сумісність",
+      "fabricationApproved": false
+    },
+    {
+      "id": "TIMBER",
+      "title": "Деревина підконструкцій",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 21,
+          "text": [
+            "olema tehases immutatud, immutusklassiga H3."
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 21,
+          "text": [
+            "kinnitusnurgikute abil 600 mm sammuga 50x50 mm ristlõikega vertikaalsed puitprussid. Prusside",
+            "puitprusside peale paigaldada horisontaalne puitroov, ristlõike mõõtmetega 50x50 mm, sammuga"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 21,
+          "text": [
+            "Tuuletõkkeplaadi peale paigaldada vertikaalselt 420 mm sammuga 25x100 tuletõkkevõõbaga"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 19,
+          "text": [
+            "Ümber     katuse    tuulekastide     paigaldada     putukavõrk.     Tuulekastid     rajada    22x100    mm"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 57,
+          "text": [
+            "·   50x75 sügavimmutatud puit/                                                     ·      50x75 sügavimmutatud puit/"
+          ]
+        }
+      ],
+      "statedCode": "H3; для софіту Bs1,d0",
+      "statedThicknessMM": null,
+      "statedDimensions": "Фасад50×50 і25×100; дах32×50 і32×100; цоколь50×75; софіт22×100 мм",
+      "sourceAuthority": "Розміри й обробка задані для відповідних вузлів; C24 не задано",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Показова деревна фактура; порода й колір партії невідомі",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Порода, сорт міцності, засіб просочення, вогнезахисна партія; існуючі крокви",
+      "fabricationApproved": false
+    },
+    {
+      "id": "FC-COLOUR-8",
+      "title": "Фіброцементні плити",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 21,
+          "text": [
+            "kasutada 8 mm paksust massvärvitud tsementkiudplaati (nt Cembrit Patina). Roovide ja plaadi"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 53,
+          "text": [
+            "1.    Fassaad - massvärvitud tsementkiudplaat Cembrit Patina: P222         1"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 53,
+          "text": [
+            "2.    Fassaad, tuulekoda - massvärvitud tsementkiudplaat Cembrit Patina: P070                                  6                    10",
+            "3.    Sokkel - massvärvitud tsementkiudplaat Cembrit Patina: P070",
+            "10.   Rõdu piire- massvärvitud tsementkiudplaat Cembrit Patina: P070                                                                                       ARHITEKT                ALLKIRI                 KUUPÄEV               PROJEKTI NR             JOONISE NR            PROJEKTI ETAPP             MÕÕTKAVA              REV"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 21,
+          "text": [
+            "Näidiste alusel kooskõlastada maja viimistlus tellijaga."
+          ]
+        }
+      ],
+      "statedCode": "P222 / P070",
+      "statedThicknessMM": 8,
+      "statedDimensions": null,
+      "sourceAuthority": "Коди й товщина задані; Cembrit Patina у записці — приклад або аналог",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Цифрові зразки сучасного виробника; не обмір поставленої партії",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Замовлений продукт і покоління, партія, погоджений фізичний зразок",
+      "fabricationApproved": false
+    },
+    {
+      "id": "FACADE-WOOL",
+      "title": "Фасадна мінеральна вата",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 21,
+          "text": [
+            "välisseintele kohtparandused. Välisseinad soojustada 200 mm paksuselt mineraalvillaga (λ≤0,035",
+            "lubatud soojustuse paksus on 200 mm, seinte kõveruse korral paigaldada vastavalt vajadusele"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 21,
+          "text": [
+            "taha paigaldada 100 mm paksuselt mineraalvill ja vahele 50 mm paksuselt mineraalvill. Vertikaalsete"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 29,
+          "text": [
+            "Pehme                      0,035 W/m2*K              NPD           NPD          Nt Isover Standard"
+          ]
+        }
+      ],
+      "statedCode": "λ≤0,035 Вт/(м·К)",
+      "statedThicknessMM": 200,
+      "statedDimensions": "100+50+50 мм; не менше200 мм",
+      "sourceAuthority": "Параметри задані; Isover Standard35 — приклад",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Показові волокна; колір і густина цифрової поверхні не сертифікують продукт",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Виробник, продукт, густина й партія",
+      "fabricationApproved": false
+    },
+    {
+      "id": "ATTIC-PP1",
+      "title": "Утеплення горищного перекриття",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 19,
+          "text": [
+            "Pööningult eemaldada olemasolev 250 mm soojustus ning lammutada olemasolevad käiguteed."
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 20,
+          "text": [
+            "Isover KV, vt tabel 2), lõplik soojustuskihi paksus peab olema 450 mm. Pööningul kasutatav puistevill"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 29,
+          "text": [
+            "Puistevill                  0,041 W/m*K            22 kg/m3        NPD          Nt Isover KV -"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 60,
+          "text": [
+            "·       Puistevill 450mm"
+          ]
+        }
+      ],
+      "statedCode": "PP-1; λ≤0,041; класA",
+      "statedThicknessMM": 450,
+      "statedDimensions": "Старі250 мм видаляються; утеплюється горизонтальне перекриття",
+      "sourceAuthority": "Насипна мінеральна вата; Isover KV — приклад",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Показовий волокнистий шар; не утеплення всіх схилів",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Продукт, монтажна густина, осідання й партія",
+      "fabricationApproved": false
+    },
+    {
+      "id": "WINDBOARD-9",
+      "title": "Вітрозахисна гіпсова плита",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 21,
+          "text": [
+            "Tuuletõkkena kasutada tuuletõkke kipsplaati paksusega 9 mm, plaatide liitekohad teipida."
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 56,
+          "text": [
+            "· Tuuletõkke kipsplaat 9mm, liitekohad teipida                                                                                                                  kinnitusnurgik"
+          ]
+        }
+      ],
+      "statedCode": null,
+      "statedThicknessMM": 9,
+      "statedDimensions": "Проклеєні стики",
+      "sourceAuthority": "Загальний матеріал9 мм; марка не задана",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Показова поверхня; сучасний Gyproc GTS9 має9,5 мм і не є точною підміною",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Виробник, тип плити та сумісна стрічка",
+      "fabricationApproved": false
+    },
+    {
+      "id": "EPDM",
+      "title": "Захисна стрічка під фіброцементом",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 21,
+          "text": [
+            "vahele paigaldada vuugilint vastavalt tootjapoolsele juhendile."
+          ]
+        }
+      ],
+      "statedCode": null,
+      "statedThicknessMM": null,
+      "statedDimensions": "100 мм ширина і2 мм товщина — цифровий кандидат, не проєктні розміри",
+      "sourceAuthority": "Проєкт вимагає стрічку за системою виробника; Global DIM рекомендує ширину не меншу за дошку",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Показова чорна гума; збільшення90→100 не погоджує вузол парних дощок",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Система, профіль ребер, ширина, товщина, стики та сумісність",
+      "fabricationApproved": false
+    },
+    {
+      "id": "FLASHINGS",
+      "title": "Відливи й металеві обрамлення",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 23,
+          "text": [
+            "välja vahetada uute vastu (pleki paksus 0,6 mm, PURAL kate). Veeplekkide üleulatus seintest 30"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 23,
+          "text": [
+            "mm, veeplekkidele anda kalle vähemalt 1:10 hoonest eemale. Rõdude avatäidete ulatuses teha"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 53,
+          "text": [
+            "7.    Veeplekid, katuse turvavarustus - toon RR23                                                                                                                                                          AADRESS"
+          ]
+        }
+      ],
+      "statedCode": "PURAL / RR23",
+      "statedThicknessMM": 0.6,
+      "statedDimensions": "Винос30 мм; біля балконів10 мм; нахил≥1:10",
+      "sourceAuthority": "Лист, покриття та вимоги вузлів задані",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Цифровий RR23; блиск і згини — кандидати",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Профілі згинів, покриття, герметики, кути та кріплення",
+      "fabricationApproved": false
+    },
+    {
+      "id": "WINDOW-PVC-IGU",
+      "title": "Нові вікна PVC і склопакети",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 23,
+          "text": [
+            "Kõik korterite ja trepikodade aknad vahetada välja kolmekordse klaasiga PVC raamiga"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 23,
+          "text": [
+            "Kõik väljavahetatavad aknad varustada keraamiliste vaheliistudega, kõikide akende veeplekid tuleb"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 73,
+          "text": [
+            "1780                                                                  PVC profiil"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 74,
+          "text": [
+            "Kirgas klaas",
+            "Kirgas klaas",
+            "Kirgas klaas"
+          ]
+        }
+      ],
+      "statedCode": "PVC; прозоре потрійне скління; керамічна дистанційна рамка",
+      "statedThicknessMM": null,
+      "statedDimensions": "Темно-сірі зовні, білі всередині; U≤0,9/1,1 за типом",
+      "sourceAuthority": "Матеріальна сім’я, скління та теплові вимоги задані; зовнішній RR23/RAL не задано",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Колірна сім’я за проєктом; RGB, IOR, transmission і шорсткість — кандидати",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Профіль постачальника, склад скла, газ, покриття, крайове ущільнення та точний колір",
+      "fabricationApproved": false
+    },
+    {
+      "id": "ENTRANCE-DOOR",
+      "title": "Вхідні двері",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 24,
+          "text": [
+            "Trepikodadele ja keldri sissepääsudele paigaldada uued alumiiniumprofiil välisuksed (U≤1,4"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 53,
+          "text": [
+            "8.    Välisuksed, alumiiniumprofiil - toon RR23, kirgas karastatud klaas                                                                                   PROJEKTEERIJA           ALLKIRI                 KUUPÄEV               JOONISE NIMETUS"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 75,
+          "text": [
+            "Värvitoon: RR23"
+          ]
+        }
+      ],
+      "statedCode": "VU01; утеплений алюміній / RR23; прозоре загартоване скло",
+      "statedThicknessMM": null,
+      "statedDimensions": "U≤1,4; скло12 мм у моделі — лише кандидат",
+      "sourceAuthority": "Алюміній і колір задані; композиція скління не задана",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Цифровий RR23 і показова оптика; не замовлений IGU",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Терморозрив, переріз профілю, склад і товщина скла, оптичні покриття",
+      "fabricationApproved": false
+    },
+    {
+      "id": "ENTRANCE-ROOF-CONFLICT",
+      "title": "Покриття даху тамбура",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 53,
+          "text": [
+            "5.    Tuulekoja katus - SBS.                                                                                                                                                                               OBJEKT"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 25,
+          "text": [
+            "klassik profiil plekk (t=0,6 mm, PURAL kate)."
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 68,
+          "text": [
+            "Päästemeeskonna infopunkt igas trepikojas,                                                                 Terasest porirest,                           ·            Klassik plekk                                                                     100x100x60x2,5"
+          ]
+        }
+      ],
+      "statedCode": "SBS ↔ Classic / PURAL",
+      "statedThicknessMM": null,
+      "statedDimensions": "Для вузла Classic лист0,6 мм;32×50 і32×100 мм",
+      "sourceAuthority": "Суперечність джерела: легенда SBS, записка й вузол Classic; не вирішена",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Візуалізований Classic — вибір вузла, не погоджене усунення суперечності",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Підтвердження проєктанта щодо застосовного вузла й продукту",
+      "fabricationApproved": false
+    },
+    {
+      "id": "BALCONY-STEEL",
+      "title": "Сталь балконів",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 26,
+          "text": [
+            "Uute rõdude konstruktsioon on terasest keevisraam (terase klass S355JR), vertikaalsed tugipostid"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 26,
+          "text": [
+            "pinnavärviga, mille kogupaksus peab olema 160 mikronit."
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 26,
+          "text": [
+            "olema vähemalt 60 mikronit. Lõpliku viimistlusena katta kahes kihis kahekomponentse",
+            "pinnavärviga, mille kogupaksus peab olema 160 mikronit."
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 53,
+          "text": [
+            "6.    Teraspost toon RR23 tumehall                                                                                                                                                                                              KORTERELAMU"
+          ]
+        }
+      ],
+      "statedCode": "S355JR / C3 / RR23",
+      "statedThicknessMM": null,
+      "statedDimensions": "100×100×5;100×50×5;50×50×5;L50×50×5; огорожа40×40×3 і40×80×3 мм",
+      "sourceAuthority": "Епоксидний ґрунт≥60 мкм і двокомпонентне покриття160 мкм; не PURAL і не цинкування",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Цифровий RR23; фактура фарби й гострі кути — кандидати",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Система фарбування, адгезія, радіуси, анкери та зварювання",
+      "fabricationApproved": false
+    },
+    {
+      "id": "ENTRANCE-STEEL",
+      "title": "Сталь козирка входу",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 25,
+          "text": [
+            "100x80x5 nelikant-terastorust (terase klass S355JR) C3 keskkonnaklassile vastavad kuumtsingitud"
+          ]
+        }
+      ],
+      "statedCode": "S355JR / C3 / гаряче цинкування",
+      "statedThicknessMM": null,
+      "statedDimensions": "RHS100×80×5 мм",
+      "sourceAuthority": "Окрема оцинкована конструкція; не фарбований балкон і не лист PURAL",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Показове цинкування; реальний візерунок і старіння невідомі",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Ванна й товщина покриття, отвори, зварювання та кріплення",
+      "fabricationApproved": false
+    },
+    {
+      "id": "BALCONY-GLASS",
+      "title": "Балконне скло",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 26,
+          "text": [
+            "tsementlaastplaatide ja metallkonstruktsiooni vahele lisaks veeplekid (pleki paksus 0,6 mm, PURAL",
+            "tihenditega, klaasina kasutada 6 mm karastatud kirgasklaasi. Lükandklaasidena paigaldada"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 26,
+          "text": [
+            "Viimase korruse varikatus moodustub rõdu metallkonstruktsioonist. Konstruktsioon katta 4+4 mm"
+          ]
+        }
+      ],
+      "statedCode": "Прозоре загартоване; верхнє сіре загартоване ламіноване",
+      "statedThicknessMM": [
+        6
+      ],
+      "statedDimensions": "Верхнє4+4 мм; міжшар невідомий",
+      "sourceAuthority": "Товщини листів і типи задані;8 мм у моделі не визначає міжшар",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "IOR, пропускання, тон і відбиття — цифрові кандидати",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Виробник системи, міжшар, VLT, тонування, край і напрямні",
+      "fabricationApproved": false
+    },
+    {
+      "id": "BALCONY-FLOOR",
+      "title": "Підлога балкона",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 26,
+          "text": [
+            "majast eemale juhtimiseks. Põranda konstruktsioon katta 24 mm paksuse tsementlaastplaadiga,"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 26,
+          "text": [
+            "mis omakorda kaetakse libisemiskindla polüuretaankattega vm analoogse kattega ( nt. Protani"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 26,
+          "text": []
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 65,
+          "text": [
+            "1. Vuugilint (1,5x50 mm) paigaldada plaadi ja terase vahele kogu terase ulatuses."
+          ]
+        }
+      ],
+      "statedCode": "Цементно-стружкова плита; неслизький PU або аналог",
+      "statedThicknessMM": 24,
+      "statedDimensions": "Гума1,5×50; PURAL0,6 мм; ухил≥1:80; примикання≥100 мм",
+      "sourceAuthority": "Матеріали й мінімальні вимоги задані; Protan — приклад",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Показова поверхня;1 мм фінішу й порядок шарів — кандидати",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Плита, покриття, товщина фінішу, клас ковзання, гума й робочий водний вузол",
+      "fabricationApproved": false
+    },
+    {
+      "id": "PLINTH-EPS-HAT",
+      "title": "Цокольне утеплення й профілі",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 18,
+          "text": [
+            "Sillutisriba armeerida 6 mm diameetriga armatuurvõrguga, silmaga 150 mm, B500. Sillutisribale",
+            "kogupaksusega 150 mm. Väljastpoolt katta sokkel 8 mm massvärvitud tsementkiudplaadiga (nt"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 28,
+          "text": [
+            "Vahtpolüstüreen             0,035 W/m*K             22 kg/m3     120 kPa         Nt EPS 120"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 57,
+          "text": [
+            "vahtpolüstüreen EPS 120 Perimeeter 50mm                                               vahtpolüstüreen EPS 120 Perimeeter 50mm"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 57,
+          "text": [
+            "+                          -        MP25/38 või analoog                                                                   MP25/38 või analoog"
+          ]
+        }
+      ],
+      "statedCode": "EPS; приклад EPS120 Perimeeter; MP25/38 або аналог",
+      "statedThicknessMM": 150,
+      "statedDimensions": "100+50 мм; λ≤0,035;120 кПа; дерево50×75; профіль25 мм; FC8 P070",
+      "sourceAuthority": "EPS120 Perimeeter — приклад, не встановлений постачальник; геометрія профілю частково кандидат",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Показова структура EPS та цинку; колір FC — цифровий зразок",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "EPS продукт і партія, калібр/переріз hat, гідроізоляція й анкери",
+      "fabricationApproved": false
+    },
+    {
+      "id": "BASEMENT-RETAINED",
+      "title": "Збережені підвальні вікна",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 23,
+          "text": [
+            "Keldri aknaid välja ei vahetata. Kõik väljavahetatavad aknad tõstetakse sügavimmutatud"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 63,
+          "text": [
+            "t=0,6 mm              Ol. olev keldriaken          75x30mm                                                                                                      Tuuletõkketeip"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 63,
+          "text": [
+            "PURAL kate                                                     RKL-31 30mm või analoog",
+            "RKL-31 30mm või analoog"
+          ]
+        }
+      ],
+      "statedCode": null,
+      "statedThicknessMM": null,
+      "statedDimensions": "Нові відливи0,6 PURAL; вузол дерево75×30; RKL31 30 мм або аналог",
+      "sourceAuthority": "Вікна зберігаються; матеріал рами й скління невідомий; нова закупівля вікон0",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Біла рама і прозора площина — лише оптична репрезентація існуючого",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Обмір, існуючі рама/скло, посадка, відкоси та прив’язка вузла",
+      "fabricationApproved": false
+    },
+    {
+      "id": "FASTENERS",
+      "title": "Кріплення та кронштейни",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 21,
+          "text": [
+            "Kinnitusnurgikute tsingikihi paksus peab olema vähemalt 275 g/m². Sügavimmutatud puit peab"
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 21,
+          "text": [
+            "dimensioneerida kinnitusvahendid ning teostada neile väljatõmbekatsed (vähemalt 5 tk)."
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 57,
+          "text": [
+            "kübarprofiili minimaalne tsingikihi paksus 275g/m². Kasutatav sügavimmutatud puit"
+          ]
+        }
+      ],
+      "statedCode": "C3; цинк≥275 г/м² для кронштейнів/hat",
+      "statedThicknessMM": null,
+      "statedDimensions": "L150×150×60×2,5 мм; не менше5 випробувань витягування",
+      "sourceAuthority": "Загальні вимоги задані; точні анкери й схема потребують робочого розрахунку",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Показові металеві поверхні;9 маркерів не є просвердленими отворами чи специфікацією",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Вироби, діаметри, стіна, крайові відстані, навантаження та погодження",
+      "fabricationApproved": false
+    },
+    {
+      "id": "APRON-CONCRETE",
+      "title": "Бетонне вимощення",
+      "sources": [
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 18,
+          "text": [
+            "fraktsiooniga 0-32 mm, 90 MPa. Betoon tugevusklassiga C30/37, keskkonnaklassiga XC4+XF3."
+          ]
+        },
+        {
+          "kind": "project",
+          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "pdfPage": 18,
+          "text": [
+            "Sillutisriba armeerida 6 mm diameetriga armatuurvõrguga, silmaga 150 mm, B500. Sillutisribale"
+          ]
+        }
+      ],
+      "statedCode": "C30/37 / XC4+XF3 / B500",
+      "statedThicknessMM": null,
+      "statedDimensions": "Ширина600 мм; ухил≥2%; щебінь200 мм0–32; сіткаØ6@150×150 мм",
+      "sourceAuthority": "Клас і вузол задані;100 мм товщина моделі — кандидат",
+      "appearance": {
+        "authority": "цифровий кандидат; не обмір поставленого матеріалу",
+        "description": "Показова бетонна поверхня; не скан фактичної суміші",
+        "calibrated": false,
+        "deliveredBatch": null
+      },
+      "orderedProduct": null,
+      "missingOrderedProduct": "Товщина, рівні, положення арматури й контакт з фундаментом",
+      "fabricationApproved": false
+    }
+  ],
+  "referenceReview": {
+    "actualCorrect": [
+      "PVC frameExterior має сім’юPVC; зовнішній темно-сірий не стає RR23",
+      "galvanized лишається оцинкованим металом",
+      "windboard має9 мм без бренду GTS",
+      "timber strengthGrade=null",
+      "балконний paintedMetal/materialId має S355JR/C3, не PURAL"
+    ],
+    "corrections": [
+      "EPS120 Perimeeter в identity слід явно назвати прикладом",
+      "entrance_frame слід назвати утепленим алюмінієм RR23 за VU01",
+      "Пріоритет явної materialFamily над загальним name=board: синтетичний cement_particleboard інакше стає Patina8; поточне ім’я балконної плити цю колізію не запускає"
+    ],
+    "unknown": [
+      "Специфікація конкретного замовленого продукту й партії",
+      "Калібровані оптичні параметри й натурний колір",
+      "Погодження парного вузла дошка100/стрічка100"
+    ]
+  }
+}

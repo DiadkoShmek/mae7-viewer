@@ -1,0 +1,80 @@
+[
+  {
+    "asset": "Grass005",
+    "file": "Grass005_1K-JPG_Color.jpg",
+    "bytes": 1875015,
+    "sha256": "5fd8edc1a04e2b9b093229dd0ec41f29668dda9fc698f6610b12cdd83b7690cb",
+    "source": "https://ambientcg.com/view?id=Grass005",
+    "license": "CC0-1.0",
+    "appearanceAuthority": "generic landscape material reference, not photographed or surveyed at Mae7",
+    "servedFile": "Grass005_1K-JPG_Color.webp",
+    "servedBytes": 442398,
+    "servedSHA256": "cc85bcd3ab2e6f51a283ae7d6db000978450a36ff62f25a83052c235f8062e92",
+    "processing": "1024px WebP quality90; generic appearance maps, not measured properties"
+  },
+  {
+    "asset": "Grass005",
+    "file": "Grass005_1K-JPG_NormalGL.jpg",
+    "bytes": 2137845,
+    "sha256": "f89e3a1701511d379a9772774ec6b9d7b7ccf3e944fdcc2b98c09dee4cfd804f",
+    "source": "https://ambientcg.com/view?id=Grass005",
+    "license": "CC0-1.0",
+    "appearanceAuthority": "generic landscape material reference, not photographed or surveyed at Mae7",
+    "servedFile": "Grass005_1K-JPG_NormalGL.webp",
+    "servedBytes": 456782,
+    "servedSHA256": "2e8c05665d0a35ca4dbd29555e4e82a35fef39d62611c116133bb8907f5db31e",
+    "processing": "1024px WebP quality90; generic appearance maps, not measured properties"
+  },
+  {
+    "asset": "Grass005",
+    "file": "Grass005_1K-JPG_Roughness.jpg",
+    "bytes": 851896,
+    "sha256": "04ca3a66eee6105cac9754ac773ffd4ee63ca2222984554c4c04b0cdca80da26",
+    "source": "https://ambientcg.com/view?id=Grass005",
+    "license": "CC0-1.0",
+    "appearanceAuthority": "generic landscape material reference, not photographed or surveyed at Mae7",
+    "servedFile": "Grass005_1K-JPG_Roughness.webp",
+    "servedBytes": 468700,
+    "servedSHA256": "f2ec7388822b373bc502093c2ca8be217248ace8adf3f39aed5e517c3c6c3f1e",
+    "processing": "1024px WebP quality90; generic appearance maps, not measured properties"
+  },
+  {
+    "asset": "Asphalt012",
+    "file": "Asphalt012_1K-JPG_Color.jpg",
+    "bytes": 1009615,
+    "sha256": "c7a142a1c12f517024d1b4c92472c700af86cfe3bfc12263c4260e414d4c2c59",
+    "source": "https://ambientcg.com/view?id=Asphalt012",
+    "license": "CC0-1.0",
+    "appearanceAuthority": "generic landscape material reference, not photographed or surveyed at Mae7",
+    "servedFile": "Asphalt012_1K-JPG_Color.webp",
+    "servedBytes": 332234,
+    "servedSHA256": "e9af27d4d58fc6bcd3e326b4fc43cf27b25d0fa925e06054990cdb7c390b3006",
+    "processing": "1024px WebP quality90; generic appearance maps, not measured properties"
+  },
+  {
+    "asset": "Asphalt012",
+    "file": "Asphalt012_1K-JPG_NormalGL.jpg",
+    "bytes": 2149012,
+    "sha256": "4e1d22a2216769d575d3481c548555ab955f7e6d7cb06f0c5eda99835612deb1",
+    "source": "https://ambientcg.com/view?id=Asphalt012",
+    "license": "CC0-1.0",
+    "appearanceAuthority": "generic landscape material reference, not photographed or surveyed at Mae7",
+    "servedFile": "Asphalt012_1K-JPG_NormalGL.webp",
+    "servedBytes": 480680,
+    "servedSHA256": "02a342634c59c6dbaa9af58d27c1868f8fa1a4b664051846c9c05bdae3dc6ecf",
+    "processing": "1024px WebP quality90; generic appearance maps, not measured properties"
+  },
+  {
+    "asset": "Asphalt012",
+    "file": "Asphalt012_1K-JPG_Roughness.jpg",
+    "bytes": 744991,
+    "sha256": "0f3bdc4408c43fb8cfbef8089ea6aa9dbfbd104fcfc0ea7a63200fed79cb395c",
+    "source": "https://ambientcg.com/view?id=Asphalt012",
+    "license": "CC0-1.0",
+    "appearanceAuthority": "generic landscape material reference, not photographed or surveyed at Mae7",
+    "servedFile": "Asphalt012_1K-JPG_Roughness.webp",
+    "servedBytes": 347542,
+    "servedSHA256": "7fdc648c0bc7fd13ba0266a306100aec06c6ff79fa5d4d07e993d37b46924fe9",
+    "processing": "1024px WebP quality90; generic appearance maps, not measured properties"
+  }
+]

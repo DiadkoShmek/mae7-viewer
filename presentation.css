@@ -1,0 +1,55 @@
+#presentation-toggle,#gesture-mode{min-height:44px}
+.selection-card{display:none}
+#engineering-drawer>summary[hidden]{display:none!important}
+.dimension-overlay{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+.app:is([data-entrance-focus="true"],[data-balcony-focus="true"]) .layer-workspace{display:block}
+.app:is([data-entrance-focus="true"],[data-balcony-focus="true"]) .layer-list,.app:is([data-entrance-focus="true"],[data-balcony-focus="true"]) #focus-component{display:none!important}
+.app:is([data-entrance-focus="true"],[data-balcony-focus="true"]) #dimensions{display:none}
+body.presentation{overflow:hidden}
+body.presentation .app{position:fixed;inset:0;min-height:0;height:100vh;height:100dvh;background:var(--panel)}
+body.presentation .header{height:56px;min-height:56px;padding:0 20px;flex:none;background:var(--panel)}
+body.presentation .identity{gap:9px}.presentation .identity b{font-size:18px}.presentation .identity>svg{width:22px;height:25px}
+body.presentation .subbrand,body.presentation .demo-badge,body.presentation #open-engineering{display:none}
+body.presentation .header-actions{gap:0}.presentation #presentation-toggle{font-size:12px;min-width:110px;padding:8px 12px}
+body.presentation .app main{padding:12px 12px 0;gap:12px;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;flex:1;height:auto;min-height:0}
+body.presentation .stage{height:auto;min-height:0;max-height:none}
+body.presentation .control-panel{display:block;border:0;border-radius:0;background:var(--panel);padding:9px 20px;overflow:visible}
+body.presentation .control-panel>:not(.mode-tabs){display:none!important}
+body.presentation .mode-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;max-width:620px;margin:auto;width:100%;padding:4px;border-radius:14px;background:var(--soft)}
+body.presentation .mode-tabs button{min-height:44px;padding:10px 6px;font-size:14px;line-height:1.2;border:0;color:var(--muted);background:transparent;border-radius:10px}
+body.presentation .mode-tabs button[aria-pressed=true]{background:var(--accent);color:var(--panel);box-shadow:0 2px 4px #253b3312}
+body.presentation .stage-title,body.presentation .model-tag,body.presentation .gesture-hint,body.presentation .layer-pin,body.presentation #engineering-drawer,body.presentation .app footer{display:none!important}
+body.presentation .view-tools{top:14px;right:14px;gap:4px}
+body.presentation .icon-button{width:44px;height:44px}.presentation .icon-button svg{width:19px;height:19px}
+body.presentation .stage-bottom{left:18px;right:18px;bottom:18px}
+body.presentation .dimension-button{min-height:44px;padding:10px 14px;font-size:13px}
+body.presentation .dimension-label{font-size:14px;padding:5px 8px}
+body.presentation .selection-card:not([hidden]){display:block;position:absolute;top:76px;left:14px;width:min(310px,calc(100% - 28px));padding:12px 14px;border:1px solid var(--overlay-line);border-radius:14px;background:var(--overlay);color:var(--ink);z-index:5;box-shadow:var(--shadow);pointer-events:auto}
+body.presentation .selection-card h3{margin:0;font-size:14px;font-weight:650;line-height:1.35}
+body.presentation .selection-card p{margin:6px 0 10px;font-size:11px;line-height:1.5;max-height:4.5em;overflow:auto}
+body.presentation .selection-card .selection-actions{gap:5px}.presentation .selection-card .selection-actions button{font-size:11px;min-height:44px;padding:8px 10px;flex:1}
+body.presentation .app:not([data-mode="building"]) .control-panel>.layer-workspace,
+body.presentation .app:is([data-entrance-focus="true"],[data-balcony-focus="true"]) .control-panel>.layer-workspace{display:block!important;position:fixed;left:18px;bottom:86px;width:min(310px,calc(100% - 110px));padding:10px 14px 4px;border:1px solid var(--overlay-line);border-radius:14px;background:var(--overlay);z-index:5;box-shadow:var(--shadow)}
+body.presentation .control-panel .layer-workspace .layer-list{display:none!important}
+body.presentation .slider-heading{font-size:12px;margin-bottom:0}.presentation .slider-heading output{font-size:12px}
+body.presentation #explode{height:44px;min-height:44px;margin:0}
+body.presentation button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:600px){
+ body.presentation .header{padding:0 16px;height:56px;min-height:56px}
+ body.presentation .app main{padding:8px 8px 0;gap:6px}.presentation .identity b{font-size:16px}.presentation #presentation-toggle{font-size:11px;min-width:94px;min-height:44px}
+ body.presentation .control-panel{padding:7px 10px}.presentation .mode-tabs button{font-size:13px;padding:9px 3px;min-height:44px}.presentation .mode-tabs{gap:3px}
+ body.presentation .view-tools{top:12px;right:9px;gap:3px}.presentation .dimension-button{font-size:11px;padding:10px 12px}.presentation .stage-bottom{right:14px;bottom:14px}
+ body.presentation .selection-card:not([hidden]){left:12px;top:76px;padding:10px 12px;width:min(260px,calc(100% - 24px))}.presentation .selection-card h3{font-size:13px}.presentation .selection-card p{font-size:12px}
+ body.presentation .app:not([data-mode="building"]) .control-panel>.layer-workspace,
+ body.presentation .app:is([data-entrance-focus="true"],[data-balcony-focus="true"]) .control-panel>.layer-workspace{left:12px;bottom:130px;width:min(290px,calc(100% - 24px))}
+ body.presentation .dimension-label{font-size:11px;line-height:1.35;padding:4px 6px}
+ body.presentation .app[data-dimensions=true] .view-tools{top:12px;left:12px;right:12px;flex-direction:row;justify-content:space-between;padding:3px;border-radius:25px}
+ body.presentation .app[data-dimensions=true] .view-tools .icon-button{width:40px;height:40px}
+ body.presentation .app[data-dimensions=true] .selection-card{top:70px}
+}
+
+body.presentation .app[data-dimensions=true] .control-panel>#dimension-review:not([hidden]){display:block!important;max-width:620px;margin:8px auto 0;max-height:32dvh;overflow:auto;padding:8px 10px}
+body.presentation .app[data-dimensions=true] .control-panel{max-height:44dvh;overflow:auto}
+body.presentation #dimension-review #dimension-values{max-height:18dvh}
+body.presentation .app[data-dimensions=true] .stage-bottom{bottom:12px}
+body.presentation .view-tools{position:absolute;top:10px!important;left:10px!important;right:10px!important;flex-direction:row!important;justify-content:space-between;padding:4px!important;max-width:420px;margin-left:auto}body.presentation .view-tools .icon-button{width:44px!important;height:44px!important}

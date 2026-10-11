@@ -1,0 +1,74 @@
+{
+  "partId": "ADDRESS-MAE7",
+  "facade": "SW",
+  "referenceWindowId": "SW-A02-1",
+  "width": 0.8037547240740651,
+  "height": 0.20093868101851628,
+  "depth": 0.012,
+  "x": -4.7437181369232215,
+  "y": 1.8985529919918738,
+  "z": 0.041,
+  "facadeOuter": 0.029,
+  "gap": 0.006,
+  "wallStrip": [
+    -5.649,
+    0.42599999999999993
+  ],
+  "approved": false,
+  "surveyVerified": false,
+  "quantityEligible": false,
+  "source": "§5.5.1; Ark06/PDF54 SW end wall; ECE09/ECE10 appearance candidate",
+  "sourcePlacement": {
+    "pdfSHA256": "fc22c9eb0964b52800a5d926fa2574b3f95654f64d1a3f17f21a0afaddd15f99",
+    "pageIndex": 53,
+    "sheet": "06",
+    "facade": "SW",
+    "facadeDrawing": {
+      "index": 564,
+      "rect": [
+        125.33999633789062,
+        102.6199951171875,
+        462.47998046875,
+        409.58001708984375
+      ]
+    },
+    "plaqueDrawing": {
+      "index": 4309,
+      "rect": [
+        425.3999938964844,
+        351.6800231933594,
+        448.1999816894531,
+        359.8399963378906
+      ]
+    },
+    "windowDrawing": {
+      "index": 3221,
+      "rect": [
+        315.8999938964844,
+        328.94000244140625,
+        358.44000244140625,
+        370.760009765625
+      ]
+    },
+    "writtenEndWidthMM": 11885,
+    "modelEndWidthMM": 11885,
+    "requirement": "§5.5.1: address sign at the right corner of the end wall; Ark06 locates it on SW"
+  },
+  "coordinateBasis": {
+    "horizontal": "Ark06 written11885mm full end wall; mirrored to native SW frame; SE entrance corner",
+    "vertical": "Drawing centre offset anchored to current lower A02 window",
+    "graphicAspectRatio": 4
+  },
+  "unknown": {
+    "endWidthConflict": "Ark06 labels11885mm; Ark02 labels11890mm. Five millimetre source difference and site registration remain open.",
+    "installationHeight": "Graphic offset from nominal A02; not a dimensioned mounting level",
+    "productSize": "Graphical width and photo4:1 ratio, not an ordered sign",
+    "fixings": "Depth12mm/gap6mm and fasteners not approved",
+    "appearance": "Font/colour reconstructed from existing photos, not a specified product"
+  },
+  "portableTexture": {
+    "path": "assets/mae7-address.png",
+    "sha256": "da1ed628172373c0fda5bd694046707934a60dd16817f2f5eba26aa1f8e748f8"
+  },
+  "text": "Mäe 7"
+}

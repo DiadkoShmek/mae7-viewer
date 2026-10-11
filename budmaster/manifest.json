@@ -1,0 +1,220 @@
+{
+  "schema": "mae7-budmaster-handoff-v21",
+  "approved": false,
+  "readyToCut": false,
+  "sourceArchiveSHA256": "f659dcff1812b01c54827e67d26e685dcbdab81d86afc90a746c8deb8aed3c86",
+  "files": [
+    {
+      "path": "START.md",
+      "title": "Почати тут · уточнення й завдання",
+      "bytes": 5771,
+      "sha256": "3e2ea396634ffcc3191e8d99822e79a20c76e233e46aa7de9988f66106044f86"
+    },
+    {
+      "path": "original-project-v04.pdf",
+      "title": "Оригінальний проєкт · PDF",
+      "bytes": 5781227,
+      "sha256": "fc22c9eb0964b52800a5d926fa2574b3f95654f64d1a3f17f21a0afaddd15f99"
+    },
+    {
+      "path": "original-project-v04.dwg",
+      "title": "Оригінальні креслення · DWG",
+      "bytes": 955439,
+      "sha256": "ed78adabbf887a2cdacb3bcc74f8a79759d35a146e7f478521d43f31a8da7226"
+    },
+    {
+      "path": "original-quantities-v02.xls",
+      "title": "Проєктні обсяги · XLS",
+      "bytes": 107520,
+      "sha256": "f43bc54cb78de1a87b3911cd5481e501390b2ab7bd07848f372b97d015e3a7ce"
+    },
+    {
+      "path": "swisspearl-patina-wood-dim.pdf",
+      "title": "Swisspearl Patina · інструкція",
+      "bytes": 4466220,
+      "sha256": "fbf732904c59982208a0c5ec16783c1a630e895613df4db37ddbffdef6b9efae"
+    },
+    {
+      "path": "facade-layout-v21.pdf",
+      "title": "Наша розкладка · PDF V21",
+      "bytes": 149652,
+      "sha256": "df924aac5964f6fb392e6dfd0b6ffe4ad7101dcc84e0eb7dd1d3a5bd7e4d61cc"
+    },
+    {
+      "path": "facade-layout-v21.json",
+      "title": "Наша розкладка й розкрій · JSON V21",
+      "bytes": 4909491,
+      "sha256": "71ec19c25a0ad498f049c25e979a85dd93fdf94132b60c50de976550c0f9b362"
+    },
+    {
+      "path": "windows.json",
+      "title": "Віконні блоки та джерела розмірів",
+      "bytes": 306497,
+      "sha256": "74e44ffeea60c7464576aa2ad34531657b72bb60288b47a594f71d4719044679"
+    },
+    {
+      "path": "cembrit-reveals-candidate.json",
+      "title": "Відкоси Cembrit · кандидат",
+      "bytes": 18777,
+      "sha256": "b94b55be0f2cf8744ea28b56615d621e08a0da4633e237854fe43709d3276c39"
+    },
+    {
+      "path": "operations.json",
+      "title": "Операції та проєктні обсяги",
+      "bytes": 20992,
+      "sha256": "e1389dda089634e64afecc5f1684c5567bd67077cdc9481e8da8499843a361fd"
+    },
+    {
+      "path": "questions.json",
+      "title": "Невирішені вузли й питання",
+      "bytes": 18126,
+      "sha256": "ba2960b1d41f5426b47d0c4154f049fca36705bc446599123794c956e83db26b"
+    },
+    {
+      "path": "vertical-section.svg",
+      "title": "Контрольний розріз",
+      "bytes": 7354,
+      "sha256": "06157d7825fbfc69c9a24c5e405c3d7780a7343518d314efebd387bdbb475422"
+    },
+    {
+      "path": "roof-model-candidate.json",
+      "title": "Дах · деталі й шари макета",
+      "bytes": 4114025,
+      "sha256": "3c59130a30535cc4210811469f209c4370dcc674dcaf49706c6e722dc8e5b073"
+    },
+    {
+      "path": "plinth-model-candidate.json",
+      "title": "Цоколь · деталі й шари макета",
+      "bytes": 1167368,
+      "sha256": "dac2f098b967d61f82ab31a1cd1db492ae77e02916e1065bfe4a76743bf1180a"
+    },
+    {
+      "path": "entrance-model-candidate.json",
+      "title": "Входи й навіси · макет",
+      "bytes": 256180,
+      "sha256": "4893a24c4def1999af8414429262c5055ea15e89e9cb961baa46c6fbaf86d6b4"
+    },
+    {
+      "path": "model-northwest-v21.png",
+      "title": "Поточна модель · фасад із балконами",
+      "bytes": 2456057,
+      "sha256": "9360f278cceee511083842e95505280bd1d0bd35e51cc3283d8bbdf54d89a925"
+    },
+    {
+      "path": "model-detail-v21.png",
+      "title": "Поточна модель · деталі зблизька",
+      "bytes": 3259665,
+      "sha256": "797caafd4eed3f13ee42ea0b9dfdaa6aa080caaa8ab69a39a89156666c502f82"
+    },
+    {
+      "path": "original-artur-brief.md",
+      "title": "Початкове ТЗ Артура · уточнення у START.md",
+      "bytes": 18711,
+      "sha256": "bdf9d4da186f4cdb973d53312b3d0c8f636c6cec0a89c91d4f2679c379c2ad3b"
+    }
+  ],
+  "originalSourceFiles": [
+    {
+      "path": "source/00.pdf",
+      "title": "03 Energiaarvutused/PDF/20260212_M2e_7_Alu_Energiaarvutused_Lähteandmed.pdf",
+      "bytes": 51423,
+      "sha256": "10470229ef28a4eedc717ea7da3c5f927c1d56f96a0bf1e1714435ce1ee7cd93"
+    },
+    {
+      "path": "source/01.pdf",
+      "title": "03 Energiaarvutused/PDF/20260212_M2e_7_Alu_Energiaarvutused_Arvutustulemused.pdf",
+      "bytes": 1812504,
+      "sha256": "d2bd3e408c5ad9e378d2f415d5f81b15ebd9e88ef9a973cc62fd5d18bdf04efd"
+    },
+    {
+      "path": "source/02.asice",
+      "title": "03 Energiaarvutused/DIGIDOC/Energiaarvutusel_põhinev_energiamärgis_2611583_00717.asice",
+      "bytes": 201638,
+      "sha256": "f9cff8c55ad17b2a6d3b3de09a590789717ec4e0f5423b4e54e8768a34052062"
+    },
+    {
+      "path": "source/03.zip",
+      "title": "02 Tehnosüsteemid/EL/2023-005_PP_EL_v02.zip",
+      "bytes": 8745478,
+      "sha256": "7b649057426ef6fcdf9255f6f66bcd3f422ab7e3734d0b55665bb636f331d809"
+    },
+    {
+      "path": "source/04.asice",
+      "title": "02 Tehnosüsteemid/KVVK/22074_PP_KV+VK-Mae7.asice",
+      "bytes": 5899680,
+      "sha256": "7a502368ea505648a6b07843f3e8b93b95916aadbca8d32eded28857948cb986"
+    },
+    {
+      "path": "source/05.asice",
+      "title": "02 Tehnosüsteemid/KVVK/2682802_Vent-TO-EkspertArvamus_Mae7_AluAlevik_RaplaVald_2026-03-04.asice",
+      "bytes": 3243145,
+      "sha256": "6122ebd8f22196d1a1c347b1e874100a913c2ab06962f2a93bdaa70cf6c705cc"
+    },
+    {
+      "path": "source/06.dwg",
+      "title": "02 Tehnosüsteemid/PEJ/Mäe7PEJ.dwg",
+      "bytes": 10427124,
+      "sha256": "50592d17b30a1b72da44a1043a1cd2aa8194e927db445d0079f394637fd55ed7"
+    },
+    {
+      "path": "source/07.asice",
+      "title": "02 Tehnosüsteemid/PEJ/230117_PP_Mäe7PEJ-2023-01-14.asice",
+      "bytes": 9064499,
+      "sha256": "e36ca24be353ca40e7d1880c4ad97d76415d8cb967270252a98bf460812fcf69"
+    },
+    {
+      "path": "source/08.asice",
+      "title": "01 Arhitektuur/GEO/6776-22-2 Mäe tn 7, Alu alevik, Rapla vald, Rapla maakond.asice",
+      "bytes": 4824822,
+      "sha256": "e16640668054449a560804f899e15c47ad6c8f78a85ad3faa0230c0566356bae"
+    },
+    {
+      "path": "source/09.dwg",
+      "title": "01 Arhitektuur/DWG/Mäe 7, Alu PP - DWG.dwg",
+      "bytes": 955439,
+      "sha256": "ed78adabbf887a2cdacb3bcc74f8a79759d35a146e7f478521d43f31a8da7226"
+    },
+    {
+      "path": "source/10.pdf",
+      "title": "01 Arhitektuur/PDF/P8822_PP_AA-0-01_v04_Mae7.pdf",
+      "bytes": 5781227,
+      "sha256": "fc22c9eb0964b52800a5d926fa2574b3f95654f64d1a3f17f21a0afaddd15f99"
+    },
+    {
+      "path": "source/11.asice",
+      "title": "01 Arhitektuur/DIGIDOC/P8822_PP_AA-0-01_v04_Mae7.asice",
+      "bytes": 5093500,
+      "sha256": "0b3bb25cace5b274d6ea9afaa664626fe34c035717883f629b4d662332e84a6e"
+    },
+    {
+      "path": "source/12.asice",
+      "title": "01 Arhitektuur/DIGIDOC/Ehitusteatis_2611201_02906.asice",
+      "bytes": 111202,
+      "sha256": "375c64e1a881b869b2ecd8a91b2a002c7ab0e840ef93585fd84cffd175f7f07d"
+    },
+    {
+      "path": "source/13.xls",
+      "title": "01 Arhitektuur/Mäe 7, Alu - mahutabel - v02.xls",
+      "bytes": 107520,
+      "sha256": "f43bc54cb78de1a87b3911cd5481e501390b2ab7bd07848f372b97d015e3a7ce"
+    }
+  ],
+  "summary": {
+    "parts": 1013,
+    "finishedArea": 769.080173167284,
+    "blankArea": 771.890637,
+    "profileRemovalArea": 2.810463832715982,
+    "separateSheets": 582,
+    "combinedCandidateSheets": 567,
+    "selectedSheets": 567,
+    "sheetsSaved": 15,
+    "rejected": 0,
+    "geometricConflictParts": 0,
+    "profileReviewParts": 44,
+    "rectangularCuts": 1241,
+    "profileMarkingLines": 28,
+    "utilization": 0.9136638578175491,
+    "unallocatedArea": 72.939363
+  },
+  "nativeModel": "../index.html; native authoring files retained locally, not in phone ZIP"
+}
