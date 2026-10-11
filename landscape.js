@@ -5,6 +5,7 @@ import {createTerrainRelief,terrainGeometry} from './terrain-relief.js';
 import {rainwaterChannelPlan} from './ground-junctions.js';
 import {planRainwaterDetails} from './rainwater-details.js';
 import {plinthSpec} from './plinth-plan.js';
+import {daylightSkySpec} from './daylight-sky.js';
 
 // PDF49/арк01 + §3.4–3.5: retained greenery, restored entrance asphalt.
 // §5.2: 600mm concrete perimeter apron, authored separately in the native model.
@@ -30,7 +31,7 @@ export function setupLandscape(scene,{footprint,groundY,apronWidth=.6,apronCentr
  // an illustrative surface treatment, never a vegetation or moisture survey.
  // Fade the distant turf into the native presentation ground, including its
  // normal detail, so the yard does not end as a hard green island.
- const horizonColour=new THREE.Color('#e8e5df');
+ const horizonColour=new THREE.Color(daylightSkySpec.horizon);
  grass.onBeforeCompile=shader=>{
   shader.uniforms.terrainHorizonColour={value:horizonColour};
   shader.vertexShader='attribute float terrainFade; varying float vTerrainFade;\n'+shader.vertexShader;
@@ -39,14 +40,14 @@ export function setupLandscape(scene,{footprint,groundY,apronWidth=.6,apronCentr
   shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>','#include <color_fragment>\ndiffuseColor.rgb = mix(diffuseColor.rgb, terrainHorizonColour, vTerrainFade);');
   shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_maps>','#include <normal_fragment_maps>\nnormal = normalize(mix(normal, nonPerturbedNormal, vTerrainFade));');
  };
- grass.customProgramCacheKey=()=> 'mae7-lawn-relief-horizon-v38';
+ grass.customProgramCacheKey=()=> 'mae7-lawn-relief-horizon-v73';
  // Low contrast, mipmapped albedo variation; no extra blades/draw calls.
  const pixels=new Uint8Array(64*64*4);let seed=713;
  for(let i=0;i<pixels.length;i+=4){seed=(Math.imul(seed,1664525)+1013904223)>>>0;const c=238+(seed>>>28);pixels[i]=c;pixels[i+1]=c;pixels[i+2]=c;pixels[i+3]=255;}
  const texture=new THREE.DataTexture(pixels,64,64,THREE.RGBAFormat);texture.colorSpace=THREE.SRGBColorSpace;texture.wrapS=texture.wrapT=THREE.RepeatWrapping;texture.repeat.set(1/2.5,1/2.5);texture.generateMipmaps=true;texture.minFilter=THREE.LinearMipmapLinearFilter;texture.magFilter=THREE.LinearFilter;texture.needsUpdate=true;textures.push(texture);grass.map=texture;
  // Only the existing building core removes turf. The wider protection
  // rectangle flattens relief; it must not cut a hole between concrete pads.
- const lawnGeometry=terrainGeometry(THREE,{halfX:plinthSpec.existingHalfLength,halfZ:plinthSpec.existingHalfDepth,xBreaks:[-halfX,halfX],zBreaks:[apronCentreZ-halfZ,apronCentreZ+halfZ],height:relief.height});
+ const lawnGeometry=terrainGeometry(THREE,{halfX:plinthSpec.existingHalfLength,halfZ:plinthSpec.existingHalfDepth,xBreaks:[-halfX,halfX],zBreaks:[apronCentreZ-halfZ,apronCentreZ+halfZ],height:relief.height,extent:daylightSkySpec.terrainExtent,farStep:32});
  const positions=lawnGeometry.attributes.position,colours=[],fade=[];
  const smooth=t=>{t=Math.max(0,Math.min(1,t));return t*t*(3-2*t);};
  for(let i=0;i<positions.count;i++){

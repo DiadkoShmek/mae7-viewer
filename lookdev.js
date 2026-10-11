@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import {HDRLoader} from './assets/HDRLoader.js';
 import {requestAsset} from './asset-request.js';
 import {configureGlassPresentation} from './glass-presentation.js';
+import {daylightSkySpec,daylightSkyPixels} from './daylight-sky.js';
 
 let daylightSource;
 export function preloadDaylight(){
@@ -17,16 +18,23 @@ export function preloadDaylight(){
 
 // Presentation lighting, not the surveyed surroundings or solar orientation.
 // The CC0 HDR is used for illumination/reflections, never as site geometry.
+function skyTexture(useFloat=true){
+ const {width,height}=daylightSkySpec,encoded=daylightSkyPixels(width,height),data=new Uint16Array(encoded.length);
+ for(let i=0;i<encoded.length;i++){const s=encoded[i]/255;data[i]=THREE.DataUtils.toHalfFloat(i%4===3?1:s<=.04045?s/12.92:Math.pow((s+.055)/1.055,2.4));}
+ // Three converts equirectangular backgrounds through a cube render target.
+ // A float-limited device therefore needs a byte sky too, not just no FXAA.
+ const pixels=useFloat?data:Uint8Array.from(data,n=>Math.round(THREE.DataUtils.fromHalfFloat(n)*255));
+ const background=new THREE.DataTexture(pixels,width,height,THREE.RGBAFormat,useFloat?THREE.HalfFloatType:THREE.UnsignedByteType);
+ background.name='Stroika illustrative daylight';
+ background.colorSpace=THREE.LinearSRGBColorSpace;background.mapping=THREE.EquirectangularReflectionMapping;
+ background.magFilter=THREE.LinearFilter;background.minFilter=THREE.LinearFilter;background.needsUpdate=true;
+ return background;
+}
 export function setupLookdev(scene){
  // A restrained outdoor sky, not a photograph of the surveyed surroundings.
- const width=256,height=128,data=new Uint8Array(width*height*4);
- for(let y=0;y<height;y++)for(let x=0;x<width;x++){
-  const v=y/(height-1),sky=Math.max(0,Math.min(1,(v-.40)/.48)),cloud=Math.max(0,Math.sin(x*.047+Math.sin(y*.14))*Math.cos(y*.091+x*.021)-.42)*.30;
-  const horizon=[207,215,207],zenith=[126,157,179],i=(y*width+x)*4;
-  for(let c=0;c<3;c++)data[i+c]=Math.round(horizon[c]*(1-sky)+zenith[c]*sky+cloud*30);data[i+3]=255;
- }
- const background=new THREE.DataTexture(data,width,height,THREE.RGBAFormat);background.colorSpace=THREE.SRGBColorSpace;background.mapping=THREE.UVMapping;background.magFilter=THREE.LinearFilter;background.minFilter=THREE.LinearFilter;background.needsUpdate=true;
- scene.background=background;scene.fog=new THREE.Fog('#cfd7cf',140,320);
+ const background=skyTexture();
+ scene.background=background;scene.fog=new THREE.Fog(daylightSkySpec.horizon,daylightSkySpec.fogNear,daylightSkySpec.fogFar);
+ scene.userData.presentationSky={...daylightSkySpec,worldSpace:true,source:'Authored illustrative daylight; not site photography'};
  // Neutral sky bounce keeps the shaded end readable without recolouring FC.
  const ambient=new THREE.HemisphereLight('#eef2f3','#aeb8b2',.55);
  ambient.name='Lookdev · outdoor bounce';scene.add(ambient);
@@ -48,6 +56,11 @@ export function setupLookdev(scene){
 }
 
 export function configureRendererBase(renderer,scene){
+ const useFloat=renderer.extensions.has('EXT_color_buffer_float');
+ if(scene.background?.name==='Stroika illustrative daylight'&&scene.background.type!==(useFloat?THREE.HalfFloatType:THREE.UnsignedByteType)){
+  scene.background.dispose();scene.background=skyTexture(useFloat);
+ }
+ scene.userData.presentationSky={...scene.userData.presentationSky,buffer:useFloat?'half-float':'linear-byte-capability-limit'};
  configureGlassPresentation(scene);
  // Bound future transmissive surfaces and reapply after context restoration.
  renderer.transmissionResolutionScale=.5;
@@ -71,6 +84,10 @@ export function configureRendererBase(renderer,scene){
 
 export async function configureRenderer(renderer,scene,{isCurrent=()=>true}={}){
  configureRendererBase(renderer,scene);
+ if(!renderer.extensions.has('EXT_color_buffer_float')){
+  scene.environment=null;scene.userData.lookdev={...scene.userData.lookdev,environment:'neutral daylight: float render targets unavailable'};
+  return {mode:'daylight base · capability limit',dispose(){}};
+ }
  const source=await preloadDaylight();if(!isCurrent())return null;
  // Keep the decoded CPU source. A PMREM render target has no pixel source
  // to re-upload after context loss, so it must be generated again.

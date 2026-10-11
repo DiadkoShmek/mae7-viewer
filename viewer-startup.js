@@ -14,6 +14,28 @@ export function createViewerContext(createCanvas,{preferAntialias=false}={}){
  const error=Error('WebGL2 unavailable');error.code='WEBGL2_UNAVAILABLE';error.attempts=failures;throw error;
 }
 
+// Reserve one tiny context before importing/downloading the native scene.
+// The renderer takes this same context after CPU assembly; no second probe
+// or large GPU buffer lives alongside the model download.
+let preparedContext=null;
+export function prepareViewerContext(createCanvas){
+ if(!preparedContext)preparedContext=createViewerContext(createCanvas);
+ return preparedContext;
+}
+export function releasePreparedContext(){
+ const prepared=preparedContext;preparedContext=null;
+ try{prepared?.context.getExtension('WEBGL_lose_context')?.loseContext();}catch{}
+}
+export function takeViewerContext(createCanvas){
+ const prepared=preparedContext;preparedContext=null;
+ if(prepared&&!prepared.context.isContextLost())return prepared;
+ return createViewerContext(createCanvas);
+}
+export async function launchViewer({createCanvas,load}){
+ try{prepareViewerContext(createCanvas);return await load();}
+ catch(error){releasePreparedContext();throw error;}
+}
+
 export function startupFailure(error,phase){
  const code=error?.code==='WEBGL2_UNAVAILABLE'?'WEBGL2_UNAVAILABLE':phase==='module'?'MODULE_LOAD':phase==='asset'?'MODEL_LOAD':'RENDER_START';
  return {code,title:code==='WEBGL2_UNAVAILABLE'?'Браузер не запустив 3D':'Не вдалося відкрити 3D',

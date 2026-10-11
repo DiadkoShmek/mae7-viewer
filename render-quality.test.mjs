@@ -42,3 +42,12 @@ test('every resize intermediate stays bounded, including large-to-small density 
   assert.deepEqual([w,h],target);assert.equal(r,finalRatio);assert.ok(allocations>=1);
  }
 });
+
+test('HDR attachment budget constrains density without reducing phone refinement',()=>{
+ const cap=Math.floor(128*1024*1024/36);
+ assert.equal(renderPixelRatio(390,700,'still',cap),2);
+ assert.equal(renderPixelRatio(1214,704,'still',cap),2);
+ for(const [w,h] of sizes){const ratio=renderPixelRatio(w,h,'still',cap);assert.ok(w*h*ratio*ratio<=cap+.001);}
+ const fourOnly=Math.floor(128*1024*1024/60);
+ assert.ok(3840*2160*renderPixelRatio(3840,2160,'still',fourOnly)**2<=fourOnly+.001);
+});

@@ -3,7 +3,7 @@ import {addPanelScrews} from './panel-screws.js';
 import * as THREE from 'three';
 import {GLTFLoader} from './assets/GLTFLoader.js';
 import {loadNativeTransport} from './native-transport.js';
-import {requestAsset} from './asset-request.js';
+import {requestAsset,decodeAsset} from './asset-request.js';
 import {layoutFor} from './facade-layouts.js';
 import {gableLayout} from './gables.js';
 import {origin} from './model.js';
@@ -37,7 +37,10 @@ let physicalPlinthPlan;
 // produces a computational overlay; it does not redefine the native building.
 export async function loadNativeModel(scene,{assetVersion='',onProgress=()=>{}}={}){
  const suffix=assetVersion?'?v='+encodeURIComponent(assetVersion):'';
- const [gltf,bindingBytes]=await Promise.all([loadNativeTransport(new GLTFLoader(),{suffix,compressedBuffers:true,onProgress}),requestAsset('./assets/mae7-bindings.json'+suffix)]);
+ const bindings=requestAsset('./assets/mae7-bindings.json.gz'+suffix).then(decodeAsset).catch(error=>{
+  if(error.status!==404)throw error;return requestAsset('./assets/mae7-bindings.json'+suffix);
+ });
+ const [gltf,bindingBytes]=await Promise.all([loadNativeTransport(new GLTFLoader(),{suffix,compressedBuffers:true,onProgress}),bindings]);
  const nativeScene=gltf.scene;
  // Retain the authored scene, not GLTFParser and its decoded source caches.
  // Inspection closures otherwise keep every import buffer/JSON alive forever.
