@@ -1,8 +1,9 @@
 // Motion retains the repaired GPU budget. A single settled frame samples
 // fine roof ribs / facade joints more densely, without an extra render target.
 export const RENDER_PROFILES={
- motion:{pixels:2_097_152,dimension:2048,ratio:1.5},
- still:{pixels:4_194_304,dimension:2560,ratio:2}
+ motion:{pixels:1_048_576,dimension:1536,ratio:1.5},
+ still:{pixels:2_097_152,dimension:2048,ratio:2},
+ presentation:{pixels:1_048_576,dimension:1536,ratio:1.5}
 };
 export function renderPixelRatio(width,height,profile='motion'){
  const w=Math.max(1,width),h=Math.max(1,height);

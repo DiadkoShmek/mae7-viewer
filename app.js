@@ -457,8 +457,9 @@ const renderQuality=createRenderQuality({
 });
 function syncRenderQuality(){
  const w=Math.max(1,viewer.clientWidth),h=Math.max(1,viewer.clientHeight);
- const ratio=resizeRenderer(renderer,w,h,renderQuality.profile);
- app.dataset.renderScale=ratio.toFixed(2);app.dataset.renderQuality=renderQuality.profile;
+ const profile=document.body.classList.contains('presentation')?'presentation':renderQuality.profile;
+ const ratio=resizeRenderer(renderer,w,h,profile);
+ app.dataset.renderScale=ratio.toFixed(2);app.dataset.renderQuality=profile;
 }
 document.addEventListener('visibilitychange',()=>{if(document.hidden)renderQuality.suspend();else if(renderer)draw();});
 async function refreshLighting(isCurrent=()=>true){
@@ -571,7 +572,7 @@ try{
   // Allocate GPU resources only after native assembly, keeping downloads
   // and CPU model construction outside the context lifetime. On touch
   // devices the denser settled frame smooths edges without an MSAA buffer.
-  rendererStart=createViewerContext(()=>document.createElement('canvas'),{preferAntialias:!matchMedia('(pointer:coarse)').matches});app.dataset.contextAntialias=String(rendererStart.antialias);
+  rendererStart=createViewerContext(()=>document.createElement('canvas'));app.dataset.contextAntialias=String(rendererStart.antialias);
   // Closed 0.6mm sheet solids require precision at whole-building distances.
   // EXT_clip_control uses reversed depth without logarithmic fragment-depth
   // writes, which produced visible roof patterns in the projector view.

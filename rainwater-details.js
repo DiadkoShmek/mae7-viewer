@@ -91,7 +91,7 @@ function tube(THREE,p,radius,thickness){
  for(let i=0;i<indices.length;i+=3)[indices[i+1],indices[i+2]]=[indices[i+2],indices[i+1]];
  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));g.setIndex(indices);g.computeVertexNormals();return g;
 }
-function gutterGeometry(THREE,p,{radius=rainwaterSpec.gutterDiameter/2,outletRadius=rainwaterSpec.pipeDiameter/2}={}){
+export function gutterGeometry(THREE,p,{radius=p.radius??rainwaterSpec.gutterDiameter/2,outletRadius=rainwaterSpec.pipeDiameter/2}={}){
  const shape=new THREE.Shape(),left=-p.length/2,right=p.length/2;
  shape.moveTo(left,0);shape.lineTo(right,0);shape.lineTo(right,Math.PI);shape.lineTo(left,Math.PI);shape.closePath();
  // Circular outlet in world XZ, mapped into the curved gutter section.
@@ -107,7 +107,7 @@ function gutterGeometry(THREE,p,{radius=rainwaterSpec.gutterDiameter/2,outletRad
  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));g.computeVertexNormals();return g;
 }
 export function gutterEndCapGeometry(THREE,p,endSign){
- const r=rainwaterSpec.gutterDiameter/2,t=rainwaterSpec.steelThickness,shape=new THREE.Shape();
+ const r=p.radius??rainwaterSpec.gutterDiameter/2,t=rainwaterSpec.steelThickness,shape=new THREE.Shape();
  // Solid semicircular end plate and short return collar, in the bowl's YZ plane.
  shape.moveTo(-r,0);for(let i=1;i<=40;i++){const a=Math.PI*i/40;shape.lineTo(-r*Math.cos(a),-r*Math.sin(a));}shape.closePath();
  const g=new THREE.ExtrudeGeometry(shape,{depth:t,bevelEnabled:false,steps:1}),a=g.attributes.position;
@@ -123,11 +123,11 @@ export const gutterOutletReference=Object.freeze({
  scope:'Running-outlet form and lip retention reference only. Reference product is150/100; this150/90 model fit is a candidate, not the ordered product.',approved:false
 });
 export function planGutterOutlet(pipe,gutter){
- const r=rainwaterSpec.gutterDiameter/2,t=rainwaterSpec.steelThickness,pipeR=rainwaterSpec.pipeDiameter/2;
+ const r=gutter.radius??rainwaterSpec.gutterDiameter/2,t=rainwaterSpec.steelThickness,pipeR=rainwaterSpec.pipeDiameter/2;
  if(pipe.s!==gutter.s||!gutter.outlets.includes(pipe.outletX))throw Error('Running outlet must share the real gutter-hole axis');
  const inlet=pipe.parts.find(p=>p.role==='inlet');if(!inlet||Math.abs(inlet.points[0][0]-pipe.outletX)>1e-9||Math.abs(inlet.points[0][2]-gutter.z)>1e-9)throw Error('Inlet axis differs from gutter');
  return {id:pipe.id+'-GUTTER-OUTLET',x:pipe.outletX,y:gutter.y,z:gutter.z,s:pipe.s,
-  gutterRadius:r,sheetThickness:t,saddleWidth:.175,mouthRadius:.062,
+  gutterRadius:r,sheetThickness:t,saddleWidth:r*7/3,mouthRadius:Math.min(.062,r-.001),
   socketInnerRadius:pipeR+.0005,socketOuterRadius:pipeR+.0005+t,
   throatY:inlet.points[0][1]-.055,socketBottomY:inlet.points[0][1]-.080,
   pipeStart:inlet.points[0],pipeEnd:inlet.points[1],source:gutterOutletReference,approved:false};
