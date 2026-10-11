@@ -10,7 +10,7 @@ export function depthBufferOptions(reversedSupported){
 // supplies an exterior pose with120mm clearance. At FOV36 and current mobile
 // /desktop aspects,0.3 of radial clearance stays below axial frustum clearance.
 // Use for perspective only; leave the orthographic camera's linear depth alone.
-export function safePerspectiveNear(position,volumes,{min=.02,max=2,safety=.3}={}){
+export function safePerspectiveNear(position,volumes,{min=.02,max=20,safety=.3}={}){
  const vector=v=>Array.isArray(v)&&v.length===3&&v.every(Number.isFinite);
  if(!vector(position)||!Array.isArray(volumes))throw new TypeError('Finite camera position and guard volumes required');
  if(![min,max,safety].every(Number.isFinite)||min<=0||max<min||safety<=0||safety>.35)throw new RangeError('Invalid perspective depth limits');

@@ -6,6 +6,7 @@ import {setupLookdev,configureRenderer,configureRendererBase,preloadDaylight} fr
 import {bindContextRecovery} from './context-recovery.js';
 import {setupLandscape} from './landscape.js';
 import {renderPixelRatio,resizeRenderer,createRenderQuality} from './render-quality.js';
+import {createPresentationRenderer} from './presentation-renderer.js';
 import {mergeBalconyDisplay,mergeFixedBuildingDisplay,mergeStaticShellDisplay,mergeBalconyFloorDisplay} from './static-display.js';
 import {layers as facadeLayers,roofLayers,plinthLayers,layerZ,origin,geometry} from './model.js';
 import {loadNativeModel,nativePanelRecord,nativeLayerRecord,nativePanelBounds,nativeEntranceRecord,nativeBalconyRecord,nativeBalconyGuardRecord,nativeGlazingPartRecord,nativePlinthRecord,nativeRetainedReturnRecord,nativeRoofEdgeRecord,nativeRoofLathRecord,nativeOpeningRecord,nativeBalconyOpeningRecords} from './native-model.js';
@@ -26,7 +27,7 @@ import {balconyDoorNote} from './balcony-door-review.js';
 import {keyboardTranslation,acceptsCameraKeys} from './camera-keyboard.js';
 import {endWallFrame,endWallSpec} from './end-wall-plan.js';
 import {dimensionSchedule} from './dimension-schedule.js';
-import {createViewerContext,showStartupFailure} from './viewer-startup.js';
+import {takeViewerContext,showStartupFailure} from './viewer-startup.js';
 import {placeDimensionLabels,dimensionAnchorVisible,clippedDimensionSegment} from './dimension-label-layout.js';
 
 const $ = id => document.getElementById(id);
@@ -450,15 +451,26 @@ function protectCamera(){
  const near=safePerspectiveNear(safe,volumes);if(camera.near!==near){camera.near=near;camera.updateProjectionMatrix();}app.dataset.cameraNear=near.toFixed(5);
  if(app.dataset.cameraBlocked==='true'){guardingCamera=true;controls.update();guardingCamera=false;}
 }
-let renderPending=false,renderCompletion=null,recoveryFramePending=false,contextRecovery=null,rendererLookdev=null,lightingGeneration=0;
+let renderPending=false,renderCompletion=null,recoveryFramePending=false,contextRecovery=null,rendererLookdev=null,lightingGeneration=0,presentationRenderer=null;
+let shaderWarmupGeneration=0;
+function prepareInspectionShaders(){
+ const token=++shaderWarmupGeneration,pass=presentationRenderer;
+ const run=()=>{
+  if(token!==shaderWarmupGeneration||pass!==presentationRenderer||renderer.getContext().isContextLost()||document.hidden)return;
+  const start=performance.now();app.dataset.shaderWarmup='compiling';
+  try{const materials=pass.prepare(scene,camera);if(token!==shaderWarmupGeneration||pass!==presentationRenderer)return;app.dataset.shaderWarmup='submitted';app.dataset.shaderWarmupMaterials=String(materials.size);app.dataset.shaderWarmupMs=(performance.now()-start).toFixed(1);}
+  catch(error){if(token!==shaderWarmupGeneration)return;app.dataset.shaderWarmup='failed';console.warn('Inspection shader preparation failed',error);}
+ };
+ if(globalThis.requestIdleCallback)requestIdleCallback(run,{timeout:1500});else setTimeout(run,0);
+}
 const renderQuality=createRenderQuality({
  canRefine:()=>!document.hidden&&app.dataset.ready==='true'&&!renderer?.getContext().isContextLost(),
  refine:()=>draw(false,true)
 });
 function syncRenderQuality(){
  const w=Math.max(1,viewer.clientWidth),h=Math.max(1,viewer.clientHeight);
- const profile=document.body.classList.contains('presentation')?'presentation':renderQuality.profile;
- const ratio=resizeRenderer(renderer,w,h,profile);
+ const profile=document.body.classList.contains('presentation')&&renderQuality.profile!=='still'?'presentation':renderQuality.profile;
+ const ratio=resizeRenderer(renderer,w,h,profile,presentationRenderer?.maxPixels);
  app.dataset.renderScale=ratio.toFixed(2);app.dataset.renderQuality=profile;
 }
 document.addEventListener('visibilitychange',()=>{if(document.hidden)renderQuality.suspend();else if(renderer)draw();});
@@ -466,7 +478,7 @@ async function refreshLighting(isCurrent=()=>true){
  const token=++lightingGeneration,current=()=>token===lightingGeneration&&isCurrent()&&!renderer.getContext().isContextLost();
  try{
   const next=await configureRenderer(renderer,scene,{isCurrent:current});if(!next)return false;
-  rendererLookdev?.dispose();rendererLookdev=next;app.dataset.lookdev='CC0 HDR daylight';return true;
+  rendererLookdev?.dispose();rendererLookdev=next;app.dataset.lookdev=next.mode??'CC0 HDR daylight';return true;
  }catch(error){
   if(!current())return false;
   scene.environment=null;app.dataset.lookdev='daylight base';scene.userData.lookdev={...scene.userData.lookdev,environment:'neutral daylight (HDR unavailable)'};console.warn('HDR unavailable; daylight view remains usable',error);return true;
@@ -486,7 +498,7 @@ function draw(recoveryFrame=false,settledFrame=false){
  if(renderer.capabilities.reversedDepthBuffer){renderer.shadowMap.needsUpdate=true;renderer.render(scene,camera);shadowPasses++;}rendererPrimed=true;shadowsDirty=true;}
  renderer.shadowMap.needsUpdate=shadowsDirty;
  if(shadowsDirty)shadowPasses++;
- renderer.render(scene,camera);shadowsDirty=false;labelRenderer.render(scene,camera);updateDimensionOverlay();app.dataset.shadowPasses=String(shadowPasses);app.dataset.frameMs=(performance.now()-start).toFixed(1);app.dataset.drawCalls=String(renderer.info.render.calls);app.dataset.triangles=String(renderer.info.render.triangles);app.dataset.camera=[camera.position.x,camera.position.y,camera.position.z].map(n=>n.toFixed(2)).join(',');app.dataset.frameCount=String(Number(app.dataset.frameCount||0)+1);if(app.dataset.contextState==='render-error'){app.dataset.contextState='ready';app.dataset.ready='true';$('fallback').hidden=true;}resolve(!renderer.getContext().isContextLost());}catch(error){renderQuality.suspend();app.dataset.renderErrors=String(Number(app.dataset.renderErrors||0)+1);app.dataset.contextState='render-error';app.dataset.ready='false';$('fallback').hidden=false;$('fallback-title').textContent='Огляд 3D призупинено';$('fallback-note').textContent='Спробуй відкрити сцену ще раз. Ракурс збережений до перезавантаження.';console.error('3D render failed',error);resolve(false);}
+ presentationRenderer??=createPresentationRenderer(renderer);presentationRenderer.render(scene,camera);app.dataset.antiAliasing=presentationRenderer.mode;app.dataset.presentationBufferBytes=String(presentationRenderer.bytes);shadowsDirty=false;labelRenderer.render(scene,camera);updateDimensionOverlay();app.dataset.shadowPasses=String(shadowPasses);app.dataset.frameMs=(performance.now()-start).toFixed(1);app.dataset.drawCalls=String(renderer.info.render.calls);app.dataset.triangles=String(renderer.info.render.triangles);app.dataset.camera=[camera.position.x,camera.position.y,camera.position.z].map(n=>n.toFixed(2)).join(',');app.dataset.frameCount=String(Number(app.dataset.frameCount||0)+1);if(app.dataset.contextState==='render-error'){app.dataset.contextState='ready';app.dataset.ready='true';$('fallback').hidden=true;}resolve(!renderer.getContext().isContextLost());}catch(error){renderQuality.suspend();app.dataset.renderErrors=String(Number(app.dataset.renderErrors||0)+1);app.dataset.contextState='render-error';app.dataset.ready='false';$('fallback').hidden=false;$('fallback-title').textContent='Огляд 3D призупинено';$('fallback-note').textContent='Спробуй відкрити сцену ще раз. Ракурс збережений до перезавантаження.';console.error('3D render failed',error);resolve(false);}
  }));return renderCompletion;}
 
 function fit(){const w=Math.max(1,viewer.clientWidth),h=Math.max(1,viewer.clientHeight);perspectiveCamera.aspect=w/h;if(orthographic&&framingBox){let size=framingBox.getSize(new THREE.Vector3());if(dimensionVisible){const back=camera.position.clone().sub(controls.target).normalize(),right=new THREE.Vector3(0,1,0).cross(back).normalize(),up=back.clone().cross(right).normalize();let x0=Infinity,x1=-Infinity,y0=Infinity,y1=-Infinity;for(const x of [framingBox.min.x,framingBox.max.x])for(const y of [framingBox.min.y,framingBox.max.y])for(const z of [framingBox.min.z,framingBox.max.z]){const q=new THREE.Vector3(x,y,z).sub(controls.target),px=q.dot(right),py=q.dot(up);x0=Math.min(x0,px);x1=Math.max(x1,px);y0=Math.min(y0,py);y1=Math.max(y1,py);}size=new THREE.Vector3(2*Math.max(Math.abs(x0),Math.abs(x1)),2*Math.max(Math.abs(y0),Math.abs(y1)),0);}const safeH=Math.max(.45,(h-(w<600?72:96))/h),safeW=Math.max(.5,(w-(w<600?32:48))/w),half=Math.max(size.y/(2*safeH),size.x/(2*(w/h)*safeW))*1.04;camera.left=-half*w/h;camera.right=half*w/h;camera.top=half;camera.bottom=-half;}camera.updateProjectionMatrix();if(renderer){renderQuality.activity();syncRenderQuality();labelRenderer.setSize(w,h);draw();}}
@@ -569,17 +581,21 @@ $('open-engineering').addEventListener('click',()=>{const d=$('engineering-drawe
 const engineeringDrawer=$('engineering-drawer');engineeringDrawer.addEventListener('toggle',()=>{$('open-engineering').setAttribute('aria-expanded',String(engineeringDrawer.open));$('open-engineering').textContent=engineeringDrawer.open?'До моделі ↑':'Креслення';});
 
 try{
-  // Allocate GPU resources only after native assembly, keeping downloads
-  // and CPU model construction outside the context lifetime. On touch
-  // devices the denser settled frame smooths edges without an MSAA buffer.
-  rendererStart=createViewerContext(()=>document.createElement('canvas'));app.dataset.contextAntialias=String(rendererStart.antialias);
+  // Take the same tiny context reserved before model transport. Allocate
+  // scene GPU resources only now, after native CPU assembly.
+  rendererStart=takeViewerContext(()=>document.createElement('canvas'));app.dataset.contextAntialias=String(rendererStart.antialias);
   // Closed 0.6mm sheet solids require precision at whole-building distances.
   // EXT_clip_control uses reversed depth without logarithmic fragment-depth
   // writes, which produced visible roof patterns in the projector view.
   // Without that extension use linear depth with a near plane derived from
   // the active camera-clearance volumes. Physical phone proof is separate.
   const {canvas,context,antialias,reversedDepth}=rendererStart;
-  renderer=new THREE.WebGLRenderer({canvas,context,antialias,alpha:false,powerPreference:'default',...depthBufferOptions(reversedDepth)});renderer.setPixelRatio(renderPixelRatio(viewer.clientWidth,viewer.clientHeight));configureRendererBase(renderer,scene);app.dataset.lookdev='daylight base';app.dataset.depthPrecision=renderer.capabilities.reversedDepthBuffer?'reversed':renderer.capabilities.logarithmicDepthBuffer?'logarithmic':'linear';viewer.appendChild(renderer.domElement);
+  renderer=new THREE.WebGLRenderer({canvas,context,antialias,alpha:false,powerPreference:'default',...depthBufferOptions(reversedDepth)});
+  // Three may otherwise log a bad linked shader but return from render(),
+  // making a black canvas look ready to our loading/recovery state machine.
+  renderer.debug.checkShaderErrors=true;
+  renderer.debug.onShaderError=(gl,program,vertex,fragment)=>{throw Error('GPU shader failed: '+[gl.getProgramInfoLog(program),gl.getShaderInfoLog(vertex),gl.getShaderInfoLog(fragment)].filter(Boolean).join('\n').slice(0,1800));};
+  configureRendererBase(renderer,scene);presentationRenderer=createPresentationRenderer(renderer);renderer.setPixelRatio(renderPixelRatio(viewer.clientWidth,viewer.clientHeight,'motion',presentationRenderer.maxPixels));app.dataset.lookdev='daylight base';app.dataset.depthPrecision=renderer.capabilities.reversedDepthBuffer?'reversed':renderer.capabilities.logarithmicDepthBuffer?'logarithmic':'linear';viewer.appendChild(renderer.domElement);
   // Optional HDR must not hold the first usable frame or make 3D unavailable.
   refreshLighting().then(applied=>{if(applied)draw();});
   labelRenderer=new CSS2DRenderer();labelRenderer.domElement.style.cssText='position:absolute;inset:0;z-index:4;pointer-events:none;overflow:hidden';viewer.appendChild(labelRenderer.domElement);
@@ -668,6 +684,7 @@ try{
   contextRecovery=bindContextRecovery(renderer.domElement,{
    isLost:()=>renderer.getContext().isContextLost(),
    rebuild:async({isCurrent})=>{
+    presentationRenderer?.dispose();presentationRenderer=null;
     scene.environment=null;rendererLookdev?.dispose();rendererLookdev=null;
     configureRendererBase(renderer,scene);await refreshLighting(isCurrent);
     if(!isCurrent())return;rendererPrimed=false;invalidateShadows();
@@ -676,7 +693,8 @@ try{
    onState:state=>{
     app.dataset.contextState=state;app.dataset.ready=String(state==='ready');$('fallback').hidden=state==='ready';
     if(state!=='ready')renderQuality.suspend();
-    if(state==='lost'){app.dataset.contextLosses=String(Number(app.dataset.contextLosses||0)+1);lightingGeneration++;stopNavigation();}
+    if(state==='lost'){app.dataset.contextLosses=String(Number(app.dataset.contextLosses||0)+1);lightingGeneration++;shaderWarmupGeneration++;stopNavigation();}
+    if(state==='ready')prepareInspectionShaders();
     $('fallback-title').textContent=state==='restoring'?'Відновлюємо 3D…':state==='lost'?'3D тимчасово призупинено':'Не вдалося відновити 3D';
     $('fallback-note').textContent=state==='restoring'?'Збережений ракурс і розміри повернуться разом зі сценою.':'Ракурс і вибір збережені. Якщо сцена не повернулась, перезавантажте сторінку.';
    },
@@ -685,6 +703,7 @@ try{
   loadingStage({stage:'frame'});
   if(!await draw())throw Error('Initial 3D frame unavailable');
   $('loading').hidden=true;app.dataset.ready='true';app.dataset.contextState='ready';app.dataset.readyMs=performance.now().toFixed(0);
+  prepareInspectionShaders();
 }catch(error){showStartupFailure(document,error,'render');console.error('3D initialization failed',error);}
 
 function showGlazingPart(hit){

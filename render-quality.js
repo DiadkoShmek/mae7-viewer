@@ -1,19 +1,20 @@
-// Motion retains the repaired GPU budget. A single settled frame samples
-// fine roof ribs / facade joints more densely, without an extra render target.
+// Keep common desktop screens at native CSS resolution even during motion.
+// Touch density remains capped at1.5/2; a phone does not allocate a desktop
+// sized framebuffer. A settled presentation refines just like the normal view.
 export const RENDER_PROFILES={
- motion:{pixels:1_048_576,dimension:1536,ratio:1.5},
- still:{pixels:2_097_152,dimension:2048,ratio:2},
- presentation:{pixels:1_048_576,dimension:1536,ratio:1.5}
+ motion:{pixels:2_097_152,dimension:2048,ratio:1.5},
+ still:{pixels:4_194_304,dimension:3072,ratio:2},
+ presentation:{pixels:2_097_152,dimension:2048,ratio:1.5}
 };
-export function renderPixelRatio(width,height,profile='motion'){
+export function renderPixelRatio(width,height,profile='motion',maxPixels=Infinity){
  const w=Math.max(1,width),h=Math.max(1,height);
  const limit=RENDER_PROFILES[profile];
- return Math.min(limit.ratio,Math.sqrt(limit.pixels/(w*h)),limit.dimension/Math.max(w,h));
+ return Math.min(limit.ratio,Math.sqrt(Math.min(limit.pixels,maxPixels)/(w*h)),limit.dimension/Math.max(w,h));
 }
 
 const sizes=new WeakMap();
-export function resizeRenderer(renderer,width,height,profile='motion'){
- const ratio=renderPixelRatio(width,height,profile),oldRatio=renderer.getPixelRatio(),oldSize=sizes.get(renderer);
+export function resizeRenderer(renderer,width,height,profile='motion',maxPixels=Infinity){
+ const ratio=renderPixelRatio(width,height,profile,maxPixels),oldRatio=renderer.getPixelRatio(),oldSize=sizes.get(renderer);
  const changedSize=!oldSize||oldSize[0]!==width||oldSize[1]!==height;
  // Three.setPixelRatio immediately reallocates at the OLD logical size.
  // Shrink first when increasing density, so even the intermediate buffer
