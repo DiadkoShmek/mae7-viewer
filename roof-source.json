@@ -1,0 +1,210 @@
+{
+  "status": "GRAPHIC_PRESENTATION_CANDIDATE_RFI",
+  "approved": false,
+  "units": "m",
+  "sourcePdf": "Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+  "sheets": [
+    "05 / PDF53",
+    "06 / PDF54",
+    "07 / PDF55",
+    "12 / PDF60",
+    "§5.4 / записка"
+  ],
+  "candidate": {
+    "attic": 8.525,
+    "ridge": 11.109,
+    "frontSpan": 6.266544318625537,
+    "backSpan": 6.799867239359625,
+    "frontEdgeY": 9.547125732135884,
+    "backEdgeY": 9.413795001952362,
+    "length": 41.60018861993084,
+    "endProjection": 0.6000943099654196,
+    "thickness": 0.0006
+  },
+  "candidateMeaning": {
+    "selection": "SECTION55 top roof contour, translated to written ridge datum11.109; rooflength graphically fromPDF53",
+    "attic": "Written attic/floor datum; not the roof edge",
+    "frontEdgeY": "Top-plane edge of SE slope; graphically derived, not a written working height",
+    "backEdgeY": "Top-plane edge of NW slope; graphically derived, not a written working height",
+    "thickness": "Physical roof sheet thickness0.6mm. Old65mm display shell removed; roofSpec.thickness is deprecated nongeometry compatibility data. Actual assembly normal envelope is214.8mm below pan and32mm above.",
+    "bodyReference": "Current facade planes remain±5.62m; graphically traced dimensions are not site measurements",
+    "ridge": "Extrapolated outer flat-pan datum; reference fold rises32mm normal above pan. Ridge100mm setbacks and cap40mmraise are explicit display candidates, not approved source dimensions."
+  },
+  "sourcePoints": {
+    "section55": {
+      "coordinateUnits": "PDF points, y down",
+      "axisA": 150.42,
+      "axisC": 457.74,
+      "axisSpanWritten": 10.84,
+      "pointsPerMetre": 28.350553505535053,
+      "ridge": [
+        304.08,
+        56.48
+      ],
+      "frontTopEdge": [
+        126.42,
+        100.76
+      ],
+      "backTopEdge": [
+        496.86,
+        104.54
+      ],
+      "frontPitchDegrees": 13.995259369399296,
+      "backPitchDegrees": 13.998474337264648
+    },
+    "elevation53": {
+      "pointsPerMetre": 18.897029702970297,
+      "bodyX": [
+        269.82,
+        1033.26
+      ],
+      "roofX": [
+        258.48,
+        1044.6
+      ],
+      "frontZeroY": 293.06,
+      "frontAtticMarkY": 131.96,
+      "frontRidgeMarkY": 83.12,
+      "frontLowestRoofLineY": 118.64,
+      "frontLowestRoofLineWorldY": 9.230022005658597,
+      "backZeroY": 608.06,
+      "backAtticMarkY": 446.96,
+      "backLowestRoofLineY": 436.7,
+      "backLowestRoofLineWorldY": 9.068091795033004
+    }
+  },
+  "writtenRequirements": {
+    "minimumFrontOverhangFromInsulatedWall": 0.6,
+    "minimumBackOverhangFromInsulatedWall": 0.75,
+    "endBoxExtensionIncrement": 0.3,
+    "metalThickness": 0.0006,
+    "notes": "End300mm is an extension instruction, not an unambiguous final total overhang"
+  },
+  "alternatives": {
+    "legacy": {
+      "spanEach": 5.96,
+      "edgeEach": 8.525,
+      "rejection": "Only340mmoverhang from current facade; attic datum used as roof edge"
+    },
+    "minimumSpansAtLegacyEdgeHeight": {
+      "frontSpan": 6.22,
+      "backSpan": 6.37,
+      "edgeEach": 8.525,
+      "rejection": "Preserves legacy nominal heights but conflicts with graphic attic/roof distinction and≈14degsourcepitch"
+    },
+    "elevation54TopContour": {
+      "axisA": 456.78,
+      "axisC": 149.52,
+      "ridge": [
+        303.18,
+        95.0
+      ],
+      "frontTopEdge": [
+        484.74,
+        140.24
+      ],
+      "backTopEdge": [
+        103.14,
+        144.86
+      ],
+      "frontSpanApprox": 6.4066,
+      "backSpanApprox": 7.0563,
+      "frontEdgeYApprox": 9.5129,
+      "backEdgeYApprox": 9.3499,
+      "status": "Alternative graphic trace; not the selected section candidate"
+    }
+  },
+  "conflicts": [
+    "PDF54graphic spans exceed PDF55section spans byabout140mmfront/256mmback; neither is a written roof span",
+    "PDF53lowest fascia lines must not be treated as top metal plane; no written fascia depth closes all views",
+    "PDF53NW ridge label11.149 differs from SE11.109; chosen ridge uses SE written datum",
+    "11885mm chain includes200+5260+5580+845 projected extent; it does not establish a symmetric bodydepth11.885m",
+    "Graphic end overhang≈600mm is compatible with an extension instruction300mm but existing end baseline is not verified",
+    "Exact source plane corresponding to ridge cap/top metal and fascia lower edge requires designer/site confirmation",
+    "Existingrafter/wall bearing, gable junction, endsecondarysupports, roof accessory flashing and manufacturer click profile require working details; canonical holes are physical candidate cuts, not approved structural alterations."
+  ],
+  "physicalAssembly": {
+    "source": "PDF60/node12; written§5.4",
+    "sheetThickness": 0.0006,
+    "counter": [
+      0.032,
+      0.05
+    ],
+    "lath": [
+      0.032,
+      0.1
+    ],
+    "underlay": {
+      "sourceThickness": null,
+      "displayThickness": 0.0002,
+      "type": "nonbreathing",
+      "displayEndFit": "candidate termination at fascia back; actual membrane routing and drip detail unknown",
+      "endFitApproved": false
+    },
+    "rafters": {
+      "sourceSection": null,
+      "sourcePitch": null,
+      "candidateSection": [
+        0.065,
+        0.15
+      ],
+      "candidatePitch": 1,
+      "candidatePhaseGlobalX": 0,
+      "approved": false,
+      "candidateEndFit": {
+        "shape": "rafters,counters,laths use exact prisms vertically cut at shared fascia back",
+        "fasciaThickness": 0.022,
+        "fasciaCentreSetback": 0.02,
+        "placementSource": null,
+        "approved": false
+      }
+    },
+    "manufacturerReference": {
+      "name": "Ruukki EE Classic Design475 dimensional reference",
+      "url": "https://www.ruukki.com/est/katusetooted/tooted-ja-teenused/katuseprofiilid/katuse-detailid/parnu-classic-design-c-475mm",
+      "module": 0.475,
+      "height": 0.032,
+      "thickness": 0.0006,
+      "recommendedLathPitch": 0.2,
+      "orderedProduct": null,
+      "approved": false
+    },
+    "idealisedGeometry": {
+      "candidateFoldWidth": 0.0066,
+      "sourceFoldWidth": null,
+      "bendRadius": null,
+      "clickInterlockApproved": false,
+      "ridgeSetbackCandidate": 0.1,
+      "ridgeSetbackSource": null,
+      "ridgeCapRaiseCandidate": 0.04,
+      "ridgeCapRaiseSource": null
+    },
+    "soffit": {
+      "thickness": 0.022,
+      "width": 0.1,
+      "gap": 0.015,
+      "source": "§5.4 / PDF60"
+    },
+    "atticInsulation": {
+      "thickness": 0.45,
+      "plane": "atticfloor8.525; not roof-slope insulation"
+    },
+    "openings": {
+      "hatchWritten": [
+        0.8,
+        0.6
+      ],
+      "hatchLocation": "display candidate x−9/worldz3.3",
+      "sixDuctDiameter": {
+        "observedModel": 0.12,
+        "ordered": null
+      },
+      "sixDuctOpening": {
+        "candidateWidth": 0.14,
+        "shape": "vertical worldY rectangular corridor; localZ interval shifts and widens independently through each actual layer normal-depth envelope, including32mm seam crest",
+        "approved": false
+      },
+      "fixingsApproved": false
+    }
+  }
+}

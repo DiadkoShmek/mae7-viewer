@@ -1,0 +1,80 @@
+// Paired actual NW downpipe outlines, kept separate from steel balcony posts.
+import {retainedReturnFootprints} from './balcony-returns.js';
+export const nwRainwaterSource=Object.freeze({
+  "schema": "mae7-NW-rainwater-source-v36",
+  "pdfSHA256": "fc22c9eb0964b52800a5d926fa2574b3f95654f64d1a3f17f21a0afaddd15f99",
+  "page": 53,
+  "sheet": "05 / Vaated loodest ja kagust",
+  "source": "PDF53/ark05 NW paired downpipe outlines; §5.4 Ø90/PURAL0.6",
+  "graphicMapping": {
+    "pdfBodyX": [
+      269.82,
+      1033.26
+    ],
+    "displayWidth": 40.4,
+    "mirroredNW": true,
+    "authority": "Current display facade fit; not written pipe-axis dimensions or surveyed coordinates"
+  },
+  "stations": [
+    {
+      "sourceDrawingIndices": [
+        18470,
+        18471
+      ],
+      "strokeX": [
+        1027.6199951171875,
+        1025.699951171875
+      ],
+      "axisPDF": 1026.6599731445312,
+      "axisWorld": -19.85073734024817
+    },
+    {
+      "sourceDrawingIndices": [
+        19311,
+        19312
+      ],
+      "strokeX": [
+        775.5,
+        773.6399536132812
+      ],
+      "axisPDF": 774.5699768066406,
+      "axisWorld": -6.510545770444672
+    },
+    {
+      "sourceDrawingIndices": [
+        19369,
+        19370
+      ],
+      "strokeX": [
+        527.9400024414062,
+        526.0800170898438
+      ],
+      "axisPDF": 527.010009765625,
+      "axisWorld": 6.589924035246714
+    },
+    {
+      "sourceDrawingIndices": [
+        18412,
+        18413
+      ],
+      "strokeX": [
+        275.4599914550781,
+        277.3800048828125
+      ],
+      "axisPDF": 276.4199981689453,
+      "axisWorld": 19.850738858292214
+    }
+  ],
+  "nominalPipeDiameter": 0.09,
+  "approved": false,
+  "unknown": {
+    "writtenPipeAxes": null,
+    "sourceOutletZ": null,
+    "mountedFaceSurvey": null,
+    "supplierElbows": null,
+    "anchors": null
+  }
+});
+export function planNWSourcePipeStations(){
+ return nwRainwaterSource.stations.map(p=>{const returns=retainedReturnFootprints().filter(r=>p.axisWorld>=r.x0&&p.axisWorld<=r.x1);if(returns.length!==1)throw Error('NW graphic pipe does not identify one retained return');const r=returns[0];return {...p,x:p.axisWorld,retainedWallReturnId:r.id,wallFace:r.min[2],faceAuthority:'Source elevation axis on photo-guided finished return front; depth not surveyed',approved:false};});
+}

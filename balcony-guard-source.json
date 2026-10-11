@@ -1,0 +1,91 @@
+{
+  "schema": "mae7-balcony-guard-source-v37",
+  "source": "PDF64/65 ark16/17; \u00a75.8.2; Swisspearl Steel DIM02.2026 pp8,13,14,26",
+  "pdfSHA256": "fc22c9eb0964b52800a5d926fa2574b3f95654f64d1a3f17f21a0afaddd15f99",
+  "manufacturerSHA256": "1c7490b33c32162bc35a8203781acb0e6bc64fb8d6596ca2f2c4f53e4f14ef9f",
+  "manufacturerURL": "https://www.swisspearl.com/media/19900/download/SUK_Swisspearl_Facade_PatinaSteel_DIM_EN_2026_02.pdf?inline=true&v=5",
+  "graphicPostCentres": [
+    249.98999786376953,
+    857.5499877929688
+  ],
+  "displayPostCentreSpan": 3.215,
+  "frontUprights": [
+    {
+      "drawingIndex": 1974,
+      "centrePDF": 339.17999267578125,
+      "localX": -1.1355370036314718,
+      "faceWidth": 0.04,
+      "depth": 0.04,
+      "thickness": 0.003
+    },
+    {
+      "drawingIndex": 1966,
+      "centrePDF": 445.739990234375,
+      "localX": -0.5716578841542298,
+      "faceWidth": 0.08,
+      "depth": 0.04,
+      "thickness": 0.003
+    },
+    {
+      "drawingIndex": 1970,
+      "centrePDF": 552.3600158691406,
+      "localX": -0.007461116595989033,
+      "faceWidth": 0.04,
+      "depth": 0.04,
+      "thickness": 0.003
+    },
+    {
+      "drawingIndex": 1968,
+      "centrePDF": 658.9199829101562,
+      "localX": 0.5564178413926506,
+      "faceWidth": 0.08,
+      "depth": 0.04,
+      "thickness": 0.003
+    },
+    {
+      "drawingIndex": 1972,
+      "centrePDF": 765.4800109863281,
+      "localX": 1.1202971223584952,
+      "faceWidth": 0.04,
+      "depth": 0.04,
+      "thickness": 0.003
+    }
+  ],
+  "boardThickness": 0.008,
+  "boardColour": "P070",
+  "maxStock": [
+    1.25,
+    3.05
+  ],
+  "stockRotatable": true,
+  "jointGap": 0.008,
+  "boreDiameter": 0.008,
+  "screwDisplay": {
+    "id": "SCR-S-SPECIAL-5.5x25",
+    "shaft": 0.0055,
+    "length": 0.025,
+    "head": 0.012,
+    "steelThicknessRange": [
+      0.0015,
+      0.006
+    ]
+  },
+  "edgeDistances": {
+    "vertical": 0.1,
+    "side": 0.03
+  },
+  "supportMaximum": 0.629,
+  "fixingMaximum": 0.6,
+  "jointProfileMinimum": 0.1,
+  "adapterThicknessCandidate": 0.003,
+  "EPDMThicknessCandidate": 0.003,
+  "approved": false,
+  "unknown": {
+    "guardCapacity": null,
+    "adapterWelds": null,
+    "orderedProduct": null,
+    "steelFrameShopDrawings": null,
+    "impactResistance": null,
+    "topEdgeWeatherDetail": null
+  }
+}

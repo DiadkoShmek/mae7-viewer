@@ -1,0 +1,708 @@
+{
+  "approved": false,
+  "measured": false,
+  "illustrative": true,
+  "source": "User field candidate: Cembrit side/head returns; PDF62 retains PURAL0.6mm source assembly",
+  "note": "150mm is approximate facade-to-frame input. Stock is a derived cut blank, not a selected manufacturer sheet. Joint8mm is explicit. Head split across width is provisional pending clarification. Supports, fasteners, edge distances, sealing and fire details are not approved.",
+  "mode": "field",
+  "opening": {
+    "width": 1.78,
+    "height": 1.475
+  },
+  "faceZ": 0.029,
+  "revealDepth": 0.15,
+  "frame": {
+    "front": -0.121,
+    "back": -0.211,
+    "width": 1.76,
+    "height": 1.4300000000000002,
+    "centreY": 0.0125,
+    "depth": 0.09
+  },
+  "joint": 0.008,
+  "boardThickness": 0.008,
+  "rearClearance": 0.002,
+  "sillClearance": 0.002,
+  "facadeClearance": 0.004,
+  "sill": {
+    "backY": -0.7045000000000001,
+    "angleDegrees": 10,
+    "metalThickness": 0.0006,
+    "plateUpperOffset": 0.00030462798356572346
+  },
+  "boundaries": {
+    "outerX": 0.886,
+    "innerX": 0.878,
+    "headTop": 0.7335,
+    "headBottom": 0.7255,
+    "sideTop": 0.7175,
+    "backZ": -0.119
+  },
+  "parts": [
+    {
+      "id": "FIELD-SIDE-L",
+      "role": "side-board",
+      "material": "Cembrit candidate",
+      "approved": false,
+      "measured": false,
+      "illustrative": true,
+      "source": "User field candidate: Cembrit side/head returns; PDF62 retains PURAL0.6mm source assembly",
+      "note": "150mm is approximate facade-to-frame input. Stock is a derived cut blank, not a selected manufacturer sheet. Joint8mm is explicit. Head split across width is provisional pending clarification. Supports, fasteners, edge distances, sealing and fire details are not approved.",
+      "geometry": {
+        "x": [
+          -0.886,
+          -0.878
+        ],
+        "profileYZ": [
+          [
+            -0.7025480259778514,
+            -0.119
+          ],
+          [
+            0.7175,
+            -0.119
+          ],
+          [
+            0.7175,
+            0.029
+          ],
+          [
+            -0.7286444191227042,
+            0.029
+          ]
+        ]
+      },
+      "stock": {
+        "kind": "minimum rectangular cut blank",
+        "length": 1.447,
+        "width": 0.15,
+        "thickness": 0.008,
+        "manufacturerSheet": null,
+        "kerf": null,
+        "geometry": {
+          "x": [
+            -0.886,
+            -0.878
+          ],
+          "profileYZ": [
+            [
+              -0.7295,
+              -0.121
+            ],
+            [
+              0.7175,
+              -0.121
+            ],
+            [
+              0.7175,
+              0.029
+            ],
+            [
+              -0.7295,
+              0.029
+            ]
+          ]
+        }
+      },
+      "finished": {
+        "depth": 0.148,
+        "heightBack": 1.4200480259778514,
+        "heightFront": 1.4461444191227042,
+        "thickness": 0.008,
+        "top": "straight",
+        "bottomAngleDegrees": 10
+      },
+      "operations": [
+        {
+          "id": "FIELD-SIDE-L-DEPTH",
+          "kind": "trim rear edge",
+          "remove": 0.002,
+          "keep": "z >= rear edge plus clearance"
+        },
+        {
+          "id": "FIELD-SIDE-L-BOTTOM",
+          "kind": "inclined lower cut",
+          "angleDegrees": 10,
+          "keep": "above sill clearance line",
+          "lineYZ": [
+            [
+              -0.7021953720164344,
+              -0.121
+            ],
+            [
+              -0.7286444191227042,
+              0.029
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FIELD-SIDE-R",
+      "role": "side-board",
+      "material": "Cembrit candidate",
+      "approved": false,
+      "measured": false,
+      "illustrative": true,
+      "source": "User field candidate: Cembrit side/head returns; PDF62 retains PURAL0.6mm source assembly",
+      "note": "150mm is approximate facade-to-frame input. Stock is a derived cut blank, not a selected manufacturer sheet. Joint8mm is explicit. Head split across width is provisional pending clarification. Supports, fasteners, edge distances, sealing and fire details are not approved.",
+      "geometry": {
+        "x": [
+          0.878,
+          0.886
+        ],
+        "profileYZ": [
+          [
+            -0.7025480259778514,
+            -0.119
+          ],
+          [
+            0.7175,
+            -0.119
+          ],
+          [
+            0.7175,
+            0.029
+          ],
+          [
+            -0.7286444191227042,
+            0.029
+          ]
+        ]
+      },
+      "stock": {
+        "kind": "minimum rectangular cut blank",
+        "length": 1.447,
+        "width": 0.15,
+        "thickness": 0.008,
+        "manufacturerSheet": null,
+        "kerf": null,
+        "geometry": {
+          "x": [
+            0.878,
+            0.886
+          ],
+          "profileYZ": [
+            [
+              -0.7295,
+              -0.121
+            ],
+            [
+              0.7175,
+              -0.121
+            ],
+            [
+              0.7175,
+              0.029
+            ],
+            [
+              -0.7295,
+              0.029
+            ]
+          ]
+        }
+      },
+      "finished": {
+        "depth": 0.148,
+        "heightBack": 1.4200480259778514,
+        "heightFront": 1.4461444191227042,
+        "thickness": 0.008,
+        "top": "straight",
+        "bottomAngleDegrees": 10
+      },
+      "operations": [
+        {
+          "id": "FIELD-SIDE-R-DEPTH",
+          "kind": "trim rear edge",
+          "remove": 0.002,
+          "keep": "z >= rear edge plus clearance"
+        },
+        {
+          "id": "FIELD-SIDE-R-BOTTOM",
+          "kind": "inclined lower cut",
+          "angleDegrees": 10,
+          "keep": "above sill clearance line",
+          "lineYZ": [
+            [
+              -0.7021953720164344,
+              -0.121
+            ],
+            [
+              -0.7286444191227042,
+              0.029
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FIELD-HEAD-L",
+      "role": "head-board",
+      "material": "Cembrit candidate",
+      "approved": false,
+      "measured": false,
+      "illustrative": true,
+      "source": "User field candidate: Cembrit side/head returns; PDF62 retains PURAL0.6mm source assembly",
+      "note": "150mm is approximate facade-to-frame input. Stock is a derived cut blank, not a selected manufacturer sheet. Joint8mm is explicit. Head split across width is provisional pending clarification. Supports, fasteners, edge distances, sealing and fire details are not approved.",
+      "geometry": {
+        "x": [
+          -0.886,
+          -0.004
+        ],
+        "profileYZ": [
+          [
+            0.7255,
+            -0.119
+          ],
+          [
+            0.7335,
+            -0.119
+          ],
+          [
+            0.7335,
+            0.029
+          ],
+          [
+            0.7255,
+            0.029
+          ]
+        ]
+      },
+      "stock": {
+        "kind": "minimum rectangular cut blank",
+        "length": 0.882,
+        "width": 0.15,
+        "thickness": 0.008,
+        "manufacturerSheet": null,
+        "kerf": null,
+        "geometry": {
+          "x": [
+            -0.886,
+            -0.004
+          ],
+          "profileYZ": [
+            [
+              0.7255,
+              -0.121
+            ],
+            [
+              0.7335,
+              -0.121
+            ],
+            [
+              0.7335,
+              0.029
+            ],
+            [
+              0.7255,
+              0.029
+            ]
+          ]
+        }
+      },
+      "finished": {
+        "width": 0.882,
+        "depth": 0.148,
+        "thickness": 0.008
+      },
+      "operations": [
+        {
+          "id": "FIELD-HEAD-L-DEPTH",
+          "kind": "trim rear edge",
+          "remove": 0.002
+        },
+        {
+          "id": "FIELD-HEAD-L-WIDTH",
+          "kind": "square end cut",
+          "finishedLength": 0.882
+        }
+      ],
+      "provisionalLayout": "two adjacent across width"
+    },
+    {
+      "id": "FIELD-HEAD-R",
+      "role": "head-board",
+      "material": "Cembrit candidate",
+      "approved": false,
+      "measured": false,
+      "illustrative": true,
+      "source": "User field candidate: Cembrit side/head returns; PDF62 retains PURAL0.6mm source assembly",
+      "note": "150mm is approximate facade-to-frame input. Stock is a derived cut blank, not a selected manufacturer sheet. Joint8mm is explicit. Head split across width is provisional pending clarification. Supports, fasteners, edge distances, sealing and fire details are not approved.",
+      "geometry": {
+        "x": [
+          0.004,
+          0.886
+        ],
+        "profileYZ": [
+          [
+            0.7255,
+            -0.119
+          ],
+          [
+            0.7335,
+            -0.119
+          ],
+          [
+            0.7335,
+            0.029
+          ],
+          [
+            0.7255,
+            0.029
+          ]
+        ]
+      },
+      "stock": {
+        "kind": "minimum rectangular cut blank",
+        "length": 0.882,
+        "width": 0.15,
+        "thickness": 0.008,
+        "manufacturerSheet": null,
+        "kerf": null,
+        "geometry": {
+          "x": [
+            0.004,
+            0.886
+          ],
+          "profileYZ": [
+            [
+              0.7255,
+              -0.121
+            ],
+            [
+              0.7335,
+              -0.121
+            ],
+            [
+              0.7335,
+              0.029
+            ],
+            [
+              0.7255,
+              0.029
+            ]
+          ]
+        }
+      },
+      "finished": {
+        "width": 0.882,
+        "depth": 0.148,
+        "thickness": 0.008
+      },
+      "operations": [
+        {
+          "id": "FIELD-HEAD-R-DEPTH",
+          "kind": "trim rear edge",
+          "remove": 0.002
+        },
+        {
+          "id": "FIELD-HEAD-R-WIDTH",
+          "kind": "square end cut",
+          "finishedLength": 0.882
+        }
+      ],
+      "provisionalLayout": "two adjacent across width"
+    }
+  ],
+  "supports": [
+    {
+      "id": "FIELD-SUPPORT-L-1",
+      "role": "timber-support",
+      "approved": false,
+      "measured": false,
+      "illustrative": true,
+      "source": "User field candidate: Cembrit side/head returns; PDF62 retains PURAL0.6mm source assembly",
+      "note": "150mm is approximate facade-to-frame input. Stock is a derived cut blank, not a selected manufacturer sheet. Joint8mm is explicit. Head split across width is provisional pending clarification. Supports, fasteners, edge distances, sealing and fire details are not approved.",
+      "x": [
+        -0.936,
+        -0.886
+      ],
+      "y": [
+        -0.47500000000000003,
+        -0.425
+      ],
+      "z": [
+        -0.065,
+        -0.04
+      ],
+      "layer": 4,
+      "boardId": "FIELD-SIDE-L",
+      "stock": {
+        "kind": "illustrative timber blocking",
+        "width": 0.05,
+        "height": 0.05,
+        "depth": 0.025
+      },
+      "pitch": null,
+      "fasteners": null,
+      "structuralCapacity": null,
+      "positions": "two illustrative stations per side, not a fixing schedule"
+    },
+    {
+      "id": "FIELD-SUPPORT-L-2",
+      "role": "timber-support",
+      "approved": false,
+      "measured": false,
+      "illustrative": true,
+      "source": "User field candidate: Cembrit side/head returns; PDF62 retains PURAL0.6mm source assembly",
+      "note": "150mm is approximate facade-to-frame input. Stock is a derived cut blank, not a selected manufacturer sheet. Joint8mm is explicit. Head split across width is provisional pending clarification. Supports, fasteners, edge distances, sealing and fire details are not approved.",
+      "x": [
+        -0.936,
+        -0.886
+      ],
+      "y": [
+        0.425,
+        0.47500000000000003
+      ],
+      "z": [
+        -0.065,
+        -0.04
+      ],
+      "layer": 4,
+      "boardId": "FIELD-SIDE-L",
+      "stock": {
+        "kind": "illustrative timber blocking",
+        "width": 0.05,
+        "height": 0.05,
+        "depth": 0.025
+      },
+      "pitch": null,
+      "fasteners": null,
+      "structuralCapacity": null,
+      "positions": "two illustrative stations per side, not a fixing schedule"
+    },
+    {
+      "id": "FIELD-SUPPORT-R-1",
+      "role": "timber-support",
+      "approved": false,
+      "measured": false,
+      "illustrative": true,
+      "source": "User field candidate: Cembrit side/head returns; PDF62 retains PURAL0.6mm source assembly",
+      "note": "150mm is approximate facade-to-frame input. Stock is a derived cut blank, not a selected manufacturer sheet. Joint8mm is explicit. Head split across width is provisional pending clarification. Supports, fasteners, edge distances, sealing and fire details are not approved.",
+      "x": [
+        0.886,
+        0.936
+      ],
+      "y": [
+        -0.47500000000000003,
+        -0.425
+      ],
+      "z": [
+        -0.065,
+        -0.04
+      ],
+      "layer": 4,
+      "boardId": "FIELD-SIDE-R",
+      "stock": {
+        "kind": "illustrative timber blocking",
+        "width": 0.05,
+        "height": 0.05,
+        "depth": 0.025
+      },
+      "pitch": null,
+      "fasteners": null,
+      "structuralCapacity": null,
+      "positions": "two illustrative stations per side, not a fixing schedule"
+    },
+    {
+      "id": "FIELD-SUPPORT-R-2",
+      "role": "timber-support",
+      "approved": false,
+      "measured": false,
+      "illustrative": true,
+      "source": "User field candidate: Cembrit side/head returns; PDF62 retains PURAL0.6mm source assembly",
+      "note": "150mm is approximate facade-to-frame input. Stock is a derived cut blank, not a selected manufacturer sheet. Joint8mm is explicit. Head split across width is provisional pending clarification. Supports, fasteners, edge distances, sealing and fire details are not approved.",
+      "x": [
+        0.886,
+        0.936
+      ],
+      "y": [
+        0.425,
+        0.47500000000000003
+      ],
+      "z": [
+        -0.065,
+        -0.04
+      ],
+      "layer": 4,
+      "boardId": "FIELD-SIDE-R",
+      "stock": {
+        "kind": "illustrative timber blocking",
+        "width": 0.05,
+        "height": 0.05,
+        "depth": 0.025
+      },
+      "pitch": null,
+      "fasteners": null,
+      "structuralCapacity": null,
+      "positions": "two illustrative stations per side, not a fixing schedule"
+    },
+    {
+      "id": "FIELD-HEAD-L-SUPPORT",
+      "role": "timber-support",
+      "approved": false,
+      "measured": false,
+      "illustrative": true,
+      "source": "User field candidate: Cembrit side/head returns; PDF62 retains PURAL0.6mm source assembly",
+      "note": "150mm is approximate facade-to-frame input. Stock is a derived cut blank, not a selected manufacturer sheet. Joint8mm is explicit. Head split across width is provisional pending clarification. Supports, fasteners, edge distances, sealing and fire details are not approved.",
+      "boardId": "FIELD-HEAD-L",
+      "x": [
+        -0.47000000000000003,
+        -0.42
+      ],
+      "y": [
+        0.7335,
+        0.7835000000000001
+      ],
+      "z": [
+        -0.065,
+        -0.04
+      ],
+      "layer": 4,
+      "stock": {
+        "kind": "illustrative timber blocking",
+        "width": 0.05,
+        "height": 0.05,
+        "depth": 0.025
+      },
+      "pitch": null,
+      "fasteners": null,
+      "structuralCapacity": null,
+      "positions": "one illustrative station per head board, not a fixing schedule"
+    },
+    {
+      "id": "FIELD-HEAD-R-SUPPORT",
+      "role": "timber-support",
+      "approved": false,
+      "measured": false,
+      "illustrative": true,
+      "source": "User field candidate: Cembrit side/head returns; PDF62 retains PURAL0.6mm source assembly",
+      "note": "150mm is approximate facade-to-frame input. Stock is a derived cut blank, not a selected manufacturer sheet. Joint8mm is explicit. Head split across width is provisional pending clarification. Supports, fasteners, edge distances, sealing and fire details are not approved.",
+      "boardId": "FIELD-HEAD-R",
+      "x": [
+        0.42,
+        0.47000000000000003
+      ],
+      "y": [
+        0.7335,
+        0.7835000000000001
+      ],
+      "z": [
+        -0.065,
+        -0.04
+      ],
+      "layer": 4,
+      "stock": {
+        "kind": "illustrative timber blocking",
+        "width": 0.05,
+        "height": 0.05,
+        "depth": 0.025
+      },
+      "pitch": null,
+      "fasteners": null,
+      "structuralCapacity": null,
+      "positions": "one illustrative station per head board, not a fixing schedule"
+    }
+  ],
+  "joints": [
+    {
+      "id": "HEAD-CENTRE",
+      "width": 0.008
+    },
+    {
+      "id": "SIDE-L-TO-FACADE",
+      "width": 0.008
+    },
+    {
+      "id": "SIDE-R-TO-FACADE",
+      "width": 0.008
+    },
+    {
+      "id": "HEAD-TO-FACADE",
+      "width": 0.008
+    },
+    {
+      "id": "SIDE-L-TO-HEAD",
+      "width": 0.008
+    },
+    {
+      "id": "SIDE-R-TO-HEAD",
+      "width": 0.008
+    }
+  ],
+  "operations": [
+    {
+      "id": "FIELD-SIDE-L-DEPTH",
+      "kind": "trim rear edge",
+      "remove": 0.002,
+      "keep": "z >= rear edge plus clearance",
+      "partId": "FIELD-SIDE-L"
+    },
+    {
+      "id": "FIELD-SIDE-L-BOTTOM",
+      "kind": "inclined lower cut",
+      "angleDegrees": 10,
+      "keep": "above sill clearance line",
+      "lineYZ": [
+        [
+          -0.7021953720164344,
+          -0.121
+        ],
+        [
+          -0.7286444191227042,
+          0.029
+        ]
+      ],
+      "partId": "FIELD-SIDE-L"
+    },
+    {
+      "id": "FIELD-SIDE-R-DEPTH",
+      "kind": "trim rear edge",
+      "remove": 0.002,
+      "keep": "z >= rear edge plus clearance",
+      "partId": "FIELD-SIDE-R"
+    },
+    {
+      "id": "FIELD-SIDE-R-BOTTOM",
+      "kind": "inclined lower cut",
+      "angleDegrees": 10,
+      "keep": "above sill clearance line",
+      "lineYZ": [
+        [
+          -0.7021953720164344,
+          -0.121
+        ],
+        [
+          -0.7286444191227042,
+          0.029
+        ]
+      ],
+      "partId": "FIELD-SIDE-R"
+    },
+    {
+      "id": "FIELD-HEAD-L-DEPTH",
+      "kind": "trim rear edge",
+      "remove": 0.002,
+      "partId": "FIELD-HEAD-L"
+    },
+    {
+      "id": "FIELD-HEAD-L-WIDTH",
+      "kind": "square end cut",
+      "finishedLength": 0.882,
+      "partId": "FIELD-HEAD-L"
+    },
+    {
+      "id": "FIELD-HEAD-R-DEPTH",
+      "kind": "trim rear edge",
+      "remove": 0.002,
+      "partId": "FIELD-HEAD-R"
+    },
+    {
+      "id": "FIELD-HEAD-R-WIDTH",
+      "kind": "square end cut",
+      "finishedLength": 0.882,
+      "partId": "FIELD-HEAD-R"
+    }
+  ],
+  "disclosure": "Field FC reveal candidate differs from PDF62 PURAL0.6mm reveals; source mode remains available and default."
+}

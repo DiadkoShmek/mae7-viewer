@@ -1,0 +1,29 @@
+// A failed multisampled context must not rule out a usable plain WebGL2
+// context. Use a fresh canvas for the second attempt; never weaken privacy
+// settings or silently substitute WebGL1 for a WebGL2 renderer.
+export function createViewerContext(createCanvas){
+ const failures=[];
+ for(const antialias of [true,false]){
+  const canvas=createCanvas();let context;
+  try{context=canvas.getContext('webgl2',{antialias,alpha:false,powerPreference:'default'});}catch(error){failures.push(error.name);}
+  if(!context||context.isContextLost()){failures.push('unavailable');continue;}
+  let reversedDepth=false;
+  try{reversedDepth=Boolean(context.getExtension('EXT_clip_control'));}catch{}
+  return {canvas,context,antialias,reversedDepth};
+ }
+ const error=Error('WebGL2 unavailable');error.code='WEBGL2_UNAVAILABLE';error.attempts=failures;throw error;
+}
+
+export function startupFailure(error,phase){
+ const code=error?.code==='WEBGL2_UNAVAILABLE'?'WEBGL2_UNAVAILABLE':phase==='module'?'MODULE_LOAD':phase==='asset'?'MODEL_LOAD':'RENDER_START';
+ return {code,title:code==='WEBGL2_UNAVAILABLE'?'Браузер не запустив 3D':'Не вдалося відкрити 3D',
+  note:code==='WEBGL2_UNAVAILABLE'?'Браузер не надав доступу до WebGL 2. Перезавантаж сторінку й спробуй ще раз.':code==='MODEL_LOAD'||code==='MODULE_LOAD'?'Не завершилось завантаження. Перевір з’єднання й спробуй ще раз.':'Сцена завантажилась, але перший кадр не запустився. Спробуй ще раз.'};
+}
+
+export function showStartupFailure(document,error,phase){
+ const failure=startupFailure(error,phase),app=document.getElementById('app');
+ document.getElementById('loading').hidden=true;document.getElementById('fallback').hidden=false;
+ document.getElementById('fallback-title').textContent=failure.title;
+ document.getElementById('fallback-note').textContent=failure.note+' Огляд будинку залишається доступним на зображенні.';
+ app.dataset.ready='false';app.dataset.startupError=failure.code;
+}

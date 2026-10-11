@@ -1,0 +1,4 @@
+export const roofColourReference={"code":"RR23","manufacturer":"Ruukki","approximateRAL":"7024","hex":"#434a50","rgb":[67,74,80],"source":"https://www.ruukki.com/docs/default-source/system-products-pdfs/eesti-ruukki/classic-design-475-et.pdf?sfvrsn=0638600557302430000","page":5,"vectorFill":[0.26269999146461487,0.29019999504089355,0.31369999051094055],"swatchBBoxPt":[248.5426025390625,437.2499694824219,338.5426025390625,527.25],"pdfSHA256":"48ce818eba58f73b7938f91e2dfc940bfe6d423dad8175f698fbd8326f140d63","basis":"Manufacturer PDF vector colour swatch labelledRR23; digitalreference not measured delivered coating","calibrated":false,"deliveredBatch":null};
+
+// Review appearance only. This does not identify a gloss grade or measured stock.
+export const roofCoatingAppearance=Object.freeze({roughness:.78,metalness:0,calibrated:false,approved:false,basis:'Illustrative roof coating response; reduces grazing glare, not a measured coating or product selection'});

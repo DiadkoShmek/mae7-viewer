@@ -1,0 +1,1710 @@
+{
+  "schema": "retained-basement-window-finishes-v35",
+  "approved": false,
+  "plans": [
+    {
+      "id": "BASEMENT-SE-G01",
+      "approved": false,
+      "quantityAuthority": false,
+      "source": "§5.7; PDF63/ark15",
+      "sourceFacts": {
+        "retainedWindow": true,
+        "replacement": false,
+        "PURALThickness": 0.0006,
+        "minimumSillSlope": 0.1,
+        "projection": 0.03,
+        "FCThickness": 0.008,
+        "RKL31Thickness": 0.03,
+        "treatedTimberSection": [
+          0.075,
+          0.03
+        ],
+        "timberClass": "H3"
+      },
+      "aperture": {
+        "width": 1.781232316881482,
+        "height": 0.5905690034580333
+      },
+      "frame": {
+        "width": 1.775232316881482,
+        "height": 0.5845690034580333,
+        "front": -0.03
+      },
+      "head": {
+        "bottom": 0.26428450172901663,
+        "back": -0.028999999999999998,
+        "front": 0.1824,
+        "width": 1.765232316881482,
+        "windboardThickness": 0.03,
+        "sheetThickness": 0.0006
+      },
+      "sill": {
+        "width": 1.763232316881482,
+        "rear": -0.029699999999999997,
+        "nose": 0.213,
+        "backY": -0.2722845017290167,
+        "drop": 0.02427,
+        "sectionYZ": [
+          [
+            -0.2602845017290167,
+            -0.029399999999999996
+          ],
+          [
+            -0.27201300546038304,
+            -0.029399999999999996
+          ],
+          [
+            -0.29628300546038305,
+            0.2133
+          ],
+          [
+            -0.30885450172901674,
+            0.2133
+          ],
+          [
+            -0.30885450172901674,
+            0.21
+          ],
+          [
+            -0.3082545017290167,
+            0.21
+          ],
+          [
+            -0.3082545017290167,
+            0.2127
+          ],
+          [
+            -0.29682599799765036,
+            0.2127
+          ],
+          [
+            -0.27255599799765035,
+            -0.03
+          ],
+          [
+            -0.2602845017290167,
+            -0.03
+          ]
+        ],
+        "endSectionYZ": [
+          [
+            -0.27201900546038305,
+            -0.029339999999999998
+          ],
+          [
+            -0.29621700546038304,
+            0.21264
+          ],
+          [
+            -0.28421700546038303,
+            0.21264
+          ],
+          [
+            -0.26001900546038303,
+            -0.029339999999999998
+          ]
+        ],
+        "endThickness": 0.0006,
+        "scope": "Continuous display sheet from retained frame to30mm projection; rear/end folds are fabrication candidates, not approved weather seals"
+      },
+      "candidate": {
+        "frameFace": 0.04,
+        "frameDepth": 0.065,
+        "beadFace": 0.008,
+        "beadDepth": 0.005,
+        "gasketFace": 0.003,
+        "gasketDepth": 0.006,
+        "sillRearUpstand": 0.012,
+        "sillFrontDrip": 0.012,
+        "sillHem": 0.003,
+        "sillEndHeight": 0.012,
+        "sideClearance": 0.001,
+        "headSeat": "30mm lining fits inside the current graphic display aperture; actual head seating requires survey"
+      },
+      "unknown": {
+        "existingFrameSection": null,
+        "existingGlassLayers": null,
+        "existingGlassThickness": null,
+        "installedRecess": null,
+        "anchors": null,
+        "sillFolds": null,
+        "bottomWindboardSeat": null,
+        "sideTimber75x30Seat": null,
+        "headVentilationClosure": null,
+        "orderedFCParts": null,
+        "frameMaterial": null,
+        "existingSashDivision": null,
+        "bendRadii": null,
+        "endSealing": null,
+        "bottomRKL31Seat": null,
+        "fasteners": null
+      },
+      "sourceFeaturesNotAuthored": [
+        "Bottom RKL31 seat and side75x30H3 supports: local substrate recesses require a surveyed window detail",
+        "Head insect mesh/ventilation/tape closure: section and fastening unresolved"
+      ]
+    },
+    {
+      "id": "BASEMENT-SE-G02",
+      "approved": false,
+      "quantityAuthority": false,
+      "source": "§5.7; PDF63/ark15",
+      "sourceFacts": {
+        "retainedWindow": true,
+        "replacement": false,
+        "PURALThickness": 0.0006,
+        "minimumSillSlope": 0.1,
+        "projection": 0.03,
+        "FCThickness": 0.008,
+        "RKL31Thickness": 0.03,
+        "treatedTimberSection": [
+          0.075,
+          0.03
+        ],
+        "timberClass": "H3"
+      },
+      "aperture": {
+        "width": 1.781232316881483,
+        "height": 0.5905690034580333
+      },
+      "frame": {
+        "width": 1.775232316881483,
+        "height": 0.5845690034580333,
+        "front": -0.03
+      },
+      "head": {
+        "bottom": 0.26428450172901663,
+        "back": -0.028999999999999998,
+        "front": 0.1824,
+        "width": 1.765232316881483,
+        "windboardThickness": 0.03,
+        "sheetThickness": 0.0006
+      },
+      "sill": {
+        "width": 1.763232316881483,
+        "rear": -0.029699999999999997,
+        "nose": 0.213,
+        "backY": -0.2722845017290167,
+        "drop": 0.02427,
+        "sectionYZ": [
+          [
+            -0.2602845017290167,
+            -0.029399999999999996
+          ],
+          [
+            -0.27201300546038304,
+            -0.029399999999999996
+          ],
+          [
+            -0.29628300546038305,
+            0.2133
+          ],
+          [
+            -0.30885450172901674,
+            0.2133
+          ],
+          [
+            -0.30885450172901674,
+            0.21
+          ],
+          [
+            -0.3082545017290167,
+            0.21
+          ],
+          [
+            -0.3082545017290167,
+            0.2127
+          ],
+          [
+            -0.29682599799765036,
+            0.2127
+          ],
+          [
+            -0.27255599799765035,
+            -0.03
+          ],
+          [
+            -0.2602845017290167,
+            -0.03
+          ]
+        ],
+        "endSectionYZ": [
+          [
+            -0.27201900546038305,
+            -0.029339999999999998
+          ],
+          [
+            -0.29621700546038304,
+            0.21264
+          ],
+          [
+            -0.28421700546038303,
+            0.21264
+          ],
+          [
+            -0.26001900546038303,
+            -0.029339999999999998
+          ]
+        ],
+        "endThickness": 0.0006,
+        "scope": "Continuous display sheet from retained frame to30mm projection; rear/end folds are fabrication candidates, not approved weather seals"
+      },
+      "candidate": {
+        "frameFace": 0.04,
+        "frameDepth": 0.065,
+        "beadFace": 0.008,
+        "beadDepth": 0.005,
+        "gasketFace": 0.003,
+        "gasketDepth": 0.006,
+        "sillRearUpstand": 0.012,
+        "sillFrontDrip": 0.012,
+        "sillHem": 0.003,
+        "sillEndHeight": 0.012,
+        "sideClearance": 0.001,
+        "headSeat": "30mm lining fits inside the current graphic display aperture; actual head seating requires survey"
+      },
+      "unknown": {
+        "existingFrameSection": null,
+        "existingGlassLayers": null,
+        "existingGlassThickness": null,
+        "installedRecess": null,
+        "anchors": null,
+        "sillFolds": null,
+        "bottomWindboardSeat": null,
+        "sideTimber75x30Seat": null,
+        "headVentilationClosure": null,
+        "orderedFCParts": null,
+        "frameMaterial": null,
+        "existingSashDivision": null,
+        "bendRadii": null,
+        "endSealing": null,
+        "bottomRKL31Seat": null,
+        "fasteners": null
+      },
+      "sourceFeaturesNotAuthored": [
+        "Bottom RKL31 seat and side75x30H3 supports: local substrate recesses require a surveyed window detail",
+        "Head insect mesh/ventilation/tape closure: section and fastening unresolved"
+      ]
+    },
+    {
+      "id": "BASEMENT-SE-G03",
+      "approved": false,
+      "quantityAuthority": false,
+      "source": "§5.7; PDF63/ark15",
+      "sourceFacts": {
+        "retainedWindow": true,
+        "replacement": false,
+        "PURALThickness": 0.0006,
+        "minimumSillSlope": 0.1,
+        "projection": 0.03,
+        "FCThickness": 0.008,
+        "RKL31Thickness": 0.03,
+        "treatedTimberSection": [
+          0.075,
+          0.03
+        ],
+        "timberClass": "H3"
+      },
+      "aperture": {
+        "width": 1.778057214712356,
+        "height": 0.5905690034580333
+      },
+      "frame": {
+        "width": 1.7720572147123559,
+        "height": 0.5845690034580333,
+        "front": -0.03
+      },
+      "head": {
+        "bottom": 0.26428450172901663,
+        "back": -0.028999999999999998,
+        "front": 0.1824,
+        "width": 1.7620572147123559,
+        "windboardThickness": 0.03,
+        "sheetThickness": 0.0006
+      },
+      "sill": {
+        "width": 1.7600572147123559,
+        "rear": -0.029699999999999997,
+        "nose": 0.213,
+        "backY": -0.2722845017290167,
+        "drop": 0.02427,
+        "sectionYZ": [
+          [
+            -0.2602845017290167,
+            -0.029399999999999996
+          ],
+          [
+            -0.27201300546038304,
+            -0.029399999999999996
+          ],
+          [
+            -0.29628300546038305,
+            0.2133
+          ],
+          [
+            -0.30885450172901674,
+            0.2133
+          ],
+          [
+            -0.30885450172901674,
+            0.21
+          ],
+          [
+            -0.3082545017290167,
+            0.21
+          ],
+          [
+            -0.3082545017290167,
+            0.2127
+          ],
+          [
+            -0.29682599799765036,
+            0.2127
+          ],
+          [
+            -0.27255599799765035,
+            -0.03
+          ],
+          [
+            -0.2602845017290167,
+            -0.03
+          ]
+        ],
+        "endSectionYZ": [
+          [
+            -0.27201900546038305,
+            -0.029339999999999998
+          ],
+          [
+            -0.29621700546038304,
+            0.21264
+          ],
+          [
+            -0.28421700546038303,
+            0.21264
+          ],
+          [
+            -0.26001900546038303,
+            -0.029339999999999998
+          ]
+        ],
+        "endThickness": 0.0006,
+        "scope": "Continuous display sheet from retained frame to30mm projection; rear/end folds are fabrication candidates, not approved weather seals"
+      },
+      "candidate": {
+        "frameFace": 0.04,
+        "frameDepth": 0.065,
+        "beadFace": 0.008,
+        "beadDepth": 0.005,
+        "gasketFace": 0.003,
+        "gasketDepth": 0.006,
+        "sillRearUpstand": 0.012,
+        "sillFrontDrip": 0.012,
+        "sillHem": 0.003,
+        "sillEndHeight": 0.012,
+        "sideClearance": 0.001,
+        "headSeat": "30mm lining fits inside the current graphic display aperture; actual head seating requires survey"
+      },
+      "unknown": {
+        "existingFrameSection": null,
+        "existingGlassLayers": null,
+        "existingGlassThickness": null,
+        "installedRecess": null,
+        "anchors": null,
+        "sillFolds": null,
+        "bottomWindboardSeat": null,
+        "sideTimber75x30Seat": null,
+        "headVentilationClosure": null,
+        "orderedFCParts": null,
+        "frameMaterial": null,
+        "existingSashDivision": null,
+        "bendRadii": null,
+        "endSealing": null,
+        "bottomRKL31Seat": null,
+        "fasteners": null
+      },
+      "sourceFeaturesNotAuthored": [
+        "Bottom RKL31 seat and side75x30H3 supports: local substrate recesses require a surveyed window detail",
+        "Head insect mesh/ventilation/tape closure: section and fastening unresolved"
+      ]
+    },
+    {
+      "id": "BASEMENT-SE-G04",
+      "approved": false,
+      "quantityAuthority": false,
+      "source": "§5.7; PDF63/ark15",
+      "sourceFacts": {
+        "retainedWindow": true,
+        "replacement": false,
+        "PURALThickness": 0.0006,
+        "minimumSillSlope": 0.1,
+        "projection": 0.03,
+        "FCThickness": 0.008,
+        "RKL31Thickness": 0.03,
+        "treatedTimberSection": [
+          0.075,
+          0.03
+        ],
+        "timberClass": "H3"
+      },
+      "aperture": {
+        "width": 1.781232316881482,
+        "height": 0.5905690034580333
+      },
+      "frame": {
+        "width": 1.775232316881482,
+        "height": 0.5845690034580333,
+        "front": -0.03
+      },
+      "head": {
+        "bottom": 0.26428450172901663,
+        "back": -0.028999999999999998,
+        "front": 0.1824,
+        "width": 1.765232316881482,
+        "windboardThickness": 0.03,
+        "sheetThickness": 0.0006
+      },
+      "sill": {
+        "width": 1.763232316881482,
+        "rear": -0.029699999999999997,
+        "nose": 0.213,
+        "backY": -0.2722845017290167,
+        "drop": 0.02427,
+        "sectionYZ": [
+          [
+            -0.2602845017290167,
+            -0.029399999999999996
+          ],
+          [
+            -0.27201300546038304,
+            -0.029399999999999996
+          ],
+          [
+            -0.29628300546038305,
+            0.2133
+          ],
+          [
+            -0.30885450172901674,
+            0.2133
+          ],
+          [
+            -0.30885450172901674,
+            0.21
+          ],
+          [
+            -0.3082545017290167,
+            0.21
+          ],
+          [
+            -0.3082545017290167,
+            0.2127
+          ],
+          [
+            -0.29682599799765036,
+            0.2127
+          ],
+          [
+            -0.27255599799765035,
+            -0.03
+          ],
+          [
+            -0.2602845017290167,
+            -0.03
+          ]
+        ],
+        "endSectionYZ": [
+          [
+            -0.27201900546038305,
+            -0.029339999999999998
+          ],
+          [
+            -0.29621700546038304,
+            0.21264
+          ],
+          [
+            -0.28421700546038303,
+            0.21264
+          ],
+          [
+            -0.26001900546038303,
+            -0.029339999999999998
+          ]
+        ],
+        "endThickness": 0.0006,
+        "scope": "Continuous display sheet from retained frame to30mm projection; rear/end folds are fabrication candidates, not approved weather seals"
+      },
+      "candidate": {
+        "frameFace": 0.04,
+        "frameDepth": 0.065,
+        "beadFace": 0.008,
+        "beadDepth": 0.005,
+        "gasketFace": 0.003,
+        "gasketDepth": 0.006,
+        "sillRearUpstand": 0.012,
+        "sillFrontDrip": 0.012,
+        "sillHem": 0.003,
+        "sillEndHeight": 0.012,
+        "sideClearance": 0.001,
+        "headSeat": "30mm lining fits inside the current graphic display aperture; actual head seating requires survey"
+      },
+      "unknown": {
+        "existingFrameSection": null,
+        "existingGlassLayers": null,
+        "existingGlassThickness": null,
+        "installedRecess": null,
+        "anchors": null,
+        "sillFolds": null,
+        "bottomWindboardSeat": null,
+        "sideTimber75x30Seat": null,
+        "headVentilationClosure": null,
+        "orderedFCParts": null,
+        "frameMaterial": null,
+        "existingSashDivision": null,
+        "bendRadii": null,
+        "endSealing": null,
+        "bottomRKL31Seat": null,
+        "fasteners": null
+      },
+      "sourceFeaturesNotAuthored": [
+        "Bottom RKL31 seat and side75x30H3 supports: local substrate recesses require a surveyed window detail",
+        "Head insect mesh/ventilation/tape closure: section and fastening unresolved"
+      ]
+    },
+    {
+      "id": "BASEMENT-SE-G05",
+      "approved": false,
+      "quantityAuthority": false,
+      "source": "§5.7; PDF63/ark15",
+      "sourceFacts": {
+        "retainedWindow": true,
+        "replacement": false,
+        "PURALThickness": 0.0006,
+        "minimumSillSlope": 0.1,
+        "projection": 0.03,
+        "FCThickness": 0.008,
+        "RKL31Thickness": 0.03,
+        "treatedTimberSection": [
+          0.075,
+          0.03
+        ],
+        "timberClass": "H3"
+      },
+      "aperture": {
+        "width": 1.7812323168814874,
+        "height": 0.5905690034580333
+      },
+      "frame": {
+        "width": 1.7752323168814874,
+        "height": 0.5845690034580333,
+        "front": -0.03
+      },
+      "head": {
+        "bottom": 0.26428450172901663,
+        "back": -0.028999999999999998,
+        "front": 0.1824,
+        "width": 1.7652323168814874,
+        "windboardThickness": 0.03,
+        "sheetThickness": 0.0006
+      },
+      "sill": {
+        "width": 1.7632323168814874,
+        "rear": -0.029699999999999997,
+        "nose": 0.213,
+        "backY": -0.2722845017290167,
+        "drop": 0.02427,
+        "sectionYZ": [
+          [
+            -0.2602845017290167,
+            -0.029399999999999996
+          ],
+          [
+            -0.27201300546038304,
+            -0.029399999999999996
+          ],
+          [
+            -0.29628300546038305,
+            0.2133
+          ],
+          [
+            -0.30885450172901674,
+            0.2133
+          ],
+          [
+            -0.30885450172901674,
+            0.21
+          ],
+          [
+            -0.3082545017290167,
+            0.21
+          ],
+          [
+            -0.3082545017290167,
+            0.2127
+          ],
+          [
+            -0.29682599799765036,
+            0.2127
+          ],
+          [
+            -0.27255599799765035,
+            -0.03
+          ],
+          [
+            -0.2602845017290167,
+            -0.03
+          ]
+        ],
+        "endSectionYZ": [
+          [
+            -0.27201900546038305,
+            -0.029339999999999998
+          ],
+          [
+            -0.29621700546038304,
+            0.21264
+          ],
+          [
+            -0.28421700546038303,
+            0.21264
+          ],
+          [
+            -0.26001900546038303,
+            -0.029339999999999998
+          ]
+        ],
+        "endThickness": 0.0006,
+        "scope": "Continuous display sheet from retained frame to30mm projection; rear/end folds are fabrication candidates, not approved weather seals"
+      },
+      "candidate": {
+        "frameFace": 0.04,
+        "frameDepth": 0.065,
+        "beadFace": 0.008,
+        "beadDepth": 0.005,
+        "gasketFace": 0.003,
+        "gasketDepth": 0.006,
+        "sillRearUpstand": 0.012,
+        "sillFrontDrip": 0.012,
+        "sillHem": 0.003,
+        "sillEndHeight": 0.012,
+        "sideClearance": 0.001,
+        "headSeat": "30mm lining fits inside the current graphic display aperture; actual head seating requires survey"
+      },
+      "unknown": {
+        "existingFrameSection": null,
+        "existingGlassLayers": null,
+        "existingGlassThickness": null,
+        "installedRecess": null,
+        "anchors": null,
+        "sillFolds": null,
+        "bottomWindboardSeat": null,
+        "sideTimber75x30Seat": null,
+        "headVentilationClosure": null,
+        "orderedFCParts": null,
+        "frameMaterial": null,
+        "existingSashDivision": null,
+        "bendRadii": null,
+        "endSealing": null,
+        "bottomRKL31Seat": null,
+        "fasteners": null
+      },
+      "sourceFeaturesNotAuthored": [
+        "Bottom RKL31 seat and side75x30H3 supports: local substrate recesses require a surveyed window detail",
+        "Head insect mesh/ventilation/tape closure: section and fastening unresolved"
+      ]
+    },
+    {
+      "id": "BASEMENT-SE-G06",
+      "approved": false,
+      "quantityAuthority": false,
+      "source": "§5.7; PDF63/ark15",
+      "sourceFacts": {
+        "retainedWindow": true,
+        "replacement": false,
+        "PURALThickness": 0.0006,
+        "minimumSillSlope": 0.1,
+        "projection": 0.03,
+        "FCThickness": 0.008,
+        "RKL31Thickness": 0.03,
+        "treatedTimberSection": [
+          0.075,
+          0.03
+        ],
+        "timberClass": "H3"
+      },
+      "aperture": {
+        "width": 1.781232316881482,
+        "height": 0.5905690034580333
+      },
+      "frame": {
+        "width": 1.775232316881482,
+        "height": 0.5845690034580333,
+        "front": -0.03
+      },
+      "head": {
+        "bottom": 0.26428450172901663,
+        "back": -0.028999999999999998,
+        "front": 0.1824,
+        "width": 1.765232316881482,
+        "windboardThickness": 0.03,
+        "sheetThickness": 0.0006
+      },
+      "sill": {
+        "width": 1.763232316881482,
+        "rear": -0.029699999999999997,
+        "nose": 0.213,
+        "backY": -0.2722845017290167,
+        "drop": 0.02427,
+        "sectionYZ": [
+          [
+            -0.2602845017290167,
+            -0.029399999999999996
+          ],
+          [
+            -0.27201300546038304,
+            -0.029399999999999996
+          ],
+          [
+            -0.29628300546038305,
+            0.2133
+          ],
+          [
+            -0.30885450172901674,
+            0.2133
+          ],
+          [
+            -0.30885450172901674,
+            0.21
+          ],
+          [
+            -0.3082545017290167,
+            0.21
+          ],
+          [
+            -0.3082545017290167,
+            0.2127
+          ],
+          [
+            -0.29682599799765036,
+            0.2127
+          ],
+          [
+            -0.27255599799765035,
+            -0.03
+          ],
+          [
+            -0.2602845017290167,
+            -0.03
+          ]
+        ],
+        "endSectionYZ": [
+          [
+            -0.27201900546038305,
+            -0.029339999999999998
+          ],
+          [
+            -0.29621700546038304,
+            0.21264
+          ],
+          [
+            -0.28421700546038303,
+            0.21264
+          ],
+          [
+            -0.26001900546038303,
+            -0.029339999999999998
+          ]
+        ],
+        "endThickness": 0.0006,
+        "scope": "Continuous display sheet from retained frame to30mm projection; rear/end folds are fabrication candidates, not approved weather seals"
+      },
+      "candidate": {
+        "frameFace": 0.04,
+        "frameDepth": 0.065,
+        "beadFace": 0.008,
+        "beadDepth": 0.005,
+        "gasketFace": 0.003,
+        "gasketDepth": 0.006,
+        "sillRearUpstand": 0.012,
+        "sillFrontDrip": 0.012,
+        "sillHem": 0.003,
+        "sillEndHeight": 0.012,
+        "sideClearance": 0.001,
+        "headSeat": "30mm lining fits inside the current graphic display aperture; actual head seating requires survey"
+      },
+      "unknown": {
+        "existingFrameSection": null,
+        "existingGlassLayers": null,
+        "existingGlassThickness": null,
+        "installedRecess": null,
+        "anchors": null,
+        "sillFolds": null,
+        "bottomWindboardSeat": null,
+        "sideTimber75x30Seat": null,
+        "headVentilationClosure": null,
+        "orderedFCParts": null,
+        "frameMaterial": null,
+        "existingSashDivision": null,
+        "bendRadii": null,
+        "endSealing": null,
+        "bottomRKL31Seat": null,
+        "fasteners": null
+      },
+      "sourceFeaturesNotAuthored": [
+        "Bottom RKL31 seat and side75x30H3 supports: local substrate recesses require a surveyed window detail",
+        "Head insect mesh/ventilation/tape closure: section and fastening unresolved"
+      ]
+    },
+    {
+      "id": "BASEMENT-NW-G01",
+      "approved": false,
+      "quantityAuthority": false,
+      "source": "§5.7; PDF63/ark15",
+      "sourceFacts": {
+        "retainedWindow": true,
+        "replacement": false,
+        "PURALThickness": 0.0006,
+        "minimumSillSlope": 0.1,
+        "projection": 0.03,
+        "FCThickness": 0.008,
+        "RKL31Thickness": 0.03,
+        "treatedTimberSection": [
+          0.075,
+          0.03
+        ],
+        "timberClass": "H3"
+      },
+      "aperture": {
+        "width": 1.778057214712355,
+        "height": 0.5905690034580363
+      },
+      "frame": {
+        "width": 1.772057214712355,
+        "height": 0.5845690034580363,
+        "front": -0.03
+      },
+      "head": {
+        "bottom": 0.2642845017290182,
+        "back": -0.028999999999999998,
+        "front": 0.1824,
+        "width": 1.762057214712355,
+        "windboardThickness": 0.03,
+        "sheetThickness": 0.0006
+      },
+      "sill": {
+        "width": 1.760057214712355,
+        "rear": -0.029699999999999997,
+        "nose": 0.213,
+        "backY": -0.2722845017290182,
+        "drop": 0.02427,
+        "sectionYZ": [
+          [
+            -0.2602845017290182,
+            -0.029399999999999996
+          ],
+          [
+            -0.27201300546038454,
+            -0.029399999999999996
+          ],
+          [
+            -0.29628300546038455,
+            0.2133
+          ],
+          [
+            -0.30885450172901824,
+            0.2133
+          ],
+          [
+            -0.30885450172901824,
+            0.21
+          ],
+          [
+            -0.3082545017290182,
+            0.21
+          ],
+          [
+            -0.3082545017290182,
+            0.2127
+          ],
+          [
+            -0.29682599799765186,
+            0.2127
+          ],
+          [
+            -0.27255599799765184,
+            -0.03
+          ],
+          [
+            -0.2602845017290182,
+            -0.03
+          ]
+        ],
+        "endSectionYZ": [
+          [
+            -0.27201900546038454,
+            -0.029339999999999998
+          ],
+          [
+            -0.29621700546038454,
+            0.21264
+          ],
+          [
+            -0.28421700546038453,
+            0.21264
+          ],
+          [
+            -0.26001900546038453,
+            -0.029339999999999998
+          ]
+        ],
+        "endThickness": 0.0006,
+        "scope": "Continuous display sheet from retained frame to30mm projection; rear/end folds are fabrication candidates, not approved weather seals"
+      },
+      "candidate": {
+        "frameFace": 0.04,
+        "frameDepth": 0.065,
+        "beadFace": 0.008,
+        "beadDepth": 0.005,
+        "gasketFace": 0.003,
+        "gasketDepth": 0.006,
+        "sillRearUpstand": 0.012,
+        "sillFrontDrip": 0.012,
+        "sillHem": 0.003,
+        "sillEndHeight": 0.012,
+        "sideClearance": 0.001,
+        "headSeat": "30mm lining fits inside the current graphic display aperture; actual head seating requires survey"
+      },
+      "unknown": {
+        "existingFrameSection": null,
+        "existingGlassLayers": null,
+        "existingGlassThickness": null,
+        "installedRecess": null,
+        "anchors": null,
+        "sillFolds": null,
+        "bottomWindboardSeat": null,
+        "sideTimber75x30Seat": null,
+        "headVentilationClosure": null,
+        "orderedFCParts": null,
+        "frameMaterial": null,
+        "existingSashDivision": null,
+        "bendRadii": null,
+        "endSealing": null,
+        "bottomRKL31Seat": null,
+        "fasteners": null
+      },
+      "sourceFeaturesNotAuthored": [
+        "Bottom RKL31 seat and side75x30H3 supports: local substrate recesses require a surveyed window detail",
+        "Head insect mesh/ventilation/tape closure: section and fastening unresolved"
+      ]
+    },
+    {
+      "id": "BASEMENT-NW-G02",
+      "approved": false,
+      "quantityAuthority": false,
+      "source": "§5.7; PDF63/ark15",
+      "sourceFacts": {
+        "retainedWindow": true,
+        "replacement": false,
+        "PURALThickness": 0.0006,
+        "minimumSillSlope": 0.1,
+        "projection": 0.03,
+        "FCThickness": 0.008,
+        "RKL31Thickness": 0.03,
+        "treatedTimberSection": [
+          0.075,
+          0.03
+        ],
+        "timberClass": "H3"
+      },
+      "aperture": {
+        "width": 1.7780572147123532,
+        "height": 0.5905690034580363
+      },
+      "frame": {
+        "width": 1.7720572147123532,
+        "height": 0.5845690034580363,
+        "front": -0.03
+      },
+      "head": {
+        "bottom": 0.2642845017290182,
+        "back": -0.028999999999999998,
+        "front": 0.1824,
+        "width": 1.7620572147123532,
+        "windboardThickness": 0.03,
+        "sheetThickness": 0.0006
+      },
+      "sill": {
+        "width": 1.7600572147123532,
+        "rear": -0.029699999999999997,
+        "nose": 0.213,
+        "backY": -0.2722845017290182,
+        "drop": 0.02427,
+        "sectionYZ": [
+          [
+            -0.2602845017290182,
+            -0.029399999999999996
+          ],
+          [
+            -0.27201300546038454,
+            -0.029399999999999996
+          ],
+          [
+            -0.29628300546038455,
+            0.2133
+          ],
+          [
+            -0.30885450172901824,
+            0.2133
+          ],
+          [
+            -0.30885450172901824,
+            0.21
+          ],
+          [
+            -0.3082545017290182,
+            0.21
+          ],
+          [
+            -0.3082545017290182,
+            0.2127
+          ],
+          [
+            -0.29682599799765186,
+            0.2127
+          ],
+          [
+            -0.27255599799765184,
+            -0.03
+          ],
+          [
+            -0.2602845017290182,
+            -0.03
+          ]
+        ],
+        "endSectionYZ": [
+          [
+            -0.27201900546038454,
+            -0.029339999999999998
+          ],
+          [
+            -0.29621700546038454,
+            0.21264
+          ],
+          [
+            -0.28421700546038453,
+            0.21264
+          ],
+          [
+            -0.26001900546038453,
+            -0.029339999999999998
+          ]
+        ],
+        "endThickness": 0.0006,
+        "scope": "Continuous display sheet from retained frame to30mm projection; rear/end folds are fabrication candidates, not approved weather seals"
+      },
+      "candidate": {
+        "frameFace": 0.04,
+        "frameDepth": 0.065,
+        "beadFace": 0.008,
+        "beadDepth": 0.005,
+        "gasketFace": 0.003,
+        "gasketDepth": 0.006,
+        "sillRearUpstand": 0.012,
+        "sillFrontDrip": 0.012,
+        "sillHem": 0.003,
+        "sillEndHeight": 0.012,
+        "sideClearance": 0.001,
+        "headSeat": "30mm lining fits inside the current graphic display aperture; actual head seating requires survey"
+      },
+      "unknown": {
+        "existingFrameSection": null,
+        "existingGlassLayers": null,
+        "existingGlassThickness": null,
+        "installedRecess": null,
+        "anchors": null,
+        "sillFolds": null,
+        "bottomWindboardSeat": null,
+        "sideTimber75x30Seat": null,
+        "headVentilationClosure": null,
+        "orderedFCParts": null,
+        "frameMaterial": null,
+        "existingSashDivision": null,
+        "bendRadii": null,
+        "endSealing": null,
+        "bottomRKL31Seat": null,
+        "fasteners": null
+      },
+      "sourceFeaturesNotAuthored": [
+        "Bottom RKL31 seat and side75x30H3 supports: local substrate recesses require a surveyed window detail",
+        "Head insect mesh/ventilation/tape closure: section and fastening unresolved"
+      ]
+    },
+    {
+      "id": "BASEMENT-NW-G03",
+      "approved": false,
+      "quantityAuthority": false,
+      "source": "§5.7; PDF63/ark15",
+      "sourceFacts": {
+        "retainedWindow": true,
+        "replacement": false,
+        "PURALThickness": 0.0006,
+        "minimumSillSlope": 0.1,
+        "projection": 0.03,
+        "FCThickness": 0.008,
+        "RKL31Thickness": 0.03,
+        "treatedTimberSection": [
+          0.075,
+          0.03
+        ],
+        "timberClass": "H3"
+      },
+      "aperture": {
+        "width": 1.781232316881482,
+        "height": 0.5905690034580363
+      },
+      "frame": {
+        "width": 1.775232316881482,
+        "height": 0.5845690034580363,
+        "front": -0.03
+      },
+      "head": {
+        "bottom": 0.2642845017290182,
+        "back": -0.028999999999999998,
+        "front": 0.1824,
+        "width": 1.765232316881482,
+        "windboardThickness": 0.03,
+        "sheetThickness": 0.0006
+      },
+      "sill": {
+        "width": 1.763232316881482,
+        "rear": -0.029699999999999997,
+        "nose": 0.213,
+        "backY": -0.2722845017290182,
+        "drop": 0.02427,
+        "sectionYZ": [
+          [
+            -0.2602845017290182,
+            -0.029399999999999996
+          ],
+          [
+            -0.27201300546038454,
+            -0.029399999999999996
+          ],
+          [
+            -0.29628300546038455,
+            0.2133
+          ],
+          [
+            -0.30885450172901824,
+            0.2133
+          ],
+          [
+            -0.30885450172901824,
+            0.21
+          ],
+          [
+            -0.3082545017290182,
+            0.21
+          ],
+          [
+            -0.3082545017290182,
+            0.2127
+          ],
+          [
+            -0.29682599799765186,
+            0.2127
+          ],
+          [
+            -0.27255599799765184,
+            -0.03
+          ],
+          [
+            -0.2602845017290182,
+            -0.03
+          ]
+        ],
+        "endSectionYZ": [
+          [
+            -0.27201900546038454,
+            -0.029339999999999998
+          ],
+          [
+            -0.29621700546038454,
+            0.21264
+          ],
+          [
+            -0.28421700546038453,
+            0.21264
+          ],
+          [
+            -0.26001900546038453,
+            -0.029339999999999998
+          ]
+        ],
+        "endThickness": 0.0006,
+        "scope": "Continuous display sheet from retained frame to30mm projection; rear/end folds are fabrication candidates, not approved weather seals"
+      },
+      "candidate": {
+        "frameFace": 0.04,
+        "frameDepth": 0.065,
+        "beadFace": 0.008,
+        "beadDepth": 0.005,
+        "gasketFace": 0.003,
+        "gasketDepth": 0.006,
+        "sillRearUpstand": 0.012,
+        "sillFrontDrip": 0.012,
+        "sillHem": 0.003,
+        "sillEndHeight": 0.012,
+        "sideClearance": 0.001,
+        "headSeat": "30mm lining fits inside the current graphic display aperture; actual head seating requires survey"
+      },
+      "unknown": {
+        "existingFrameSection": null,
+        "existingGlassLayers": null,
+        "existingGlassThickness": null,
+        "installedRecess": null,
+        "anchors": null,
+        "sillFolds": null,
+        "bottomWindboardSeat": null,
+        "sideTimber75x30Seat": null,
+        "headVentilationClosure": null,
+        "orderedFCParts": null,
+        "frameMaterial": null,
+        "existingSashDivision": null,
+        "bendRadii": null,
+        "endSealing": null,
+        "bottomRKL31Seat": null,
+        "fasteners": null
+      },
+      "sourceFeaturesNotAuthored": [
+        "Bottom RKL31 seat and side75x30H3 supports: local substrate recesses require a surveyed window detail",
+        "Head insect mesh/ventilation/tape closure: section and fastening unresolved"
+      ]
+    },
+    {
+      "id": "BASEMENT-NW-G04",
+      "approved": false,
+      "quantityAuthority": false,
+      "source": "§5.7; PDF63/ark15",
+      "sourceFacts": {
+        "retainedWindow": true,
+        "replacement": false,
+        "PURALThickness": 0.0006,
+        "minimumSillSlope": 0.1,
+        "projection": 0.03,
+        "FCThickness": 0.008,
+        "RKL31Thickness": 0.03,
+        "treatedTimberSection": [
+          0.075,
+          0.03
+        ],
+        "timberClass": "H3"
+      },
+      "aperture": {
+        "width": 1.781232316881482,
+        "height": 0.5905690034580363
+      },
+      "frame": {
+        "width": 1.775232316881482,
+        "height": 0.5845690034580363,
+        "front": -0.03
+      },
+      "head": {
+        "bottom": 0.2642845017290182,
+        "back": -0.028999999999999998,
+        "front": 0.1824,
+        "width": 1.765232316881482,
+        "windboardThickness": 0.03,
+        "sheetThickness": 0.0006
+      },
+      "sill": {
+        "width": 1.763232316881482,
+        "rear": -0.029699999999999997,
+        "nose": 0.213,
+        "backY": -0.2722845017290182,
+        "drop": 0.02427,
+        "sectionYZ": [
+          [
+            -0.2602845017290182,
+            -0.029399999999999996
+          ],
+          [
+            -0.27201300546038454,
+            -0.029399999999999996
+          ],
+          [
+            -0.29628300546038455,
+            0.2133
+          ],
+          [
+            -0.30885450172901824,
+            0.2133
+          ],
+          [
+            -0.30885450172901824,
+            0.21
+          ],
+          [
+            -0.3082545017290182,
+            0.21
+          ],
+          [
+            -0.3082545017290182,
+            0.2127
+          ],
+          [
+            -0.29682599799765186,
+            0.2127
+          ],
+          [
+            -0.27255599799765184,
+            -0.03
+          ],
+          [
+            -0.2602845017290182,
+            -0.03
+          ]
+        ],
+        "endSectionYZ": [
+          [
+            -0.27201900546038454,
+            -0.029339999999999998
+          ],
+          [
+            -0.29621700546038454,
+            0.21264
+          ],
+          [
+            -0.28421700546038453,
+            0.21264
+          ],
+          [
+            -0.26001900546038453,
+            -0.029339999999999998
+          ]
+        ],
+        "endThickness": 0.0006,
+        "scope": "Continuous display sheet from retained frame to30mm projection; rear/end folds are fabrication candidates, not approved weather seals"
+      },
+      "candidate": {
+        "frameFace": 0.04,
+        "frameDepth": 0.065,
+        "beadFace": 0.008,
+        "beadDepth": 0.005,
+        "gasketFace": 0.003,
+        "gasketDepth": 0.006,
+        "sillRearUpstand": 0.012,
+        "sillFrontDrip": 0.012,
+        "sillHem": 0.003,
+        "sillEndHeight": 0.012,
+        "sideClearance": 0.001,
+        "headSeat": "30mm lining fits inside the current graphic display aperture; actual head seating requires survey"
+      },
+      "unknown": {
+        "existingFrameSection": null,
+        "existingGlassLayers": null,
+        "existingGlassThickness": null,
+        "installedRecess": null,
+        "anchors": null,
+        "sillFolds": null,
+        "bottomWindboardSeat": null,
+        "sideTimber75x30Seat": null,
+        "headVentilationClosure": null,
+        "orderedFCParts": null,
+        "frameMaterial": null,
+        "existingSashDivision": null,
+        "bendRadii": null,
+        "endSealing": null,
+        "bottomRKL31Seat": null,
+        "fasteners": null
+      },
+      "sourceFeaturesNotAuthored": [
+        "Bottom RKL31 seat and side75x30H3 supports: local substrate recesses require a surveyed window detail",
+        "Head insect mesh/ventilation/tape closure: section and fastening unresolved"
+      ]
+    },
+    {
+      "id": "BASEMENT-NW-G05",
+      "approved": false,
+      "quantityAuthority": false,
+      "source": "§5.7; PDF63/ark15",
+      "sourceFacts": {
+        "retainedWindow": true,
+        "replacement": false,
+        "PURALThickness": 0.0006,
+        "minimumSillSlope": 0.1,
+        "projection": 0.03,
+        "FCThickness": 0.008,
+        "RKL31Thickness": 0.03,
+        "treatedTimberSection": [
+          0.075,
+          0.03
+        ],
+        "timberClass": "H3"
+      },
+      "aperture": {
+        "width": 1.781232316881482,
+        "height": 0.5905690034580363
+      },
+      "frame": {
+        "width": 1.775232316881482,
+        "height": 0.5845690034580363,
+        "front": -0.03
+      },
+      "head": {
+        "bottom": 0.2642845017290182,
+        "back": -0.028999999999999998,
+        "front": 0.1824,
+        "width": 1.765232316881482,
+        "windboardThickness": 0.03,
+        "sheetThickness": 0.0006
+      },
+      "sill": {
+        "width": 1.763232316881482,
+        "rear": -0.029699999999999997,
+        "nose": 0.213,
+        "backY": -0.2722845017290182,
+        "drop": 0.02427,
+        "sectionYZ": [
+          [
+            -0.2602845017290182,
+            -0.029399999999999996
+          ],
+          [
+            -0.27201300546038454,
+            -0.029399999999999996
+          ],
+          [
+            -0.29628300546038455,
+            0.2133
+          ],
+          [
+            -0.30885450172901824,
+            0.2133
+          ],
+          [
+            -0.30885450172901824,
+            0.21
+          ],
+          [
+            -0.3082545017290182,
+            0.21
+          ],
+          [
+            -0.3082545017290182,
+            0.2127
+          ],
+          [
+            -0.29682599799765186,
+            0.2127
+          ],
+          [
+            -0.27255599799765184,
+            -0.03
+          ],
+          [
+            -0.2602845017290182,
+            -0.03
+          ]
+        ],
+        "endSectionYZ": [
+          [
+            -0.27201900546038454,
+            -0.029339999999999998
+          ],
+          [
+            -0.29621700546038454,
+            0.21264
+          ],
+          [
+            -0.28421700546038453,
+            0.21264
+          ],
+          [
+            -0.26001900546038453,
+            -0.029339999999999998
+          ]
+        ],
+        "endThickness": 0.0006,
+        "scope": "Continuous display sheet from retained frame to30mm projection; rear/end folds are fabrication candidates, not approved weather seals"
+      },
+      "candidate": {
+        "frameFace": 0.04,
+        "frameDepth": 0.065,
+        "beadFace": 0.008,
+        "beadDepth": 0.005,
+        "gasketFace": 0.003,
+        "gasketDepth": 0.006,
+        "sillRearUpstand": 0.012,
+        "sillFrontDrip": 0.012,
+        "sillHem": 0.003,
+        "sillEndHeight": 0.012,
+        "sideClearance": 0.001,
+        "headSeat": "30mm lining fits inside the current graphic display aperture; actual head seating requires survey"
+      },
+      "unknown": {
+        "existingFrameSection": null,
+        "existingGlassLayers": null,
+        "existingGlassThickness": null,
+        "installedRecess": null,
+        "anchors": null,
+        "sillFolds": null,
+        "bottomWindboardSeat": null,
+        "sideTimber75x30Seat": null,
+        "headVentilationClosure": null,
+        "orderedFCParts": null,
+        "frameMaterial": null,
+        "existingSashDivision": null,
+        "bendRadii": null,
+        "endSealing": null,
+        "bottomRKL31Seat": null,
+        "fasteners": null
+      },
+      "sourceFeaturesNotAuthored": [
+        "Bottom RKL31 seat and side75x30H3 supports: local substrate recesses require a surveyed window detail",
+        "Head insect mesh/ventilation/tape closure: section and fastening unresolved"
+      ]
+    },
+    {
+      "id": "BASEMENT-NW-G06",
+      "approved": false,
+      "quantityAuthority": false,
+      "source": "§5.7; PDF63/ark15",
+      "sourceFacts": {
+        "retainedWindow": true,
+        "replacement": false,
+        "PURALThickness": 0.0006,
+        "minimumSillSlope": 0.1,
+        "projection": 0.03,
+        "FCThickness": 0.008,
+        "RKL31Thickness": 0.03,
+        "treatedTimberSection": [
+          0.075,
+          0.03
+        ],
+        "timberClass": "H3"
+      },
+      "aperture": {
+        "width": 1.781232316881482,
+        "height": 0.5905690034580363
+      },
+      "frame": {
+        "width": 1.775232316881482,
+        "height": 0.5845690034580363,
+        "front": -0.03
+      },
+      "head": {
+        "bottom": 0.2642845017290182,
+        "back": -0.028999999999999998,
+        "front": 0.1824,
+        "width": 1.765232316881482,
+        "windboardThickness": 0.03,
+        "sheetThickness": 0.0006
+      },
+      "sill": {
+        "width": 1.763232316881482,
+        "rear": -0.029699999999999997,
+        "nose": 0.213,
+        "backY": -0.2722845017290182,
+        "drop": 0.02427,
+        "sectionYZ": [
+          [
+            -0.2602845017290182,
+            -0.029399999999999996
+          ],
+          [
+            -0.27201300546038454,
+            -0.029399999999999996
+          ],
+          [
+            -0.29628300546038455,
+            0.2133
+          ],
+          [
+            -0.30885450172901824,
+            0.2133
+          ],
+          [
+            -0.30885450172901824,
+            0.21
+          ],
+          [
+            -0.3082545017290182,
+            0.21
+          ],
+          [
+            -0.3082545017290182,
+            0.2127
+          ],
+          [
+            -0.29682599799765186,
+            0.2127
+          ],
+          [
+            -0.27255599799765184,
+            -0.03
+          ],
+          [
+            -0.2602845017290182,
+            -0.03
+          ]
+        ],
+        "endSectionYZ": [
+          [
+            -0.27201900546038454,
+            -0.029339999999999998
+          ],
+          [
+            -0.29621700546038454,
+            0.21264
+          ],
+          [
+            -0.28421700546038453,
+            0.21264
+          ],
+          [
+            -0.26001900546038453,
+            -0.029339999999999998
+          ]
+        ],
+        "endThickness": 0.0006,
+        "scope": "Continuous display sheet from retained frame to30mm projection; rear/end folds are fabrication candidates, not approved weather seals"
+      },
+      "candidate": {
+        "frameFace": 0.04,
+        "frameDepth": 0.065,
+        "beadFace": 0.008,
+        "beadDepth": 0.005,
+        "gasketFace": 0.003,
+        "gasketDepth": 0.006,
+        "sillRearUpstand": 0.012,
+        "sillFrontDrip": 0.012,
+        "sillHem": 0.003,
+        "sillEndHeight": 0.012,
+        "sideClearance": 0.001,
+        "headSeat": "30mm lining fits inside the current graphic display aperture; actual head seating requires survey"
+      },
+      "unknown": {
+        "existingFrameSection": null,
+        "existingGlassLayers": null,
+        "existingGlassThickness": null,
+        "installedRecess": null,
+        "anchors": null,
+        "sillFolds": null,
+        "bottomWindboardSeat": null,
+        "sideTimber75x30Seat": null,
+        "headVentilationClosure": null,
+        "orderedFCParts": null,
+        "frameMaterial": null,
+        "existingSashDivision": null,
+        "bendRadii": null,
+        "endSealing": null,
+        "bottomRKL31Seat": null,
+        "fasteners": null
+      },
+      "sourceFeaturesNotAuthored": [
+        "Bottom RKL31 seat and side75x30H3 supports: local substrate recesses require a surveyed window detail",
+        "Head insect mesh/ventilation/tape closure: section and fastening unresolved"
+      ]
+    }
+  ]
+}
