@@ -1,7 +1,7 @@
 // A failed multisampled context must not rule out a usable plain WebGL2
 // context. Use a fresh canvas for the second attempt; never weaken privacy
 // settings or silently substitute WebGL1 for a WebGL2 renderer.
-export function createViewerContext(createCanvas,{preferAntialias=true}={}){
+export function createViewerContext(createCanvas,{preferAntialias=false}={}){
  const failures=[];
  for(const antialias of preferAntialias?[true,false]:[false,true]){
   const canvas=createCanvas();let context;
