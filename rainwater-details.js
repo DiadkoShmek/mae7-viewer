@@ -91,11 +91,11 @@ function tube(THREE,p,radius,thickness){
  for(let i=0;i<indices.length;i+=3)[indices[i+1],indices[i+2]]=[indices[i+2],indices[i+1]];
  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));g.setIndex(indices);g.computeVertexNormals();return g;
 }
-function gutterGeometry(THREE,p){
- const radius=rainwaterSpec.gutterDiameter/2,shape=new THREE.Shape(),left=-p.length/2,right=p.length/2;
+function gutterGeometry(THREE,p,{radius=rainwaterSpec.gutterDiameter/2,outletRadius=rainwaterSpec.pipeDiameter/2}={}){
+ const shape=new THREE.Shape(),left=-p.length/2,right=p.length/2;
  shape.moveTo(left,0);shape.lineTo(right,0);shape.lineTo(right,Math.PI);shape.lineTo(left,Math.PI);shape.closePath();
  // Circular outlet in world XZ, mapped into the curved gutter section.
- for(const x of p.outlets){const hole=new THREE.Path(),r=rainwaterSpec.pipeDiameter/2;
+ for(const x of p.outlets){const hole=new THREE.Path(),r=outletRadius;
   for(let i=0;i<=32;i++){const a=-i*2*Math.PI/32,px=x+r*Math.cos(a),theta=Math.acos(r*Math.sin(a)/radius);i?hole.lineTo(px,theta):hole.moveTo(px,theta);}hole.closePath();shape.holes.push(hole);}
  const original=new THREE.ExtrudeGeometry(shape,{depth:rainwaterSpec.steelThickness,steps:1,bevelEnabled:false,curveSegments:24}),a=original.getAttribute('position'),positions=[];
  // Nonlinear mapping needs real angular subdivision: mapping only the four
@@ -118,6 +118,53 @@ export function gutterEndCapGeometry(THREE,p,endSign){
  }
  g.computeVertexNormals();return g;
 }
+export const gutterOutletReference=Object.freeze({
+ url:'https://www.ruukki.com/est/katusetooted/tooted-ja-teenused/vihmaveesusteemid/umar-vihmaveesusteem/vihmaveesusteemi-detailid/allatulek-ee',
+ scope:'Running-outlet form and lip retention reference only. Reference product is150/100; this150/90 model fit is a candidate, not the ordered product.',approved:false
+});
+export function planGutterOutlet(pipe,gutter){
+ const r=rainwaterSpec.gutterDiameter/2,t=rainwaterSpec.steelThickness,pipeR=rainwaterSpec.pipeDiameter/2;
+ if(pipe.s!==gutter.s||!gutter.outlets.includes(pipe.outletX))throw Error('Running outlet must share the real gutter-hole axis');
+ const inlet=pipe.parts.find(p=>p.role==='inlet');if(!inlet||Math.abs(inlet.points[0][0]-pipe.outletX)>1e-9||Math.abs(inlet.points[0][2]-gutter.z)>1e-9)throw Error('Inlet axis differs from gutter');
+ return {id:pipe.id+'-GUTTER-OUTLET',x:pipe.outletX,y:gutter.y,z:gutter.z,s:pipe.s,
+  gutterRadius:r,sheetThickness:t,saddleWidth:.175,mouthRadius:.062,
+  socketInnerRadius:pipeR+.0005,socketOuterRadius:pipeR+.0005+t,
+  throatY:inlet.points[0][1]-.055,socketBottomY:inlet.points[0][1]-.080,
+  pipeStart:inlet.points[0],pipeEnd:inlet.points[1],source:gutterOutletReference,approved:false};
+}
+function outletFunnelGeometry(THREE,p){
+ const n=48,positions=[],indices=[],rings=3,t=p.sheetThickness;
+ // The upper mouth follows the curved underside of the150mm gutter.
+ // A hollow flare reaches the slip socket; neither end is a filled disk.
+ for(const inner of [false,true])for(let k=0;k<rings;k++)for(let j=0;j<n;j++){
+  const a=j*2*Math.PI/n,r=k===0?p.mouthRadius+(inner?0:t):(inner?p.socketInnerRadius:p.socketOuterRadius),z=r*Math.sin(a);
+  const y=k===0?p.y-Math.sqrt((p.gutterRadius+t)**2-z*z):k===1?p.throatY:p.socketBottomY;
+  positions.push(p.x+r*Math.cos(a),y,p.z+z);
+ }
+ const quad=(a,b,c,d)=>indices.push(a,b,d,b,c,d),side=rings*n;
+ for(let k=0;k<rings-1;k++)for(let j=0;j<n;j++){
+  const q=(j+1)%n,a=k*n,b=(k+1)*n;
+  quad(a+j,a+q,b+q,b+j);quad(side+a+j,side+b+j,side+b+q,side+a+q);
+ }
+ for(let j=0;j<n;j++){const q=(j+1)%n,e=(rings-1)*n;quad(j,side+j,side+q,q);quad(e+j,e+q,side+e+q,side+e+j);}
+ const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));g.setIndex(indices);g.computeVertexNormals();return g;
+}
+export function createGutterOutlet(THREE,parent,pipe,gutter,material){
+ if(!material)throw Error('Running-outlet material required');
+ const p=planGutterOutlet(pipe,gutter),meshes=[];
+ const add=(geometry,suffix,role,position)=>{const m=new THREE.Mesh(geometry,material);m.name=p.id+suffix;m.castShadow=m.receiveShadow=true;
+  if(position)m.position.set(...position);m.userData={partId:m.name,assembly:'rainwater',rainwaterRole:role,physical:true,dynamicCover:true,preservePhysicalProfile:true,
+   gutterOutletId:p.id,connectedPipeId:pipe.id,authoring:p,sourceFacts:rainwaterSpec,candidateDimensions:true,approved:false};parent.add(m);meshes.push(m);return m;};
+ // Thin saddle sits on the actual outer bowl, with a real open mouth.
+ const saddle=gutterGeometry(THREE,{...gutter,length:p.saddleWidth,outlets:[0]},
+  {radius:p.gutterRadius+p.sheetThickness,outletRadius:p.mouthRadius});saddle.translate(p.x,0,0);
+ add(saddle,'-SADDLE','gutter-outlet-saddle');add(outletFunnelGeometry(THREE,p),'-FUNNEL','gutter-outlet-funnel');
+ // Front lip and two rear retaining tabs capture the gutter edges.
+ add(new THREE.BoxGeometry(p.saddleWidth,p.sheetThickness,.008),'-FRONT-LIP','gutter-outlet-retainer',[p.x,p.y+p.sheetThickness/2,p.z+p.s*(p.gutterRadius-.003)]);
+ for(const [i,dx] of [-.055,.055].entries())add(new THREE.BoxGeometry(.024,p.sheetThickness,.012),'-REAR-TAB-'+(i+1),'gutter-outlet-retainer',
+  [p.x+dx,p.y+p.sheetThickness/2,p.z-p.s*(p.gutterRadius-.004)]);
+ return {plan:p,meshes};
+}
 export function createRainwaterDetails(THREE,parent,{materials={},...options}={}){
  if(!materials.PURAL_dark)throw Error('Rainwater PURAL material required');
  const plan=planRainwaterDetails(options),rainwaterGroups=[],gutters=[],radius=rainwaterSpec.pipeDiameter/2;
@@ -128,6 +175,7 @@ export function createRainwaterDetails(THREE,parent,{materials={},...options}={}
  for(const p of plan.pipes){const g=new THREE.Group();g.name=p.id;parent.add(g);g.userData={assembly:'rainwater',rainwaterId:p.id,originalOutletX:p.originalOutletX,outletX:p.outletX,graphicCandidateDelta:p.graphicCandidateDelta,sourceOutletPosition:null,graphicSource:p.graphicSource,retainedWallReturnId:p.retainedWallReturnId,elbowDegrees:p.elbowDegrees,approved:false,
    component:{kind:'rainwater',title:'Водостічна труба · Ø90',source:rainwaterSpec.source,note:'Два коліна повертають трубу до стіни. Профіль, положення, хомути, анкери й підкладний брус50×200 потребують робочого рішення.'}};
   for(const part of p.parts)mesh(tube(THREE,part,radius,rainwaterSpec.steelThickness),part.id,part.role,g,{sourceFacts:rainwaterSpec,authoring:part});
+  createGutterOutlet(THREE,g,p,plan.gutters.find(q=>q.s===p.s),materials.PURAL_dark);
   for(const c of p.clamps){const ringPath=straight(add(c.position,[0,-.012,0]),add(c.position,[0,.012,0]));mesh(tube(THREE,ringPath,radius+.004,.002),c.id,'wall-clamp',g,{backingRequirement:c.backingRequirement,candidateDimensions:true});
    const back=mesh(new THREE.BoxGeometry(.060,.080,.003),c.id+'-PLATE','clamp-wallplate',g,{backingRequirement:c.backingRequirement,candidateDimensions:true});back.position.set(p.x,c.position[1],c.wallFace+p.s*.0015);
    const rear=c.position[2]-p.s*(radius+.004),start=c.wallFace+p.s*.003,stem=mesh(new THREE.BoxGeometry(.012,.025,Math.abs(rear-start)),c.id+'-STANDOFF','clamp-standoff',g,{candidateDimensions:true});stem.position.set(p.x,c.position[1],(rear+start)/2);

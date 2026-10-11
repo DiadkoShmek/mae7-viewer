@@ -41,9 +41,9 @@ export function createTerrainRelief({halfX,halfZ,centreX=0,centreZ=0,flatContour
  };
  return {height,approved:false,surveyVerified:false,quantity:0,limits:'Illustrative low lawn undulations; apron and walking surfaces retain the existing flat display datum. No surveyed grading or drainage solution.'};
 }
-export function terrainGeometry(THREE,{halfX,halfZ,centreX=0,centreZ=0,height,extent=250,step=2,farStep=8,detailExtent=60}){
- const axis=(half,centre)=>{const a=[-extent,extent,centre-half,centre+half];for(let v=-detailExtent;v<=detailExtent;v+=step)a.push(v);for(let v=detailExtent;v<extent;v+=farStep)a.push(v,-v);return [...new Set(a)].sort((a,b)=>a-b);};
- const xs=axis(halfX,centreX),zs=axis(halfZ,centreZ),vertices=[],uv=[],indices=[];
+export function terrainGeometry(THREE,{halfX,halfZ,centreX=0,centreZ=0,xBreaks=[],zBreaks=[],height,extent=250,step=2,farStep=8,detailExtent=60}){
+ const axis=(half,centre,breaks)=>{const a=[-extent,extent,centre-half,centre+half,...breaks];for(let v=-detailExtent;v<=detailExtent;v+=step)a.push(v);for(let v=detailExtent;v<extent;v+=farStep)a.push(v,-v);return [...new Set(a)].sort((a,b)=>a-b);};
+ const xs=axis(halfX,centreX,xBreaks),zs=axis(halfZ,centreZ,zBreaks),vertices=[],uv=[],indices=[];
  for(const z of zs)for(const x of xs){vertices.push(x,-z,height(x,z));uv.push(x,-z);}
  for(let j=0;j<zs.length-1;j++)for(let i=0;i<xs.length-1;i++){
   const x=(xs[i]+xs[i+1])/2,z=(zs[j]+zs[j+1])/2;
@@ -52,6 +52,6 @@ export function terrainGeometry(THREE,{halfX,halfZ,centreX=0,centreZ=0,height,ex
   indices.push(a,c,b,b,c,d);
  }
  const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));geometry.setAttribute('uv',new THREE.Float32BufferAttribute(uv,2));geometry.setIndex(indices);geometry.computeVertexNormals();geometry.computeBoundingBox();geometry.computeBoundingSphere();
- geometry.userData={presentationOnly:true,physical:false,quantity:0,approved:false,terrainRelief:true,exactApronHole:true};
+ geometry.userData={presentationOnly:true,physical:false,quantity:0,approved:false,terrainRelief:true,exactBuildingHole:true};
  return geometry;
 }
