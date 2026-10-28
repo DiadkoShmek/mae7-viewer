@@ -30,4 +30,4 @@ Open **http://127.0.0.1:8874/** in a browser with WebGL support. Serve over HTTP
 
 Інтерактивна модель для огляду будівлі, фасадних шарів і деталей. Візуалізація допомагає пояснювати проєктні рішення, але не є підтвердженням точності обмірів чи дозволом на виконання будівельних робіт.
 
-[Artur's profile and contact](https://github.com/DiadkoShmek)
+[Profile and contact](https://github.com/DiadkoShmek)
