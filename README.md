@@ -1,5 +1,12 @@
 # STROIKA · architectural review viewer
 
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/DiadkoShmek/DiadkoShmek/main/assets/identity/stroika-dark-mobile.svg">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/DiadkoShmek/DiadkoShmek/main/assets/identity/stroika-light-mobile.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DiadkoShmek/DiadkoShmek/main/assets/identity/stroika-dark.svg">
+  <img src="https://raw.githubusercontent.com/DiadkoShmek/DiadkoShmek/main/assets/identity/stroika-light.svg" alt="STROIKA — architectural 3D review" width="1280">
+</picture>
+
 An interactive 3D view of a building and its façade details, based on referenced public project material.
 
 **[Open the viewer →](https://diadkoshmek.github.io/mae7-viewer/)**
