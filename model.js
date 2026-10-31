@@ -236,10 +236,10 @@ export function createModel(scene,{authoring=false}={}){
  const detailOptions={surroundingLayout:{layout:detailLayout,centre:{x:origin.x*1000+detailLayout.width/2,y:origin.y*1000}},claddingMaterials:{P222:panelVariants,P070:charcoal}};
  const windowDetail=createWindowDetail(THREE,patch,detailOptions);
  const layerGroups=windowDetail.groups,patchWindow=windowDetail.window;
- // Artur's field description is a separate candidate from the public metal
+ // the task author's field description is a separate candidate from the public metal
  // reveal detail. Both retain editable native geometry and independent IDs.
  const fieldPatch=new THREE.Group();fieldPatch.position.copy(patch.position);scene.add(fieldPatch);
- fieldPatch.userData.component={kind:'wall',title:'Відкоси Cembrit · польовий варіант',source:'Опис Артура · 08.10.2026',note:'Глибина 150 мм — орієнтир; чинний вузол і фактичний проріз ще звіряємо.'};
+ fieldPatch.userData.component={kind:'wall',title:'Відкоси Cembrit · польовий варіант',source:'Опис автора завдання · 08.10.2026',note:'Глибина 150 мм — орієнтир; чинний вузол і фактичний проріз ще звіряємо.'};
  const fieldDetail=createWindowDetail(THREE,fieldPatch,{...detailOptions,revealMode:'field',revealDepth:.150});
  const fieldWindow=fieldDetail.window,fieldLayerGroups=fieldDetail.groups;fieldPatch.visible=false;
  // Roof groups are already source-aligned projections of the full assembly.

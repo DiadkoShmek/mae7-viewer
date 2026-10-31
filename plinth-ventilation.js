@@ -1,6 +1,6 @@
 // Derived punching of the nominal 25mm horizontal hat; no panel offset.
 // Product/capacity remain candidates. Explicit holes, never an alpha texture.
-export const plinthVentSpec=Object.freeze({pitch:.060,slotWidth:.030,z0:.154,z1:.172,source:'Artur2026-10-11:design ventilation; perforated horizontal profile candidate',approved:false});
+export const plinthVentSpec=Object.freeze({pitch:.060,slotWidth:.030,z0:.154,z1:.172,source:'Ülesande autor2026-10-11:design ventilation; perforated horizontal profile candidate',approved:false});
 const area=ps=>Math.abs(ps.reduce((v,p,i)=>{const q=ps[(i+1)%ps.length];return v+p[0]*q[1]-q[0]*p[1];},0))/2;
 function clip(ps,z,sign){const out=[];for(let i=0;i<ps.length;i++){const p=ps[i],q=ps[(i+1)%ps.length],a=sign*(p[1]-z),b=sign*(q[1]-z);if(a<=1e-12)out.push(p);if((a<0&&b>0)||(a>0&&b<0)){const t=a/(a-b);out.push(p.map((v,k)=>v+t*(q[k]-v)));}}return out;}
 export function perforatePlinthHat(p){

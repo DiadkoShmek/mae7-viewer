@@ -4,12 +4,12 @@
   "createdUTC": "2026-10-09T11:56:13.362285+00:00",
   "scope": "Джерельний реєстр; не замовлення, не підтвердження фізичного зразка та не перевірка нового native експорту",
   "sourcePDF": {
-    "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+    "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
     "sha256": "fc22c9eb0964b52800a5d926fa2574b3f95654f64d1a3f17f21a0afaddd15f99"
   },
   "auditSHA256": "5d6de7ce1d72f4facfeead4fbba9a48bfebe7b9d9f713673822f72a9f964f1f1",
   "materialReferenceAtReview": {
-    "path": "/home/pustota/Desktop/Стройка/prototype/dist/material-reference.js",
+    "path": "material-reference.js",
     "sha256": "b645a6654db5a1b4154f7531da6993db65bcdd011d3ca9e77c07ee38aa7b7387"
   },
   "manufacturerReferences": [
@@ -58,7 +58,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 19,
           "text": [
             "vastavalt kasutatava katusekatte tootja juhistele). Katusekattena paigaldada klassik profiil plekk"
@@ -66,7 +66,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 53,
           "text": [
             "4.    Katus -Klassik plekk RR23.                                                                                                                                                                           TELLIJA / ESINDAJA",
@@ -75,7 +75,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 60,
           "text": [
             "PURAL kattega                     200   liistuga distantsliistu peale                                                                   Tuulesuunaja 13 mm",
@@ -104,7 +104,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 60,
           "text": [
             "·     Katuse mittehingav aluskate                                                                                                                                                            (tuletõkkevahendiga immutatud värvitud laudis"
@@ -112,7 +112,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 19,
           "text": [
             "Sarikate peale paigaldada aluskate, distantsliist 32x50 mm ning roovitus 32x100 mm (samm"
@@ -139,7 +139,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 21,
           "text": [
             "olema tehases immutatud, immutusklassiga H3."
@@ -147,7 +147,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 21,
           "text": [
             "kinnitusnurgikute abil 600 mm sammuga 50x50 mm ristlõikega vertikaalsed puitprussid. Prusside",
@@ -156,7 +156,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 21,
           "text": [
             "Tuuletõkkeplaadi peale paigaldada vertikaalselt 420 mm sammuga 25x100 tuletõkkevõõbaga"
@@ -164,7 +164,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 19,
           "text": [
             "Ümber     katuse    tuulekastide     paigaldada     putukavõrk.     Tuulekastid     rajada    22x100    mm"
@@ -172,7 +172,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 57,
           "text": [
             "·   50x75 sügavimmutatud puit/                                                     ·      50x75 sügavimmutatud puit/"
@@ -199,7 +199,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 21,
           "text": [
             "kasutada 8 mm paksust massvärvitud tsementkiudplaati (nt Cembrit Patina). Roovide ja plaadi"
@@ -207,7 +207,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 53,
           "text": [
             "1.    Fassaad - massvärvitud tsementkiudplaat Cembrit Patina: P222         1"
@@ -215,7 +215,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 53,
           "text": [
             "2.    Fassaad, tuulekoda - massvärvitud tsementkiudplaat Cembrit Patina: P070                                  6                    10",
@@ -225,7 +225,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 21,
           "text": [
             "Näidiste alusel kooskõlastada maja viimistlus tellijaga."
@@ -252,7 +252,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 21,
           "text": [
             "välisseintele kohtparandused. Välisseinad soojustada 200 mm paksuselt mineraalvillaga (λ≤0,035",
@@ -261,7 +261,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 21,
           "text": [
             "taha paigaldada 100 mm paksuselt mineraalvill ja vahele 50 mm paksuselt mineraalvill. Vertikaalsete"
@@ -269,7 +269,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 29,
           "text": [
             "Pehme                      0,035 W/m2*K              NPD           NPD          Nt Isover Standard"
@@ -296,7 +296,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 19,
           "text": [
             "Pööningult eemaldada olemasolev 250 mm soojustus ning lammutada olemasolevad käiguteed."
@@ -304,7 +304,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 20,
           "text": [
             "Isover KV, vt tabel 2), lõplik soojustuskihi paksus peab olema 450 mm. Pööningul kasutatav puistevill"
@@ -312,7 +312,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 29,
           "text": [
             "Puistevill                  0,041 W/m*K            22 kg/m3        NPD          Nt Isover KV -"
@@ -320,7 +320,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 60,
           "text": [
             "·       Puistevill 450mm"
@@ -347,7 +347,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 21,
           "text": [
             "Tuuletõkkena kasutada tuuletõkke kipsplaati paksusega 9 mm, plaatide liitekohad teipida."
@@ -355,7 +355,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 56,
           "text": [
             "· Tuuletõkke kipsplaat 9mm, liitekohad teipida                                                                                                                  kinnitusnurgik"
@@ -382,7 +382,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 21,
           "text": [
             "vahele paigaldada vuugilint vastavalt tootjapoolsele juhendile."
@@ -409,7 +409,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 23,
           "text": [
             "välja vahetada uute vastu (pleki paksus 0,6 mm, PURAL kate). Veeplekkide üleulatus seintest 30"
@@ -417,7 +417,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 23,
           "text": [
             "mm, veeplekkidele anda kalle vähemalt 1:10 hoonest eemale. Rõdude avatäidete ulatuses teha"
@@ -425,7 +425,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 53,
           "text": [
             "7.    Veeplekid, katuse turvavarustus - toon RR23                                                                                                                                                          AADRESS"
@@ -452,7 +452,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 23,
           "text": [
             "Kõik korterite ja trepikodade aknad vahetada välja kolmekordse klaasiga PVC raamiga"
@@ -460,7 +460,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 23,
           "text": [
             "Kõik väljavahetatavad aknad varustada keraamiliste vaheliistudega, kõikide akende veeplekid tuleb"
@@ -468,7 +468,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 73,
           "text": [
             "1780                                                                  PVC profiil"
@@ -476,7 +476,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 74,
           "text": [
             "Kirgas klaas",
@@ -505,7 +505,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 24,
           "text": [
             "Trepikodadele ja keldri sissepääsudele paigaldada uued alumiiniumprofiil välisuksed (U≤1,4"
@@ -513,7 +513,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 53,
           "text": [
             "8.    Välisuksed, alumiiniumprofiil - toon RR23, kirgas karastatud klaas                                                                                   PROJEKTEERIJA           ALLKIRI                 KUUPÄEV               JOONISE NIMETUS"
@@ -521,7 +521,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 75,
           "text": [
             "Värvitoon: RR23"
@@ -548,7 +548,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 53,
           "text": [
             "5.    Tuulekoja katus - SBS.                                                                                                                                                                               OBJEKT"
@@ -556,7 +556,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 25,
           "text": [
             "klassik profiil plekk (t=0,6 mm, PURAL kate)."
@@ -564,7 +564,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 68,
           "text": [
             "Päästemeeskonna infopunkt igas trepikojas,                                                                 Terasest porirest,                           ·            Klassik plekk                                                                     100x100x60x2,5"
@@ -591,7 +591,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 26,
           "text": [
             "Uute rõdude konstruktsioon on terasest keevisraam (terase klass S355JR), vertikaalsed tugipostid"
@@ -599,7 +599,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 26,
           "text": [
             "pinnavärviga, mille kogupaksus peab olema 160 mikronit."
@@ -607,7 +607,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 26,
           "text": [
             "olema vähemalt 60 mikronit. Lõpliku viimistlusena katta kahes kihis kahekomponentse",
@@ -616,7 +616,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 53,
           "text": [
             "6.    Teraspost toon RR23 tumehall                                                                                                                                                                                              KORTERELAMU"
@@ -643,7 +643,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 25,
           "text": [
             "100x80x5 nelikant-terastorust (terase klass S355JR) C3 keskkonnaklassile vastavad kuumtsingitud"
@@ -670,7 +670,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 26,
           "text": [
             "tsementlaastplaatide ja metallkonstruktsiooni vahele lisaks veeplekid (pleki paksus 0,6 mm, PURAL",
@@ -679,7 +679,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 26,
           "text": [
             "Viimase korruse varikatus moodustub rõdu metallkonstruktsioonist. Konstruktsioon katta 4+4 mm"
@@ -708,7 +708,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 26,
           "text": [
             "majast eemale juhtimiseks. Põranda konstruktsioon katta 24 mm paksuse tsementlaastplaadiga,"
@@ -716,7 +716,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 26,
           "text": [
             "mis omakorda kaetakse libisemiskindla polüuretaankattega vm analoogse kattega ( nt. Protani"
@@ -724,13 +724,13 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 26,
           "text": []
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 65,
           "text": [
             "1. Vuugilint (1,5x50 mm) paigaldada plaadi ja terase vahele kogu terase ulatuses."
@@ -757,7 +757,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 18,
           "text": [
             "Sillutisriba armeerida 6 mm diameetriga armatuurvõrguga, silmaga 150 mm, B500. Sillutisribale",
@@ -766,7 +766,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 28,
           "text": [
             "Vahtpolüstüreen             0,035 W/m*K             22 kg/m3     120 kPa         Nt EPS 120"
@@ -774,7 +774,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 57,
           "text": [
             "vahtpolüstüreen EPS 120 Perimeeter 50mm                                               vahtpolüstüreen EPS 120 Perimeeter 50mm"
@@ -782,7 +782,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 57,
           "text": [
             "+                          -        MP25/38 või analoog                                                                   MP25/38 või analoog"
@@ -809,7 +809,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 23,
           "text": [
             "Keldri aknaid välja ei vahetata. Kõik väljavahetatavad aknad tõstetakse sügavimmutatud"
@@ -817,7 +817,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 63,
           "text": [
             "t=0,6 mm              Ol. olev keldriaken          75x30mm                                                                                                      Tuuletõkketeip"
@@ -825,7 +825,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 63,
           "text": [
             "PURAL kate                                                     RKL-31 30mm või analoog",
@@ -853,7 +853,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 21,
           "text": [
             "Kinnitusnurgikute tsingikihi paksus peab olema vähemalt 275 g/m². Sügavimmutatud puit peab"
@@ -861,7 +861,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 21,
           "text": [
             "dimensioneerida kinnitusvahendid ning teostada neile väljatõmbekatsed (vähemalt 5 tk)."
@@ -869,7 +869,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 57,
           "text": [
             "kübarprofiili minimaalne tsingikihi paksus 275g/m². Kasutatav sügavimmutatud puit"
@@ -896,7 +896,7 @@
       "sources": [
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 18,
           "text": [
             "fraktsiooniga 0-32 mm, 90 MPa. Betoon tugevusklassiga C30/37, keskkonnaklassiga XC4+XF3."
@@ -904,7 +904,7 @@
         },
         {
           "kind": "project",
-          "path": "/home/pustota/Desktop/Стройка/Джерела/P8822_PP_AA-0-01_v04_Mae7.pdf",
+          "path": "P8822_PP_AA-0-01_v04_Mae7.pdf",
           "pdfPage": 18,
           "text": [
             "Sillutisriba armeerida 6 mm diameetriga armatuurvõrguga, silmaga 150 mm, B500. Sillutisribale"
@@ -944,5 +944,6 @@
       "Калібровані оптичні параметри й натурний колір",
       "Погодження парного вузла дошка100/стрічка100"
     ]
-  }
+  },
+  "sourceLocatorPolicy": "Source filenames identify reviewed artifacts; private workstation locations are omitted. SHA-256 values refer to the reviewed bytes, not necessarily the current public file."
 }

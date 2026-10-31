@@ -21,7 +21,7 @@ export function createGroundJunctions(THREE,building,garden,{board,joint,grey,co
  function box(g,id,role,min,max,mat){const size=max.map((v,i)=>v-min[i]);if(size.some(v=>v<=0))throw Error('Invalid junction box');const m=mesh(g,id,role,new THREE.BoxGeometry(...size),mat,{bounds:{min,max}});m.position.set(...min.map((v,i)=>(v+max[i])/2));return m;}
  for(const r of retainedReturnFootprints()){
   const [left,,front]=r.min,right=r.max[0],rear=-5.649;
-  const g=group(building,r.id+'-BASE-AND-CORNERS','retained-base-junction','Цоколь і кути збереженого виступу','§5.3; арк08; опис Артура',
+  const g=group(building,r.id+'-BASE-AND-CORNERS','retained-base-junction','Цоколь і кути збереженого виступу','§5.3; арк08; опис автора завдання',
    'Обшивання P0708мм до рівня основного цоколя; сірі прямокутні профілі. Нижній пакет, відступи, виріб профілю та кріплення — оглядовий варіант до звірки. Існуюче ядро не змінене.');
   const faces=[{id:'FRONT',axis:0,a:left,b:right,base:front+.008,normal:-1},
    {id:'LEFT',axis:2,a:front+.008,b:rear,base:left+.008,normal:-1},
