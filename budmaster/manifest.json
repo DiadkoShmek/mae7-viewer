@@ -7,8 +7,8 @@
     {
       "path": "START.md",
       "title": "Почати тут · уточнення й завдання",
-      "bytes": 5771,
-      "sha256": "3e2ea396634ffcc3191e8d99822e79a20c76e233e46aa7de9988f66106044f86"
+      "bytes": 5822,
+      "sha256": "048ce517f081c4cd04f968a3c63666048efdb6fc828b95c1206301bcb78b1256"
     },
     {
       "path": "original-project-v04.pdf",
@@ -37,14 +37,14 @@
     {
       "path": "facade-layout-v21.pdf",
       "title": "Наша розкладка · PDF V21",
-      "bytes": 149652,
-      "sha256": "df924aac5964f6fb392e6dfd0b6ffe4ad7101dcc84e0eb7dd1d3a5bd7e4d61cc"
+      "bytes": 149484,
+      "sha256": "cffcd440ab579a49cd2ed574ed554898ba6b0ef60570b624bc4fc62fd88db16f"
     },
     {
       "path": "facade-layout-v21.json",
       "title": "Наша розкладка й розкрій · JSON V21",
-      "bytes": 4909491,
-      "sha256": "71ec19c25a0ad498f049c25e979a85dd93fdf94132b60c50de976550c0f9b362"
+      "bytes": 4909508,
+      "sha256": "23ec0bc47732132a51707197777a83e57686827a528c6608f8b4c1c2b8aaa1ea"
     },
     {
       "path": "windows.json",
@@ -67,8 +67,8 @@
     {
       "path": "questions.json",
       "title": "Невирішені вузли й питання",
-      "bytes": 18126,
-      "sha256": "ba2960b1d41f5426b47d0c4154f049fca36705bc446599123794c956e83db26b"
+      "bytes": 18160,
+      "sha256": "9ee817e318647a36c740b4c15ff9fcbd7ab6a2b10131383576cd60785325e6f9"
     },
     {
       "path": "vertical-section.svg",
@@ -107,8 +107,8 @@
       "sha256": "797caafd4eed3f13ee42ea0b9dfdaa6aa080caaa8ab69a39a89156666c502f82"
     },
     {
-      "path": "original-artur-brief.md",
-      "title": "Початкове ТЗ Артура · уточнення у START.md",
+      "path": "original-project-brief.md",
+      "title": "Початкове ТЗ автора завдання · уточнення у START.md",
       "bytes": 18711,
       "sha256": "bdf9d4da186f4cdb973d53312b3d0c8f636c6cec0a89c91d4f2679c379c2ad3b"
     }

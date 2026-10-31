@@ -42,5 +42,5 @@ export function selectedRoofLathReview(selection,plans=defaults()){
   dimensionsMm:{projectSection:[32,100],nominalAxisPitch:plan.lathPitch*1000,actualAxisPitch:second.axisMm-first.axisMm,actualClearGap:gapMm,fragmentLengthX:p.rect.width*1000,fragmentDepthZ:p.rect.depth*1000,fragmentThickness:p.thickness*1000,physicalLengthX:whole.rect.width*1000},context,fragmentPolygon:polygon,
   source:'PDF60 / арк12; §5.4',profileReference:copy(roofAssemblySpec.profileReference),svg,
   approved:false,readyToCut:false,quantityAuthority:false,geometryChanged:false,
-  note:'Крок лат 400 мм по осях заданий Артуром; просвіт між дошками 100 мм — 300 мм. Біля краю скату останній інтервал коротший. Довжина у 3D не визначає довжину закупівельної заготовки; стики й кріплення ще звіряємо.'};
+  note:'Крок лат 400 мм по осях заданий автором завдання; просвіт між дошками 100 мм — 300 мм. Біля краю скату останній інтервал коротший. Довжина у 3D не визначає довжину закупівельної заготовки; стики й кріплення ще звіряємо.'};
 }
