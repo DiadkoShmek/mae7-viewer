@@ -1,10 +1,88 @@
-<!doctype html><html lang="uk"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mäe7 · пакет Будмайстру</title>
-<style>body{margin:0;background:#eef1f2;color:#172432;font:17px/1.5 system-ui,sans-serif}main{max-width:880px;margin:auto;padding:28px 20px}h1{font-size:clamp(30px,5vw,46px);line-height:1.1}h2{margin-top:32px}a{color:#853e22}.button{display:inline-block;background:#172432;color:white;padding:15px 20px;text-decoration:none;border-radius:8px;margin:5px 10px 5px 0}.note{border-left:3px solid #b7593a;padding-left:16px}ul{padding:0;list-style:none}li{background:white;border-radius:8px;margin:8px 0;padding:13px 16px;overflow-wrap:anywhere}small{display:block;color:#526574}pre{white-space:pre-wrap;background:white;padding:20px;border-radius:8px;font:inherit}footer{margin-top:28px;color:#526574}</style>
-<main><a href="../index.html">← Дім 3D</a><h1>Mäe7.<br>Пакет для Будмайстра.</h1><p>Поточний макет V24 · джерела, розкладка та вузли для спільної звірки.</p>
-<a class="button" href="./facade-layout-v21.pdf" target="_blank">Креслення V21 · історичні ↗</a>
-<p>Вихідні креслення й підписані документи зберігаються у власника проєкту. Тут доступні матеріали для огляду моделі.</p><p class="note">Номінальний макет і кандидати. Фактичний обмір, монтажна ревізія, локальні опори та кріплення ще потребують погодження.</p>
-<h2>Цоколь і підвальні вікна · V24</h2>
-<p class="note">12 існуючих вікон залишаються: 6 з боку входів і 6 з боку балконів. У макеті прорізи проходять через шари цоколя; нових вікон до закупівлі не додано. Розміри взято з графіки PDF53, вони потребують обміру. Посадка, відливи, опори й різи нижньої смуги ще не погоджені.</p>
-<a class="button" href="./basement-review-v24.svg" target="_blank">Аркуш цоколя для звірки ↗</a><a class="button" href="./basement-model-v24.json" download>Координати та контури V24 · JSON ↓</a><a class="button" href="./basement-model-v24.md" download>Зміни й уточнення V24 ↓</a>
-<h2>Попереднє доповнення · V23</h2><p class="note">У 3D показано цілі плити із зарізами, перенесено адресу та виправлено водостік і підшивку. Креслення V21 нижче описують попередню розкладку окремих деталей. Зарізи V23 потребують погодження: Patina DIM, сторінка 17, рекомендує поділ біля прорізів.</p><a class="button" href="./visual-model-v23.json" download>Контури та деталі V23 · JSON ↓</a><a class="button" href="./visual-model-v23.md" download>Що змінилося · V23 ↓</a><h2>Опубліковані матеріали макета</h2><ul><li><a href="./START.md" download>Історичне завдання V21</a><small>0.0 MB</small></li><li><a href="./swisspearl-patina-wood-dim.pdf" download>Swisspearl Patina · інструкція</a><small>4.3 MB</small></li><li><a href="./facade-layout-v21.pdf" download>Наша розкладка · PDF V21</a><small>0.1 MB</small></li><li><a href="./facade-layout-v21.json" download>Наша розкладка й розкрій · JSON V21</a><small>4.7 MB</small></li><li><a href="./windows.json" download>Віконні блоки та джерела розмірів</a><small>0.3 MB</small></li><li><a href="./cembrit-reveals-candidate.json" download>Відкоси Cembrit · кандидат</a><small>0.0 MB</small></li><li><a href="./operations.json" download>Операції та проєктні обсяги</a><small>0.0 MB</small></li><li><a href="./questions.json" download>Невирішені вузли й питання</a><small>0.0 MB</small></li><li><a href="./vertical-section.svg" download>Контрольний розріз</a><small>0.0 MB</small></li><li><a href="./roof-model-candidate.json" download>Дах · деталі й шари макета</a><small>3.9 MB</small></li><li><a href="./plinth-model-candidate.json" download>Цоколь V21 · історичні деталі</a><small>1.1 MB</small></li><li><a href="./entrance-model-candidate.json" download>Входи й навіси · макет</a><small>0.2 MB</small></li><li><a href="./model-northwest-v21.png" download>Кадр V21 · фасад із балконами</a><small>2.3 MB</small></li><li><a href="./model-detail-v21.png" download>Кадр V21 · деталі зблизька</a><small>3.1 MB</small></li><li><a href="./original-project-brief.md" download>Початкове ТЗ автора завдання · уточнення у START.md</a><small>0.0 MB</small></li></ul></details>
-<footer>1192×1250 · шов8 · зліва направо. <a href="./manifest.json" download>Склад архіву V21 ↓</a></footer></main></html>
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STROIKA · Креслення для звірки</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #eef4f1; --panel: #fff; --ink: #182d2a; --muted: #415d57;
+      --line: #bdcec7; --accent: #10674f; --button-text: #fff; --note: #875520;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #0d1413; --panel: #141f1c; --ink: #e6f2ee; --muted: #acc6bd;
+        --line: #354e46; --accent: #92e5c6; --button-text: #102c22; --note: #edb77a;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--background); color: var(--ink); font: 1rem/1.6 system-ui, sans-serif; }
+    main { width: min(100% - 2rem, 52rem); margin: 0 auto; padding: 2rem 0; }
+    header, section, details { padding: clamp(1.1rem, 4vw, 2rem); border: 1px solid var(--line); border-radius: 1rem; background: var(--panel); }
+    section, details, footer { margin-top: 1rem; }
+    h1 { font-size: clamp(2rem, 7vw, 3.2rem); line-height: 1.08; margin: .65em 0 .3em; letter-spacing: -.03em; }
+    h2 { font-size: 1.3rem; line-height: 1.3; margin: 0; }
+    p { margin: .6rem 0 1rem; }
+    p:last-child { margin-bottom: 0; }
+    a { color: var(--accent); text-underline-offset: .19em; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+    .actions { display: flex; align-items: center; flex-wrap: wrap; gap: .65rem 1.1rem; }
+    .button { padding: .6rem .9rem; background: var(--accent); color: var(--button-text); border-radius: .45rem; font-weight: 650; text-decoration: none; }
+    .button:hover { text-decoration: underline; }
+    .note { border-inline-start: 3px solid var(--note); padding-inline-start: .8rem; color: var(--muted); }
+    summary { cursor: pointer; font-weight: 650; }
+    ul { padding-inline-start: 1.25rem; margin-bottom: 0; }
+    li + li { margin-top: .35rem; }
+    footer { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <a href="../index.html">← До моделі STROIKA</a>
+      <h1>Креслення для звірки</h1>
+      <p>Цоколь і підвальні вікна у макеті V24. Попередні ревізії та інструкції зібрані нижче.</p>
+      <p class="note">Фактичний обмір, монтажна ревізія, опори й кріплення потребують погодження. Вихідні креслення й підписані документи зберігаються у власника проєкту.</p>
+    </header>
+
+    <section aria-labelledby="v24">
+      <h2 id="v24">Цоколь і підвальні вікна · V24</h2>
+      <p>У макеті залишаються 12 наявних вікон, по шість із боку входів і балконів. Прорізи проходять через шари цоколя. Розміри з графіки потребують обміру. Посадку, відливи, опори й різи нижньої смуги ще треба погодити.</p>
+      <div class="actions">
+        <a class="button" href="./basement-review-v24.svg">Відкрити аркуш цоколя</a>
+        <a href="./basement-model-v24.json" download>Координати й контури · JSON</a>
+        <a href="./basement-model-v24.md">Зміни й уточнення</a>
+      </div>
+    </section>
+
+    <details>
+      <summary>Попередні ревізії й довідкові матеріали</summary>
+      <p>У V23 уточнили зарізи плит, водостік і підшивку. Зарізи потребують погодження. Рекомендації щодо поділу плит біля прорізів наведені в інструкції Patina DIM на сторінці 17.</p>
+      <div class="actions">
+        <a href="./visual-model-v23.json" download>Контури й деталі V23 · JSON</a>
+        <a href="./visual-model-v23.md">Зміни V23</a>
+      </div>
+      <ul>
+        <li><a href="./START.md" download>Історичне завдання V21</a></li>
+        <li><a href="./swisspearl-patina-wood-dim.pdf" download>Swisspearl Patina · інструкція</a></li>
+        <li><a href="./facade-layout-v21.pdf" download>Наша розкладка · PDF V21</a></li>
+        <li><a href="./facade-layout-v21.json" download>Наша розкладка й розкрій · JSON V21</a></li>
+        <li><a href="./windows.json" download>Віконні блоки та джерела розмірів</a></li>
+        <li><a href="./cembrit-reveals-candidate.json" download>Відкоси Cembrit · кандидат</a></li>
+        <li><a href="./operations.json" download>Операції та проєктні обсяги</a></li>
+        <li><a href="./questions.json" download>Невирішені вузли й питання</a></li>
+        <li><a href="./vertical-section.svg" download>Контрольний розріз</a></li>
+        <li><a href="./roof-model-candidate.json" download>Дах · деталі й шари макета</a></li>
+        <li><a href="./plinth-model-candidate.json" download>Цоколь V21 · історичні деталі</a></li>
+        <li><a href="./entrance-model-candidate.json" download>Входи й навіси · макет</a></li>
+        <li><a href="./model-northwest-v21.png" download>Кадр V21 · фасад із балконами</a></li>
+        <li><a href="./model-detail-v21.png" download>Кадр V21 · деталі зблизька</a></li>
+        <li><a href="./original-project-brief.md" download>Початкове ТЗ автора завдання · уточнення у START.md</a></li>
+      </ul>
+    </details>
+
+    <footer><a href="./manifest.json" download>Склад опублікованого пакета · JSON</a></footer>
+  </main>
+</body>
+</html>

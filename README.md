@@ -1,17 +1,10 @@
 # STROIKA · architectural review viewer
 
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="https://raw.githubusercontent.com/DiadkoShmek/DiadkoShmek/main/assets/identity/stroika-dark-mobile.svg">
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/DiadkoShmek/DiadkoShmek/main/assets/identity/stroika-light-mobile.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DiadkoShmek/DiadkoShmek/main/assets/identity/stroika-dark.svg">
-  <img src="https://raw.githubusercontent.com/DiadkoShmek/DiadkoShmek/main/assets/identity/stroika-light.svg" alt="STROIKA — architectural 3D review" width="1280">
-</picture>
+An interactive 3D view of a building, its façade layers and construction details.
 
-An interactive 3D view of a building and its façade details, with published model views and technical references.
+**[Open the 3D viewer](https://diadkoshmek.github.io/mae7-viewer/)** · [Review drawings](https://diadkoshmek.github.io/mae7-viewer/budmaster/)
 
-**[Open the viewer →](https://diadkoshmek.github.io/mae7-viewer/)**
-
-![Overview of the project-based building model](assets/mae7-preview.webp)
+[![Building model showing façade panels, roof and balconies](assets/mae7-preview.webp)](https://diadkoshmek.github.io/mae7-viewer/)
 
 ## Explore
 
@@ -25,7 +18,7 @@ Original project files and signed documents are kept by the project owner. The p
 
 ## This repository
 
-A public browser release built with JavaScript and Three.js. [Release identity](STATIC_RELEASE.json) records the source commit and model identity. This overview does not change the model, calculations or application code.
+A public browser release built with JavaScript and Three.js. [Release identity](STATIC_RELEASE.json) records the source commit and model identity.
 
 To serve a checkout locally, use Python 3:
 
@@ -39,4 +32,4 @@ Open **http://127.0.0.1:8874/** in a browser with WebGL support. Serve over HTTP
 
 Інтерактивна модель для огляду будівлі, фасадних шарів і деталей. Візуалізація допомагає пояснювати проєктні рішення, але не є підтвердженням точності обмірів чи дозволом на виконання будівельних робіт.
 
-[Project index](https://github.com/DiadkoShmek) · [External results](https://github.com/DiadkoShmek/DiadkoShmek/blob/main/RESULTS.md)
+[Відкрити 3D](https://diadkoshmek.github.io/mae7-viewer/) · [Матеріали для звірки](https://diadkoshmek.github.io/mae7-viewer/budmaster/) · [Інші проєкти](https://github.com/DiadkoShmek)
