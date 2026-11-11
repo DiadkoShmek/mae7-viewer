@@ -6,8 +6,8 @@
     {
       "path": "START.md",
       "title": "Почати тут · уточнення й завдання",
-      "bytes": 5822,
-      "sha256": "048ce517f081c4cd04f968a3c63666048efdb6fc828b95c1206301bcb78b1256"
+      "bytes": 5827,
+      "sha256": "a3b05c4fbcfbcc2b17f82056f060fede4c20947981f4a41cd7c3c95788619358"
     },
     {
       "path": "swisspearl-patina-wood-dim.pdf",
@@ -18,20 +18,20 @@
     {
       "path": "facade-layout-v21.pdf",
       "title": "Наша розкладка · PDF V21",
-      "bytes": 149484,
-      "sha256": "cffcd440ab579a49cd2ed574ed554898ba6b0ef60570b624bc4fc62fd88db16f"
+      "bytes": 128082,
+      "sha256": "870a71f5db3278be2c53c71f0cb2bc397c7d0c8401c7a71e13ca3bb705478d93"
     },
     {
       "path": "facade-layout-v21.json",
       "title": "Наша розкладка й розкрій · JSON V21",
-      "bytes": 4909508,
-      "sha256": "23ec0bc47732132a51707197777a83e57686827a528c6608f8b4c1c2b8aaa1ea"
+      "bytes": 4909513,
+      "sha256": "079c70bc6ffc98640f17ace882a36630225fe687969a4b0b0339b574d7583789"
     },
     {
       "path": "windows.json",
       "title": "Віконні блоки та джерела розмірів",
-      "bytes": 306497,
-      "sha256": "74e44ffeea60c7464576aa2ad34531657b72bb60288b47a594f71d4719044679"
+      "bytes": 306502,
+      "sha256": "f9ccfe6e29d98e4c2b5e12514abc943ef394de3f018805ee0fb0ce49a0edefb7"
     },
     {
       "path": "cembrit-reveals-candidate.json",
@@ -42,8 +42,8 @@
     {
       "path": "operations.json",
       "title": "Операції та проєктні обсяги",
-      "bytes": 20992,
-      "sha256": "e1389dda089634e64afecc5f1684c5567bd67077cdc9481e8da8499843a361fd"
+      "bytes": 21320,
+      "sha256": "3be9c2af6d21d9289616bf47d22778ae8163f6c525de50bc9fadc71c4a0b4bc1"
     },
     {
       "path": "questions.json",
@@ -54,8 +54,8 @@
     {
       "path": "vertical-section.svg",
       "title": "Контрольний розріз",
-      "bytes": 7354,
-      "sha256": "06157d7825fbfc69c9a24c5e405c3d7780a7343518d314efebd387bdbb475422"
+      "bytes": 7359,
+      "sha256": "5bee7d29460b00af1b3849ea0278481b9ce75cb64426c5baaf5da25d44784752"
     },
     {
       "path": "roof-model-candidate.json",
