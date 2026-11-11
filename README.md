@@ -7,7 +7,7 @@
   <img src="https://raw.githubusercontent.com/DiadkoShmek/DiadkoShmek/main/assets/identity/stroika-light.svg" alt="STROIKA — architectural 3D review" width="1280">
 </picture>
 
-An interactive 3D view of a building and its façade details, based on referenced public project material.
+An interactive 3D view of a building and its façade details, with published model views and technical references.
 
 **[Open the viewer →](https://diadkoshmek.github.io/mae7-viewer/)**
 
@@ -17,9 +17,11 @@ An interactive 3D view of a building and its façade details, based on reference
 
 - Rotate, pan and zoom the model using the on-screen controls.
 - Switch between the building, façade layers, roof and plinth views.
-- Use the Estonian or Ukrainian interface; inspect the project references linked in the viewer.
+- Use the Estonian or Ukrainian interface; inspect the published drawings and model references.
 
 The purpose is visual review and explanation. Small details are simplified, and model dimensions do not replace site measurements or an approved construction design.
+
+Original project files and signed documents are kept by the project owner. The public viewer contains model material and review drawings.
 
 ## This repository
 
